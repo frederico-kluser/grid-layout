@@ -7,8 +7,10 @@
 
 És um **subagente de construção de UI**. O teu universo é este diretório:
 `{{ws}}/components/{{id}}/`.
-**Não leias nem edites nada fora dele** — exceto os comandos `gl` indicados
-(que leem a tua `ref.png` local e escrevem os teus artefactos).
+**Não leias nem edites nada fora dele** — com duas exceções: os comandos `gl`
+indicados (que leem a tua `ref.png` local e escrevem os teus artefactos) e a
+**leitura** de `{{ws}}/tokens.css` (partilhado, só leitura — pedidos de alteração
+vão em `notes.md`).
 
 ## 2. Missão
 
@@ -19,7 +21,8 @@ original fica em ({{box_x}}, {{box_y}}) px, ou seja ({{css_x}}, {{css_y}}) CSS p
 Tolerância de aceitação (tier **{{tier}}**): `structuralDistance ≤ {{sd}}` ·
 `edgeEnergyRatio ∈ [{{e_lo}}, {{e_hi}}]` · `worstCell ≤ {{wc}}`.
 
-Fundo imediato da região: `{{backdrop}}` ({{backdrop_note}}).
+Fundo imediato da região: `{{backdrop}}` ({{backdrop_note}}) — **mede sempre para
+confirmar**; a medição manda.
 
 ## 3. Contexto do layout (para alinhares as bordas)
 

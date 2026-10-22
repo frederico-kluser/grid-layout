@@ -308,12 +308,27 @@ async function cmdProbe() {
   const full = { x: 0, y: 0, w: img.width, h: img.height };
 
   if (sub === 'colors') {
-    const spec = need(flags, 'at', 'gl probe colors --image ref.png --at bg=8,8,cor=40,52');
+    const spec = need(flags, 'at', 'gl probe colors --image ref.png --at bg=8,8,cor=40:52');
+    // Formatos aceites por amostra: nome=x,y[,raio] e nome=x:y[:raio]. As amostras
+    // separam-se por vírgula quando há `=`; campos sem `=` continuam a amostra
+    // anterior (resolve a ambiguidade de bg=8,8,cor=40,52).
+    const pairs = [];
+    for (const token of spec.split(',')) {
+      const t = token.trim();
+      if (!t) continue;
+      if (t.includes('=')) pairs.push(t);
+      else if (pairs.length) pairs[pairs.length - 1] += `,${t}`;
+      else fail(`amostra inválida: "${t}"`, 'formato: nome=x,y[,raio] (ex.: bg=8,8 · texto=40:52:3)', EXIT.USAGE);
+    }
     const samples = {};
-    for (const pair of spec.split(',')) {
-      const [name, coords] = pair.split('=');
-      if (!name || !coords) fail(`amostra inválida: "${pair}"`, 'formato: nome=x,y[,raio] (raio=2 → 5×5 px)', EXIT.USAGE);
-      const [lx, ly, radius = 2] = coords.split(':').map(Number);
+    for (const pair of pairs) {
+      const eq = pair.indexOf('=');
+      const name = pair.slice(0, eq).trim();
+      const nums = pair.slice(eq + 1).split(/[,:]/).map((s) => Number(s.trim()));
+      const [lx, ly, radius = 2] = nums;
+      if (!name || !Number.isFinite(lx) || !Number.isFinite(ly)) {
+        fail(`amostra inválida: "${pair}"`, 'formato: nome=x,y[,raio] (ex.: bg=8,8 · texto=40:52:3)', EXIT.USAGE);
+      }
       const r = Math.max(0, Math.min(12, radius));
       let sum = [0, 0, 0];
       const values = [];
@@ -763,19 +778,22 @@ function lintComponent(compDir, meta) {
   const cssPath = path.join(compDir, 'component.css');
   const frag = fs.existsSync(fragPath) ? fs.readFileSync(fragPath, 'utf8') : '';
   const css = fs.existsSync(cssPath) ? fs.readFileSync(cssPath, 'utf8') : '';
+  // comentários não contam: mencionar "ref.png" num comentário não é batota
+  const fragClean = frag.replace(/<!--[\s\S]*?-->/g, '');
+  const cssClean = css.replace(/\/\*[\s\S]*?\*\//g, '');
 
-  if (/ref(-grid|-zoom)?\.png/.test(frag + css)) {
+  if (/ref(-grid|-zoom)?\.png/.test(fragClean + cssClean)) {
     problems.push('BATOTA: a referência (ref.png/ref-grid.png/ref-zoom.png) é usada no código — remova-a');
   }
-  if (/https?:\/\//.test(frag.replace(/<!--[\s\S]*?-->/g, '')) || /url\(\s*['"]?https?:/.test(css)) {
+  if (/https?:\/\//.test(fragClean) || /url\(\s*['"]?https?:/.test(cssClean)) {
     problems.push('rede externa detetada (http/https) — use apenas ativos locais em assets/');
   }
-  if (/position\s*:\s*fixed/i.test(css)) problems.push('position:fixed proibido — quebra o isolamento do componente');
-  if (/\d\s*(vw|vh|vmin|vmax)\b/i.test(css)) problems.push('unidades de viewport (vw/vh/vmin/vmax) proibidas — a caixa é fixa');
-  if (/!important/i.test(css)) problems.push('!important proibido');
+  if (/position\s*:\s*fixed/i.test(cssClean)) problems.push('position:fixed proibido — quebra o isolamento do componente');
+  if (/\d\s*(vw|vh|vmin|vmax)\b/i.test(cssClean)) problems.push('unidades de viewport (vw/vh/vmin/vmax) proibidas — a caixa é fixa');
+  if (/!important/i.test(cssClean)) problems.push('!important proibido');
 
   const rootClass = meta.rootClass;
-  const noComments = css.replace(/\/\*[\s\S]*?\*\//g, '');
+  const noComments = cssClean;
   const blocks = noComments.split('}').map((b) => b.trim()).filter(Boolean);
   for (const block of blocks) {
     const braceIdx = block.indexOf('{');

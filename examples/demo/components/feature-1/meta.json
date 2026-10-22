@@ -1,0 +1,58 @@
+{
+  "id": "feature-1",
+  "kind": "ui",
+  "tier": "standard",
+  "trivial": false,
+  "box": {
+    "x": 0,
+    "y": 1088,
+    "w": 1000,
+    "h": 560
+  },
+  "cssBox": {
+    "x": 0,
+    "y": 544,
+    "w": 500,
+    "h": 280
+  },
+  "dpr": 2,
+  "cssSize": {
+    "w": 500,
+    "h": 280
+  },
+  "rootClass": "gl-feature-1",
+  "backdrop": {
+    "hex": "#fdfdfe",
+    "flat": false
+  },
+  "thresholds": {
+    "structuralDistance": 0.02,
+    "edgeEnergyRatio": [
+      0.95,
+      1.05
+    ],
+    "worstCell": 0.02
+  },
+  "neighbors": {
+    "left": null,
+    "right": "feature-2",
+    "top": "stats",
+    "bottom": "footer"
+  },
+  "gutters": {
+    "left": null,
+    "right": 0,
+    "top": 0,
+    "bottom": 0
+  },
+  "notes": "Cartao 'Deploy instantaneo' (icone azul) sobre fundo claro; a caixa inclui as margens do vao — reproduz a caixa inteira (fundo + cartao). Padrao canonico da familia.",
+  "gridStepPx": 92,
+  "zoomFactor": 1,
+  "files": {
+    "ref": "ref.png",
+    "refGrid": "ref-grid.png",
+    "refZoom": "ref-zoom.png"
+  },
+  "gl": "/home/ondokai/Agent-Skills/grid-layout/skills/grid-layout/scripts/gl.mjs",
+  "ws": "/home/ondokai/Agent-Skills/grid-layout/examples/demo"
+}

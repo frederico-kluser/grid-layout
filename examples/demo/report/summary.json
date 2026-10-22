@@ -1,0 +1,761 @@
+{
+  "entries": [
+    {
+      "id": "topbar",
+      "pass": true,
+      "checkedAt": "2026-10-22T23:43:55.232Z",
+      "metrics": {
+        "sizeMismatch": false,
+        "size": [
+          2880,
+          128
+        ],
+        "mae": 0.015,
+        "rmse": 0.632,
+        "diffRatio32": 0.0002,
+        "pixelmatchRatio": 0,
+        "edgeDiffRatio32": 0.0005,
+        "edgeEnergyRef": 4.38,
+        "edgeEnergyCand": 4.38,
+        "edgeEnergyRatio": 1.001,
+        "structuralDistance": 0.0004,
+        "worstCell": {
+          "cell": "B5",
+          "box": [
+            1920,
+            64,
+            480,
+            64
+          ],
+          "diffRatio": 0.005
+        },
+        "hotspots": [
+          {
+            "cell": "B5",
+            "box": [
+              1920,
+              64,
+              480,
+              64
+            ],
+            "diffRatio": 0.005
+          },
+          {
+            "cell": "A5",
+            "box": [
+              1920,
+              0,
+              480,
+              64
+            ],
+            "diffRatio": 0.0028
+          },
+          {
+            "cell": "B6",
+            "box": [
+              2400,
+              64,
+              480,
+              64
+            ],
+            "diffRatio": 0.0006
+          }
+        ],
+        "shiftHint": null,
+        "thresholds": {
+          "structuralDistance": 0.02,
+          "edgeEnergyRatio": [
+            0.95,
+            1.05
+          ],
+          "worstCell": 0.02
+        },
+        "pass": true,
+        "scene": {
+          "ref": {
+            "colorEntropyBits": 0.271,
+            "dominantColorShare": 0.9713,
+            "edgeDensity": 0.01883,
+            "edgeEnergy": 4.38,
+            "luminanceContrast": 0,
+            "transparentShare": 0,
+            "looksBlank": false,
+            "reasons": []
+          },
+          "cand": {
+            "colorEntropyBits": 0.271,
+            "dominantColorShare": 0.9713,
+            "edgeDensity": 0.01892,
+            "edgeEnergy": 4.38,
+            "luminanceContrast": 0,
+            "transparentShare": 0,
+            "looksBlank": false,
+            "reasons": []
+          }
+        },
+        "problems": []
+      },
+      "boxCheck": {
+        "selectorFound": true,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 64
+        },
+        "expected": {
+          "width": 1440,
+          "height": 64
+        },
+        "overflow": {
+          "x": 0,
+          "y": 0
+        },
+        "ok": true,
+        "delta": {
+          "w": 0,
+          "h": 0
+        }
+      },
+      "lint": {
+        "problems": [],
+        "warnings": []
+      },
+      "problems": [],
+      "blockedRequests": [],
+      "artifacts": {
+        "ref": "ref.png",
+        "cand": "cand.png",
+        "diff": "diff.png",
+        "side": "side-by-side.png"
+      }
+    },
+    {
+      "id": "hero",
+      "pass": true,
+      "checkedAt": "2026-10-22T23:43:56.026Z",
+      "metrics": {
+        "sizeMismatch": false,
+        "size": [
+          2880,
+          640
+        ],
+        "mae": 0,
+        "rmse": 0.005,
+        "diffRatio32": 0,
+        "pixelmatchRatio": 0,
+        "edgeDiffRatio32": 0,
+        "edgeEnergyRef": 5.23,
+        "edgeEnergyCand": 5.23,
+        "edgeEnergyRatio": 1,
+        "structuralDistance": 0,
+        "worstCell": {
+          "cell": "A1",
+          "box": [
+            0,
+            0,
+            480,
+            106
+          ],
+          "diffRatio": 0
+        },
+        "hotspots": [],
+        "shiftHint": null,
+        "thresholds": {
+          "structuralDistance": 0.02,
+          "edgeEnergyRatio": [
+            0.95,
+            1.05
+          ],
+          "worstCell": 0.02
+        },
+        "pass": true,
+        "scene": {
+          "ref": {
+            "colorEntropyBits": 0.377,
+            "dominantColorShare": 0.9551,
+            "edgeDensity": 0.02252,
+            "edgeEnergy": 5.23,
+            "luminanceContrast": 0,
+            "transparentShare": 0,
+            "looksBlank": false,
+            "reasons": []
+          },
+          "cand": {
+            "colorEntropyBits": 0.377,
+            "dominantColorShare": 0.9551,
+            "edgeDensity": 0.02252,
+            "edgeEnergy": 5.23,
+            "luminanceContrast": 0,
+            "transparentShare": 0,
+            "looksBlank": false,
+            "reasons": []
+          }
+        },
+        "problems": []
+      },
+      "boxCheck": {
+        "selectorFound": true,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 320
+        },
+        "expected": {
+          "width": 1440,
+          "height": 320
+        },
+        "overflow": {
+          "x": 0,
+          "y": 0
+        },
+        "ok": true,
+        "delta": {
+          "w": 0,
+          "h": 0
+        }
+      },
+      "lint": {
+        "problems": [],
+        "warnings": []
+      },
+      "problems": [],
+      "blockedRequests": [],
+      "artifacts": {
+        "ref": "ref.png",
+        "cand": "cand.png",
+        "diff": "diff.png",
+        "side": "side-by-side.png"
+      }
+    },
+    {
+      "id": "stats",
+      "pass": true,
+      "checkedAt": "2026-10-22T23:43:56.539Z",
+      "metrics": {
+        "sizeMismatch": false,
+        "size": [
+          2880,
+          320
+        ],
+        "mae": 0,
+        "rmse": 0,
+        "diffRatio32": 0,
+        "pixelmatchRatio": 0,
+        "edgeDiffRatio32": 0,
+        "edgeEnergyRef": 4.55,
+        "edgeEnergyCand": 4.55,
+        "edgeEnergyRatio": 1,
+        "structuralDistance": 0,
+        "worstCell": {
+          "cell": "A1",
+          "box": [
+            0,
+            0,
+            480,
+            106
+          ],
+          "diffRatio": 0
+        },
+        "hotspots": [],
+        "shiftHint": null,
+        "thresholds": {
+          "structuralDistance": 0.02,
+          "edgeEnergyRatio": [
+            0.95,
+            1.05
+          ],
+          "worstCell": 0.02
+        },
+        "pass": true,
+        "scene": {
+          "ref": {
+            "colorEntropyBits": 0.212,
+            "dominantColorShare": 0.978,
+            "edgeDensity": 0.02054,
+            "edgeEnergy": 4.55,
+            "luminanceContrast": 0,
+            "transparentShare": 0,
+            "looksBlank": false,
+            "reasons": []
+          },
+          "cand": {
+            "colorEntropyBits": 0.212,
+            "dominantColorShare": 0.978,
+            "edgeDensity": 0.02054,
+            "edgeEnergy": 4.55,
+            "luminanceContrast": 0,
+            "transparentShare": 0,
+            "looksBlank": false,
+            "reasons": []
+          }
+        },
+        "problems": []
+      },
+      "boxCheck": {
+        "selectorFound": true,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 160
+        },
+        "expected": {
+          "width": 1440,
+          "height": 160
+        },
+        "overflow": {
+          "x": 0,
+          "y": 0
+        },
+        "ok": true,
+        "delta": {
+          "w": 0,
+          "h": 0
+        }
+      },
+      "lint": {
+        "problems": [],
+        "warnings": []
+      },
+      "problems": [],
+      "blockedRequests": [],
+      "artifacts": {
+        "ref": "ref.png",
+        "cand": "cand.png",
+        "diff": "diff.png",
+        "side": "side-by-side.png"
+      }
+    },
+    {
+      "id": "feature-1",
+      "pass": true,
+      "checkedAt": "2026-10-22T23:43:56.889Z",
+      "metrics": {
+        "sizeMismatch": false,
+        "size": [
+          1000,
+          560
+        ],
+        "mae": 0,
+        "rmse": 0,
+        "diffRatio32": 0,
+        "pixelmatchRatio": 0,
+        "edgeDiffRatio32": 0,
+        "edgeEnergyRef": 8.19,
+        "edgeEnergyCand": 8.19,
+        "edgeEnergyRatio": 1,
+        "structuralDistance": 0,
+        "worstCell": {
+          "cell": "A1",
+          "box": [
+            0,
+            0,
+            166,
+            93
+          ],
+          "diffRatio": 0
+        },
+        "hotspots": [],
+        "shiftHint": null,
+        "thresholds": {
+          "structuralDistance": 0.02,
+          "edgeEnergyRatio": [
+            0.95,
+            1.05
+          ],
+          "worstCell": 0.02
+        },
+        "pass": true,
+        "scene": {
+          "ref": {
+            "colorEntropyBits": 0.396,
+            "dominantColorShare": 0.9569,
+            "edgeDensity": 0.04594,
+            "edgeEnergy": 8.19,
+            "luminanceContrast": 0.0211,
+            "transparentShare": 0,
+            "looksBlank": false,
+            "reasons": []
+          },
+          "cand": {
+            "colorEntropyBits": 0.396,
+            "dominantColorShare": 0.9569,
+            "edgeDensity": 0.04594,
+            "edgeEnergy": 8.19,
+            "luminanceContrast": 0.0211,
+            "transparentShare": 0,
+            "looksBlank": false,
+            "reasons": []
+          }
+        },
+        "problems": []
+      },
+      "boxCheck": {
+        "selectorFound": true,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 500,
+          "height": 280
+        },
+        "expected": {
+          "width": 500,
+          "height": 280
+        },
+        "overflow": {
+          "x": 0,
+          "y": 0
+        },
+        "ok": true,
+        "delta": {
+          "w": 0,
+          "h": 0
+        }
+      },
+      "lint": {
+        "problems": [],
+        "warnings": []
+      },
+      "problems": [],
+      "blockedRequests": [],
+      "artifacts": {
+        "ref": "ref.png",
+        "cand": "cand.png",
+        "diff": "diff.png",
+        "side": "side-by-side.png"
+      }
+    },
+    {
+      "id": "feature-2",
+      "pass": true,
+      "checkedAt": "2026-10-22T23:43:57.203Z",
+      "metrics": {
+        "sizeMismatch": false,
+        "size": [
+          880,
+          560
+        ],
+        "mae": 0,
+        "rmse": 0,
+        "diffRatio32": 0,
+        "pixelmatchRatio": 0,
+        "edgeDiffRatio32": 0,
+        "edgeEnergyRef": 8.47,
+        "edgeEnergyCand": 8.47,
+        "edgeEnergyRatio": 1,
+        "structuralDistance": 0,
+        "worstCell": {
+          "cell": "A1",
+          "box": [
+            0,
+            0,
+            146,
+            93
+          ],
+          "diffRatio": 0
+        },
+        "hotspots": [],
+        "shiftHint": null,
+        "thresholds": {
+          "structuralDistance": 0.02,
+          "edgeEnergyRatio": [
+            0.95,
+            1.05
+          ],
+          "worstCell": 0.02
+        },
+        "pass": true,
+        "scene": {
+          "ref": {
+            "colorEntropyBits": 0.42,
+            "dominantColorShare": 0.9532,
+            "edgeDensity": 0.04878,
+            "edgeEnergy": 8.47,
+            "luminanceContrast": 0.0211,
+            "transparentShare": 0,
+            "looksBlank": false,
+            "reasons": []
+          },
+          "cand": {
+            "colorEntropyBits": 0.42,
+            "dominantColorShare": 0.9532,
+            "edgeDensity": 0.04878,
+            "edgeEnergy": 8.47,
+            "luminanceContrast": 0.0211,
+            "transparentShare": 0,
+            "looksBlank": false,
+            "reasons": []
+          }
+        },
+        "problems": []
+      },
+      "boxCheck": {
+        "selectorFound": true,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 440,
+          "height": 280
+        },
+        "expected": {
+          "width": 440,
+          "height": 280
+        },
+        "overflow": {
+          "x": 0,
+          "y": 0
+        },
+        "ok": true,
+        "delta": {
+          "w": 0,
+          "h": 0
+        }
+      },
+      "lint": {
+        "problems": [],
+        "warnings": []
+      },
+      "problems": [],
+      "blockedRequests": [],
+      "artifacts": {
+        "ref": "ref.png",
+        "cand": "cand.png",
+        "diff": "diff.png",
+        "side": "side-by-side.png"
+      }
+    },
+    {
+      "id": "feature-3",
+      "pass": true,
+      "checkedAt": "2026-10-22T23:43:57.560Z",
+      "metrics": {
+        "sizeMismatch": false,
+        "size": [
+          1000,
+          560
+        ],
+        "mae": 0.002,
+        "rmse": 0.49,
+        "diffRatio32": 0,
+        "pixelmatchRatio": 0,
+        "edgeDiffRatio32": 0.0001,
+        "edgeEnergyRef": 7.53,
+        "edgeEnergyCand": 7.54,
+        "edgeEnergyRatio": 1.002,
+        "structuralDistance": 0.0004,
+        "worstCell": {
+          "cell": "D1",
+          "box": [
+            0,
+            280,
+            166,
+            93
+          ],
+          "diffRatio": 0.0024
+        },
+        "hotspots": [
+          {
+            "cell": "D1",
+            "box": [
+              0,
+              280,
+              166,
+              93
+            ],
+            "diffRatio": 0.0024
+          }
+        ],
+        "shiftHint": null,
+        "thresholds": {
+          "structuralDistance": 0.02,
+          "edgeEnergyRatio": [
+            0.95,
+            1.05
+          ],
+          "worstCell": 0.02
+        },
+        "pass": true,
+        "scene": {
+          "ref": {
+            "colorEntropyBits": 0.38,
+            "dominantColorShare": 0.9584,
+            "edgeDensity": 0.04326,
+            "edgeEnergy": 7.53,
+            "luminanceContrast": 0.0211,
+            "transparentShare": 0,
+            "looksBlank": false,
+            "reasons": []
+          },
+          "cand": {
+            "colorEntropyBits": 0.381,
+            "dominantColorShare": 0.9584,
+            "edgeDensity": 0.04332,
+            "edgeEnergy": 7.54,
+            "luminanceContrast": 0.0211,
+            "transparentShare": 0,
+            "looksBlank": false,
+            "reasons": []
+          }
+        },
+        "problems": []
+      },
+      "boxCheck": {
+        "selectorFound": true,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 500,
+          "height": 280
+        },
+        "expected": {
+          "width": 500,
+          "height": 280
+        },
+        "overflow": {
+          "x": 0,
+          "y": 0
+        },
+        "ok": true,
+        "delta": {
+          "w": 0,
+          "h": 0
+        }
+      },
+      "lint": {
+        "problems": [],
+        "warnings": []
+      },
+      "problems": [],
+      "blockedRequests": [],
+      "artifacts": {
+        "ref": "ref.png",
+        "cand": "cand.png",
+        "diff": "diff.png",
+        "side": "side-by-side.png"
+      }
+    },
+    {
+      "id": "footer",
+      "pass": true,
+      "checkedAt": "2026-10-22T23:43:57.853Z",
+      "metrics": {
+        "sizeMismatch": false,
+        "size": [
+          2880,
+          152
+        ],
+        "mae": 0.023,
+        "rmse": 0.789,
+        "diffRatio32": 0.0003,
+        "pixelmatchRatio": 0,
+        "edgeDiffRatio32": 0.0008,
+        "edgeEnergyRef": 3.98,
+        "edgeEnergyCand": 3.99,
+        "edgeEnergyRatio": 1.002,
+        "structuralDistance": 0.0008,
+        "worstCell": {
+          "cell": "B6",
+          "box": [
+            2400,
+            76,
+            480,
+            76
+          ],
+          "diffRatio": 0.0088
+        },
+        "hotspots": [
+          {
+            "cell": "B6",
+            "box": [
+              2400,
+              76,
+              480,
+              76
+            ],
+            "diffRatio": 0.0088
+          },
+          {
+            "cell": "A6",
+            "box": [
+              2400,
+              0,
+              480,
+              76
+            ],
+            "diffRatio": 0.0044
+          }
+        ],
+        "shiftHint": null,
+        "thresholds": {
+          "structuralDistance": 0.02,
+          "edgeEnergyRatio": [
+            0.95,
+            1.05
+          ],
+          "worstCell": 0.02
+        },
+        "pass": true,
+        "scene": {
+          "ref": {
+            "colorEntropyBits": 0.124,
+            "dominantColorShare": 0.9894,
+            "edgeDensity": 0.01728,
+            "edgeEnergy": 3.98,
+            "luminanceContrast": 0,
+            "transparentShare": 0,
+            "looksBlank": false,
+            "reasons": []
+          },
+          "cand": {
+            "colorEntropyBits": 0.123,
+            "dominantColorShare": 0.9894,
+            "edgeDensity": 0.01727,
+            "edgeEnergy": 3.99,
+            "luminanceContrast": 0,
+            "transparentShare": 0,
+            "looksBlank": false,
+            "reasons": []
+          }
+        },
+        "problems": []
+      },
+      "boxCheck": {
+        "selectorFound": true,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 76
+        },
+        "expected": {
+          "width": 1440,
+          "height": 76
+        },
+        "overflow": {
+          "x": 0,
+          "y": 0
+        },
+        "ok": true,
+        "delta": {
+          "w": 0,
+          "h": 0
+        }
+      },
+      "lint": {
+        "problems": [],
+        "warnings": []
+      },
+      "problems": [],
+      "blockedRequests": [],
+      "artifacts": {
+        "ref": "ref.png",
+        "cand": "cand.png",
+        "diff": "diff.png",
+        "side": "side-by-side.png"
+      }
+    }
+  ],
+  "page": null
+}

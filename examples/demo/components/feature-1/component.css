@@ -1,0 +1,44 @@
+/* componente feature-1 — todos os seletores sob .gl-feature-1 */
+.gl-feature-1 {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: var(--gl-color-bg); /* medido: #f8fafc plano (16 amostras, stddev 0) */
+  font-family: var(--gl-font-sans);
+}
+
+.gl-feature-1__card {
+  box-sizing: border-box;
+  position: absolute;
+  /* medido na referência (160,64) 804x444 px @2x → (80,32) 402x222 CSS px */
+  left: 80px;
+  top: 32px;
+  width: 402px;
+  height: 222px;
+  padding: 24px; /* medido: conteúdo do card começa 48 ref px após a borda */
+  background: var(--gl-color-surface);
+  border: 1px solid var(--gl-color-border); /* medido: 2 ref px = 1 CSS px */
+  border-radius: 16px; /* medido: raio externo 32 ref px (row 64: plano 191..934) */
+}
+
+.gl-feature-1__icon {
+  width: 48px; /* medido: 96x96 ref px em (210,114) */
+  height: 48px;
+  background: var(--gl-color-primary);
+  border-radius: 12px; /* medido: raio 24 ref px (row 114: plano 234..281) */
+}
+
+.gl-feature-1__title {
+  margin: 17px 0 0 0; /* medido: baseline 283.5 ref px (cand ficou 2 px acima → +1 CSS px) */
+  font-size: 20px; /* medido: cap D ≈ 27.5 ref px, largura ink 366 ref px */
+  line-height: 28px;
+  font-weight: 700;
+  color: var(--gl-color-ink);
+}
+
+.gl-feature-1__body {
+  margin: 8px 0 0 0; /* medido: baseline linha 1 ≈ 348 ref px */
+  font-size: 14px; /* medido: cap D = 20 ref px, largura ink 477 ref px */
+  line-height: 22px; /* medido: baselines separadas 44 ref px */
+  color: var(--gl-color-muted); /* medido: #64748b (palette da região do corpo) */
+}

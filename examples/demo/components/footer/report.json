@@ -1,0 +1,120 @@
+{
+  "id": "footer",
+  "pass": true,
+  "checkedAt": "2026-10-22T23:43:57.853Z",
+  "metrics": {
+    "sizeMismatch": false,
+    "size": [
+      2880,
+      152
+    ],
+    "mae": 0.023,
+    "rmse": 0.789,
+    "diffRatio32": 0.0003,
+    "pixelmatchRatio": 0,
+    "edgeDiffRatio32": 0.0008,
+    "edgeEnergyRef": 3.98,
+    "edgeEnergyCand": 3.99,
+    "edgeEnergyRatio": 1.002,
+    "structuralDistance": 0.0008,
+    "worstCell": {
+      "cell": "B6",
+      "box": [
+        2400,
+        76,
+        480,
+        76
+      ],
+      "diffRatio": 0.0088
+    },
+    "hotspots": [
+      {
+        "cell": "B6",
+        "box": [
+          2400,
+          76,
+          480,
+          76
+        ],
+        "diffRatio": 0.0088
+      },
+      {
+        "cell": "A6",
+        "box": [
+          2400,
+          0,
+          480,
+          76
+        ],
+        "diffRatio": 0.0044
+      }
+    ],
+    "shiftHint": null,
+    "thresholds": {
+      "structuralDistance": 0.02,
+      "edgeEnergyRatio": [
+        0.95,
+        1.05
+      ],
+      "worstCell": 0.02
+    },
+    "pass": true,
+    "scene": {
+      "ref": {
+        "colorEntropyBits": 0.124,
+        "dominantColorShare": 0.9894,
+        "edgeDensity": 0.01728,
+        "edgeEnergy": 3.98,
+        "luminanceContrast": 0,
+        "transparentShare": 0,
+        "looksBlank": false,
+        "reasons": []
+      },
+      "cand": {
+        "colorEntropyBits": 0.123,
+        "dominantColorShare": 0.9894,
+        "edgeDensity": 0.01727,
+        "edgeEnergy": 3.99,
+        "luminanceContrast": 0,
+        "transparentShare": 0,
+        "looksBlank": false,
+        "reasons": []
+      }
+    },
+    "problems": []
+  },
+  "boxCheck": {
+    "selectorFound": true,
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 76
+    },
+    "expected": {
+      "width": 1440,
+      "height": 76
+    },
+    "overflow": {
+      "x": 0,
+      "y": 0
+    },
+    "ok": true,
+    "delta": {
+      "w": 0,
+      "h": 0
+    }
+  },
+  "lint": {
+    "problems": [],
+    "warnings": []
+  },
+  "problems": [],
+  "blockedRequests": [],
+  "artifacts": {
+    "ref": "ref.png",
+    "cand": "cand.png",
+    "diff": "diff.png",
+    "side": "side-by-side.png"
+  }
+}

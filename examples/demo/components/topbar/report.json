@@ -1,0 +1,130 @@
+{
+  "id": "topbar",
+  "pass": true,
+  "checkedAt": "2026-10-22T23:43:55.232Z",
+  "metrics": {
+    "sizeMismatch": false,
+    "size": [
+      2880,
+      128
+    ],
+    "mae": 0.015,
+    "rmse": 0.632,
+    "diffRatio32": 0.0002,
+    "pixelmatchRatio": 0,
+    "edgeDiffRatio32": 0.0005,
+    "edgeEnergyRef": 4.38,
+    "edgeEnergyCand": 4.38,
+    "edgeEnergyRatio": 1.001,
+    "structuralDistance": 0.0004,
+    "worstCell": {
+      "cell": "B5",
+      "box": [
+        1920,
+        64,
+        480,
+        64
+      ],
+      "diffRatio": 0.005
+    },
+    "hotspots": [
+      {
+        "cell": "B5",
+        "box": [
+          1920,
+          64,
+          480,
+          64
+        ],
+        "diffRatio": 0.005
+      },
+      {
+        "cell": "A5",
+        "box": [
+          1920,
+          0,
+          480,
+          64
+        ],
+        "diffRatio": 0.0028
+      },
+      {
+        "cell": "B6",
+        "box": [
+          2400,
+          64,
+          480,
+          64
+        ],
+        "diffRatio": 0.0006
+      }
+    ],
+    "shiftHint": null,
+    "thresholds": {
+      "structuralDistance": 0.02,
+      "edgeEnergyRatio": [
+        0.95,
+        1.05
+      ],
+      "worstCell": 0.02
+    },
+    "pass": true,
+    "scene": {
+      "ref": {
+        "colorEntropyBits": 0.271,
+        "dominantColorShare": 0.9713,
+        "edgeDensity": 0.01883,
+        "edgeEnergy": 4.38,
+        "luminanceContrast": 0,
+        "transparentShare": 0,
+        "looksBlank": false,
+        "reasons": []
+      },
+      "cand": {
+        "colorEntropyBits": 0.271,
+        "dominantColorShare": 0.9713,
+        "edgeDensity": 0.01892,
+        "edgeEnergy": 4.38,
+        "luminanceContrast": 0,
+        "transparentShare": 0,
+        "looksBlank": false,
+        "reasons": []
+      }
+    },
+    "problems": []
+  },
+  "boxCheck": {
+    "selectorFound": true,
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 64
+    },
+    "expected": {
+      "width": 1440,
+      "height": 64
+    },
+    "overflow": {
+      "x": 0,
+      "y": 0
+    },
+    "ok": true,
+    "delta": {
+      "w": 0,
+      "h": 0
+    }
+  },
+  "lint": {
+    "problems": [],
+    "warnings": []
+  },
+  "problems": [],
+  "blockedRequests": [],
+  "artifacts": {
+    "ref": "ref.png",
+    "cand": "cand.png",
+    "diff": "diff.png",
+    "side": "side-by-side.png"
+  }
+}

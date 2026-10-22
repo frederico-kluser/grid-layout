@@ -1,0 +1,46 @@
+/* componente stats — todos os seletores sob .gl-stats */
+.gl-stats {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  padding-left: 40px;
+  background: var(--gl-color-surface);
+  overflow: hidden;
+  font-family: var(--gl-font-sans);
+}
+
+.gl-stats__item {
+  position: relative;
+  flex: 0 0 480px;
+  box-sizing: border-box;
+  padding: 36px 40px 0;
+}
+
+.gl-stats__item:last-child {
+  flex: 1 1 auto;
+}
+
+.gl-stats__item + .gl-stats__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 32px;
+  width: 1px;
+  height: 96px;
+  background: var(--gl-color-border);
+}
+
+.gl-stats__value {
+  font-size: 36px;
+  line-height: 41px;
+  font-weight: 700;
+  color: var(--gl-color-ink);
+}
+
+.gl-stats__label {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--gl-color-muted);
+}

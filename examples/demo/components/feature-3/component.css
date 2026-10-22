@@ -1,0 +1,48 @@
+/* componente feature-3 — todos os seletores sob .gl-feature-3 */
+/* medições (ref.png, device px @ dpr 2 → CSS = /2):
+   cartão (40,64) 804×444 → (20,32) 402×222 · borda 2 device (1 CSS) #e2e8f0
+   raio exterior do cartão: 32 device = 16px · padding 48 device = 24px
+   ícone (90,114) 96×96 → (45,57) 48×48 · raio 24 device = 12px · #f59e0b
+   título baseline 283.5 device = 141.75 CSS · corpo baselines 347.5/391.5 device */
+.gl-feature-3 {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 32px 0 0 20px;
+  background: var(--gl-color-bg);
+  font-family: var(--gl-font-sans);
+}
+
+.gl-feature-3__card {
+  box-sizing: border-box;
+  width: 402px;
+  height: 222px;
+  padding: var(--gl-space-3);
+  background: var(--gl-color-surface);
+  border: 1px solid var(--gl-color-border);
+  border-radius: 16px;
+}
+
+.gl-feature-3__icon {
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--gl-color-warn);
+}
+
+.gl-feature-3__title {
+  /* gap ícone→título medido: 17px (16px desvia 2 device px → falha worstCell) */
+  margin: 17px 0 var(--gl-space-1);
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: var(--gl-color-ink);
+}
+
+.gl-feature-3__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--gl-color-muted);
+}

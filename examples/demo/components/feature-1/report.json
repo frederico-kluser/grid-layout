@@ -1,0 +1,99 @@
+{
+  "id": "feature-1",
+  "pass": true,
+  "checkedAt": "2026-10-22T23:43:56.889Z",
+  "metrics": {
+    "sizeMismatch": false,
+    "size": [
+      1000,
+      560
+    ],
+    "mae": 0,
+    "rmse": 0,
+    "diffRatio32": 0,
+    "pixelmatchRatio": 0,
+    "edgeDiffRatio32": 0,
+    "edgeEnergyRef": 8.19,
+    "edgeEnergyCand": 8.19,
+    "edgeEnergyRatio": 1,
+    "structuralDistance": 0,
+    "worstCell": {
+      "cell": "A1",
+      "box": [
+        0,
+        0,
+        166,
+        93
+      ],
+      "diffRatio": 0
+    },
+    "hotspots": [],
+    "shiftHint": null,
+    "thresholds": {
+      "structuralDistance": 0.02,
+      "edgeEnergyRatio": [
+        0.95,
+        1.05
+      ],
+      "worstCell": 0.02
+    },
+    "pass": true,
+    "scene": {
+      "ref": {
+        "colorEntropyBits": 0.396,
+        "dominantColorShare": 0.9569,
+        "edgeDensity": 0.04594,
+        "edgeEnergy": 8.19,
+        "luminanceContrast": 0.0211,
+        "transparentShare": 0,
+        "looksBlank": false,
+        "reasons": []
+      },
+      "cand": {
+        "colorEntropyBits": 0.396,
+        "dominantColorShare": 0.9569,
+        "edgeDensity": 0.04594,
+        "edgeEnergy": 8.19,
+        "luminanceContrast": 0.0211,
+        "transparentShare": 0,
+        "looksBlank": false,
+        "reasons": []
+      }
+    },
+    "problems": []
+  },
+  "boxCheck": {
+    "selectorFound": true,
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 500,
+      "height": 280
+    },
+    "expected": {
+      "width": 500,
+      "height": 280
+    },
+    "overflow": {
+      "x": 0,
+      "y": 0
+    },
+    "ok": true,
+    "delta": {
+      "w": 0,
+      "h": 0
+    }
+  },
+  "lint": {
+    "problems": [],
+    "warnings": []
+  },
+  "problems": [],
+  "blockedRequests": [],
+  "artifacts": {
+    "ref": "ref.png",
+    "cand": "cand.png",
+    "diff": "diff.png",
+    "side": "side-by-side.png"
+  }
+}

@@ -263,6 +263,32 @@ export function detectBackdrop(refImg, box) {
   return { hex: toHex(mean), flat: topCount / ring.length >= 0.8 };
 }
 
+// Fundo imediato de um recorte: mediana das 4 quinas (mais fiel que o anel
+// exterior, que pode cruzar vizinhos — os construtores reportaram o desvio).
+export function backdropFromCorners(img) {
+  const samples = [];
+  const corners = [
+    [0, 0], [img.width - 1, 0], [0, img.height - 1], [img.width - 1, img.height - 1],
+  ];
+  for (const [cx, cy] of corners) {
+    for (let dy = -2; dy <= 2; dy++) {
+      for (let dx = -2; dx <= 2; dx++) samples.push(pixel(img, cx + dx, cy + dy));
+    }
+  }
+  const counts = new Map();
+  for (const [rr, gg, bb] of samples) {
+    const key = `${rr >> 3},${gg >> 3},${bb >> 3}`;
+    counts.set(key, (counts.get(key) || 0) + 1);
+  }
+  let topKey = null;
+  let topCount = 0;
+  for (const [k, c] of counts) if (c > topCount) { topCount = c; topKey = k; }
+  const [qr, qg, qb] = topKey.split(',').map(Number);
+  const reps = samples.filter(([rr, gg, bb]) => (rr >> 3) === qr && (gg >> 3) === qg && (bb >> 3) === qb);
+  const mean = [0, 1, 2].map((i) => Math.round(reps.reduce((s, p) => s + p[i], 0) / reps.length));
+  return { hex: toHex(mean), flat: topCount / samples.length >= 0.8 };
+}
+
 // ---------------------------------------------------------------------------
 // Preparação dos pacotes de trabalho (por componente)
 // ---------------------------------------------------------------------------
@@ -305,7 +331,7 @@ export async function prepOne(plan, id, opts = {}) {
   const trivial = isTrivialCrop(refCrop);
 
   // 4. meta.json — contrato medido
-  const backdrop = detectBackdrop(refImg, box);
+  const backdrop = backdropFromCorners(refCrop) || detectBackdrop(refImg, box);
   const { neighbors, gutters } = leafNeighbors(plan, id);
   const tier = leaf.tier || 'standard';
   const th = leaf.thresholds || plan.thresholds || thresholdsFor(tier);

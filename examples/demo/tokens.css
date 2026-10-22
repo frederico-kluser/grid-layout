@@ -1,0 +1,30 @@
+/* tokens.css — valores COMUNS medidos na referência (orquestrador escreve;
+   os componentes usam var(--gl-…) e os subagentes pedem acrescentos em notes.md) */
+:root {
+  /* cores (medição: gl probe colors/palette sobre reference/ref.png) */
+  --gl-color-bg: #f8fafc;        /* hero-bg=200:400 → #f8fafc */
+  --gl-color-surface: #ffffff;   /* surface=400:900 → #ffffff */
+  --gl-color-ink: #0f172a;       /* text=170:300 → #0f172a */
+  --gl-color-primary: #2563eb;   /* primary=250:585 → #2563eb */
+  --gl-color-muted: #64748b;     /* paleta (rótulos) */
+  --gl-color-body: #475569;      /* paleta (corpo) */
+  --gl-color-subtle: #94a3b8;    /* paleta (navegação/rodapé) */
+  --gl-color-border: #e2e8f0;    /* paleta (separadores/bordas) */
+  --gl-color-success: #10b981;   /* paleta (ícone 2) */
+  --gl-color-warn: #f59e0b;      /* paleta (ícone 3) */
+
+  /* tipografia */
+  --gl-font-sans: Arial, sans-serif;
+
+  /* escala de espaçamento (múltiplos de 8 px na referência) */
+  --gl-space-1: 8px;
+  --gl-space-2: 16px;
+  --gl-space-3: 24px;
+  --gl-space-4: 32px;
+
+  /* --- resposta do orquestrador aos pedidos em notes.md (onda de construção) --- */
+  --gl-radius-card: 16px;        /* pedido por feature-1/2/3 */
+  --gl-radius-icon: 12px;        /* pedido por feature-1/2/3 */
+  --gl-color-bg-inverse: #0f172a; /* pedido por footer (rodapé/topbar escuros) */
+  --gl-color-text-muted: #94a3b8; /* pedido por footer/topbar (navegação/rodapé) */
+}

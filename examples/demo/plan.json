@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "reference": { "image": "reference/ref.png", "width": 2880, "height": 1800, "dpr": 2 },
+  "viewport": { "width": 1440, "height": 900 },
+  "stack": "html",
+  "tokens": "tokens.css",
+  "thresholds": { "structuralDistance": 0.02, "edgeEnergyRatio": [0.95, 1.05], "worstCell": 0.02 },
+  "tree": {
+    "id": "page",
+    "type": "col",
+    "box": [0, 0, 2880, 1800],
+    "children": [
+      {
+        "id": "topbar",
+        "type": "leaf",
+        "kind": "ui",
+        "tier": "standard",
+        "box": [0, 0, 2880, 128],
+        "notes": "Barra superior escura (#0f172a): logotipo quadrado azul com marca branca + wordmark NIMBUS, navegacao (Produto · Precos · Docs) em tom claro e avatar circular azul a direita."
+      },
+      {
+        "id": "hero",
+        "type": "leaf",
+        "kind": "ui",
+        "tier": "standard",
+        "box": [0, 128, 2880, 640],
+        "notes": "Hero claro: titulo grande 48px, subtitulo 18px, botao primario azul (180x48 css, raio 10) e link 'Ver demo' azul. Alinhamento a esquerda a 80px css."
+      },
+      {
+        "id": "stats",
+        "type": "leaf",
+        "kind": "ui",
+        "tier": "standard",
+        "box": [0, 768, 2880, 320],
+        "notes": "Faixa branca com 3 estatisticas (valor 36px bold + rotulo 14px) separadas por linhas verticais 1px #e2e8f0."
+      },
+      {
+        "id": "features",
+        "type": "row",
+        "box": [0, 1088, 2880, 560],
+        "children": [
+          {
+            "id": "feature-1",
+            "type": "leaf",
+            "kind": "ui",
+            "tier": "standard",
+            "box": [0, 1088, 1000, 560],
+            "notes": "Cartao 'Deploy instantaneo' (icone azul) sobre fundo claro; a caixa inclui as margens do vao — reproduz a caixa inteira (fundo + cartao). Padrao canonico da familia."
+          },
+          {
+            "id": "feature-2",
+            "type": "leaf",
+            "kind": "ui",
+            "tier": "standard",
+            "box": [1000, 1088, 880, 560],
+            "reuse": "feature-1",
+            "notes": "Cartao 'Escala automatica' (icone verde #10b981); reutiliza o padrao do feature-1 com textos/cores proprios. Caixa inclui as margens do vao."
+          },
+          {
+            "id": "feature-3",
+            "type": "leaf",
+            "kind": "ui",
+            "tier": "standard",
+            "box": [1880, 1088, 1000, 560],
+            "reuse": "feature-1",
+            "notes": "Cartao 'Observabilidade' (icone ambar #f59e0b); reutiliza o padrao do feature-1 com textos/cores proprios. Caixa inclui as margens do vao."
+          }
+        ]
+      },
+      {
+        "id": "footer",
+        "type": "leaf",
+        "kind": "ui",
+        "tier": "standard",
+        "box": [0, 1648, 2880, 152],
+        "notes": "Rodape escuro (#0f172a): copyright a 80px css e 3 links (Privacidade · Termos · Estado) a direita, tom #94a3b8 13px."
+      }
+    ]
+  }
+}

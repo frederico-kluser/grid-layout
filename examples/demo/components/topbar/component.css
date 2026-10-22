@@ -1,0 +1,79 @@
+/* componente topbar — todos os seletores sob .gl-topbar */
+/* Medições (px imagem @dpr2 ÷ 2 = CSS px) — ver notes.md */
+.gl-topbar {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px; /* ref: logo x=48px img; avatar termina a 2832px img */
+  background: #0f172a;
+  font-family: Arial, "Liberation Sans", Helvetica, sans-serif;
+}
+
+.gl-topbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* ref: ink gap logo→NIMBUS = 22px img; box gap ≈ 9.7 CSS */
+}
+
+.gl-topbar__logo {
+  width: 28px; /* ref: 56x56 px img */
+  height: 28px;
+  box-sizing: border-box;
+  border-radius: 6px; /* ref: raio ≈ 12px img */
+  background: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gl-topbar__mark {
+  width: 12px; /* ref: 24x24 px img, centrada (margem 16px img = 8 CSS) */
+  height: 12px;
+  border-radius: 3px; /* ref: raio ≈ 6.2px img (perfil de cobertura medido) */
+  background: #ffffff;
+}
+
+.gl-topbar__wordmark {
+  font-size: 18px; /* ref: cap ink 27px img, largura ink 139px img */
+  font-weight: 700;
+  line-height: normal;
+  color: #ffffff;
+}
+
+.gl-topbar__aside {
+  display: flex;
+  align-items: center;
+  gap: 128.1px; /* ref: Docs-fim→avatar-início ≈ 256.2px img (calibrado: coloca Docs em fase inteira) */
+}
+
+.gl-topbar__nav {
+  display: flex;
+  align-items: center;
+}
+
+.gl-topbar__link {
+  font-size: 14px; /* ref: cap ink 21px img (Arial/Liberation cap 0.688em) */
+  font-weight: 400;
+  line-height: normal;
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+/* gaps de ink entre itens NÃO são uniformes na ref (57 vs 52px img) */
+.gl-topbar__link + .gl-topbar__link {
+  margin-left: 24.4px; /* ref: Precos→Docs box gap (calibrado: mantém Precos na fase exata) */
+}
+
+.gl-topbar__link:nth-child(2) {
+  margin-left: 27px; /* ref: Produto→Precos box gap ≈ 27.0 CSS */
+}
+
+.gl-topbar__avatar {
+  width: 32px; /* ref: 64x64 px img */
+  height: 32px;
+  border-radius: 50%;
+  background: #2563eb;
+}

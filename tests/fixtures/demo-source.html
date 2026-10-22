@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>demo source (ground truth — não mostrar aos construtores)</title>
+<style>
+  html, body { margin: 0; padding: 0; }
+  .page { position: relative; width: 1440px; height: 900px; overflow: hidden; background: #ffffff; font-family: Arial, sans-serif; }
+  .sec { position: absolute; overflow: hidden; }
+  .abs { position: absolute; }
+
+  /* topbar */
+  .topbar { left: 0; top: 0; width: 1440px; height: 64px; background: #0f172a; }
+  .logo { left: 24px; top: 18px; width: 28px; height: 28px; background: #2563eb; border-radius: 6px; }
+  .logo i { position: absolute; left: 8px; top: 8px; width: 12px; height: 12px; background: #ffffff; border-radius: 3px; }
+  .brand { left: 62px; top: 22px; color: #ffffff; font-size: 18px; font-weight: bold; }
+  .nav { top: 24px; color: #94a3b8; font-size: 14px; }
+  .nav1 { left: 1080px; } .nav2 { left: 1156px; } .nav3 { left: 1224px; }
+  .avatar { left: 1384px; top: 16px; width: 32px; height: 32px; background: #2563eb; border-radius: 50%; }
+
+  /* hero */
+  .hero { left: 0; top: 64px; width: 1440px; height: 320px; background: #f8fafc; }
+  .h1 { left: 80px; top: 68px; color: #0f172a; font-size: 48px; font-weight: bold; }
+  .sub { left: 80px; top: 142px; color: #475569; font-size: 18px; }
+  .cta { left: 80px; top: 188px; width: 180px; height: 48px; background: #2563eb; border-radius: 10px; }
+  .cta span { position: absolute; left: 24px; top: 15px; color: #ffffff; font-size: 16px; font-weight: bold; }
+  .demo-link { left: 292px; top: 204px; color: #2563eb; font-size: 16px; font-weight: bold; }
+
+  /* stats */
+  .stats { left: 0; top: 384px; width: 1440px; height: 160px; background: #ffffff; }
+  .val { top: 36px; color: #0f172a; font-size: 36px; font-weight: bold; }
+  .lbl { top: 88px; color: #64748b; font-size: 14px; }
+  .sep { top: 32px; width: 1px; height: 96px; background: #e2e8f0; }
+
+  /* features */
+  .features { left: 0; top: 544px; width: 1440px; height: 280px; background: #f8fafc; }
+  .card { top: 32px; width: 400px; height: 220px; background: #ffffff; border-radius: 16px; border: 1px solid #e2e8f0; }
+  .card .icon { position: absolute; left: 24px; top: 24px; width: 48px; height: 48px; border-radius: 12px; }
+  .card .title { position: absolute; left: 24px; top: 92px; color: #0f172a; font-size: 20px; font-weight: bold; }
+  .card .d1 { position: absolute; left: 24px; top: 128px; color: #64748b; font-size: 14px; }
+  .card .d2 { position: absolute; left: 24px; top: 150px; color: #64748b; font-size: 14px; }
+
+  /* footer */
+  .footer { left: 0; top: 824px; width: 1440px; height: 76px; background: #0f172a; }
+  .copy { left: 80px; top: 31px; color: #94a3b8; font-size: 13px; }
+  .flink { top: 31px; color: #94a3b8; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="sec topbar">
+    <div class="abs logo"><i></i></div>
+    <div class="abs brand">NIMBUS</div>
+    <div class="abs nav nav1">Produto</div>
+    <div class="abs nav nav2">Precos</div>
+    <div class="abs nav nav3">Docs</div>
+    <div class="abs avatar"></div>
+  </div>
+
+  <div class="sec hero">
+    <div class="abs h1">Escale o seu produto sem atrito</div>
+    <div class="abs sub">Infraestrutura pronta para o proximo milhao de utilizadores.</div>
+    <div class="abs cta"><span>Comecar gratis</span></div>
+    <div class="abs demo-link">Ver demo</div>
+  </div>
+
+  <div class="sec stats">
+    <div class="abs val" style="left:80px">12.4k</div>
+    <div class="abs lbl" style="left:80px">utilizadores ativos</div>
+    <div class="abs sep" style="left:520px"></div>
+    <div class="abs val" style="left:560px">99,99%</div>
+    <div class="abs lbl" style="left:560px">uptime</div>
+    <div class="abs sep" style="left:1000px"></div>
+    <div class="abs val" style="left:1040px">180 ms</div>
+    <div class="abs lbl" style="left:1040px">latencia p95</div>
+  </div>
+
+  <div class="sec features">
+    <div class="abs card" style="left:80px">
+      <div class="icon" style="background:#2563eb"></div>
+      <div class="title">Deploy instantaneo</div>
+      <div class="d1">Do commit ao producao em segundos,</div>
+      <div class="d2">sem pipelines frageis.</div>
+    </div>
+    <div class="abs card" style="left:520px">
+      <div class="icon" style="background:#10b981"></div>
+      <div class="title">Escala automatica</div>
+      <div class="d1">Cresce com o trafego e recolhe</div>
+      <div class="d2">quando a procura cai.</div>
+    </div>
+    <div class="abs card" style="left:960px">
+      <div class="icon" style="background:#f59e0b"></div>
+      <div class="title">Observabilidade</div>
+      <div class="d1">Metricas, logs e traces num so</div>
+      <div class="d2">lugar, sem agentes extra.</div>
+    </div>
+  </div>
+
+  <div class="sec footer">
+    <div class="abs copy">(C) 2026 Nimbus Cloud</div>
+    <div class="abs flink" style="left:1150px">Privacidade</div>
+    <div class="abs flink" style="left:1250px">Termos</div>
+    <div class="abs flink" style="left:1330px">Estado</div>
+  </div>
+
+</div>
+</body>
+</html>

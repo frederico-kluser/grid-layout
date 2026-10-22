@@ -1,0 +1,98 @@
+# =============================================================================
+# CI — grid-layout (frederico-kluser/grid-layout)
+#
+# O job agregador chama-se `build` (nome do job = context exigido pelo ruleset
+# .github/rulesets/regras-main.json). Não renomeie sem atualizar o ruleset.
+# Actions fixadas por SHA (formato owner/repo@<sha40> # vX.Y.Z) via
+# `bash scripts/oss-pin-actions.sh` da skill opensource-project.
+# =============================================================================
+
+name: ci
+
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+
+# Privilégio mínimo: o CI só precisa de ler o repositório.
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+
+      - name: Set up toolchain
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: "22"
+
+      - name: Instalar dependências do motor (locked)
+        run: npm ci --ignore-scripts
+        working-directory: skills/grid-layout
+
+      - name: Validação da skill (padrão Agent Skills)
+        run: node scripts/validate-skill.mjs
+        working-directory: skills/grid-layout
+
+      - name: Sintaxe de todo o JavaScript
+        run: |
+          set -e
+          find skills/grid-layout/scripts tests -name '*.mjs' | while read -r f; do
+            node --check "$f"
+          done
+
+      - name: JSON do projeto válidos
+        run: |
+          python3 - <<'PY'
+          import glob, json, sys
+          files = [f for f in glob.glob('**/*.json', recursive=True) if 'node_modules' not in f]
+          bad = 0
+          for f in sorted(files):
+              try:
+                  json.load(open(f, encoding='utf-8'))
+              except Exception as e:
+                  print('JSON ERRO:', f, e); bad = 1
+          print(f'{len(files)} ficheiros JSON verificados')
+          sys.exit(bad)
+          PY
+
+      - name: Commits convencionais (últimos 25)
+        run: |
+          git log --format=%s -n 25 HEAD | while IFS= read -r s; do
+            case "$s" in "Merge "*|"Revert \""*|"fixup!"*|"squash!"*) continue ;; esac
+            python3 - "$s" <<'PY' || exit 1
+          import re, sys
+          s = sys.argv[1]
+          h = re.sub(r'\s+\(#\d+\)$', '', s)
+          pat = re.compile(r'^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\([^)]*\))?!?: .+')
+          if not pat.match(h) or len(h) > 72:
+              print('ERRO: mensagem fora de Conventional Commits:', s); sys.exit(1)
+          print('OK  :', s)
+          PY
+          done
+
+      - name: Varredura de segredos (básica)
+        run: |
+          set -e
+          if grep -rInE '(gh[pousr]_[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|xox[baprs]-[A-Za-z0-9-]{10,}|-----BEGIN (RSA|EC|OPENSSH) PRIVATE KEY)' \
+              --exclude-dir=node_modules --exclude-dir=.git . ; then
+            echo "::error::possível segredo em claro encontrado"
+            exit 1
+          fi
+          echo "varredura limpa"
+
+      - name: Sumário
+        run: echo "### build ✅" >> "$GITHUB_STEP_SUMMARY"

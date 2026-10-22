@@ -15,7 +15,7 @@
     "gl": "node scripts/gl.mjs",
     "doctor": "node scripts/gl.mjs doctor",
     "validate-skill": "node scripts/validate-skill.mjs",
-    "test": "node --test --test-concurrency=1 ../tests/unit/*.test.mjs ../tests/integration/*.test.mjs"
+    "test": "node --test --test-concurrency=1 ../../tests/unit/*.test.mjs ../../tests/integration/*.test.mjs"
   },
   "dependencies": {
     "pixelmatch": "^7.1.0",

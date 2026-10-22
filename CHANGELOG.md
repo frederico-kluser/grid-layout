@@ -10,6 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   at release time (see `cliff.toml` and the release automation in `.github/workflows/`).
 - Compare views: <https://github.com/frederico-kluser/grid-layout/compare/>
 
+## 1.0.0 (2026-10-22)
+
+
+### Features
+
+* skill grid-layout — clonar layouts por imagem com multi-subagentes ([#1](https://github.com/frederico-kluser/grid-layout/issues/1)) ([231f040](https://github.com/frederico-kluser/grid-layout/commit/231f040c20dfeef8c853e763e861d318b6f5538d))
+
 ## [Unreleased]
 
 ### Added

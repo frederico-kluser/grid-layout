@@ -51,8 +51,9 @@ jobs:
       - name: Testes (unit + integração)
         run: |
           mkdir -p test-results
+          # sem aspas: a shell expande os globs (node 20 não os expande sozinho)
           node --test --test-reporter=junit --test-reporter-destination=test-results/junit.xml \
-            "tests/unit/*.test.mjs" "tests/integration/*.test.mjs"
+            tests/unit/*.test.mjs tests/integration/*.test.mjs
 
       - name: Upload test results
         if: always()

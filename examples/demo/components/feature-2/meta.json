@@ -1,0 +1,58 @@
+{
+  "id": "feature-2",
+  "kind": "ui",
+  "tier": "standard",
+  "trivial": false,
+  "box": {
+    "x": 1000,
+    "y": 1088,
+    "w": 880,
+    "h": 560
+  },
+  "cssBox": {
+    "x": 500,
+    "y": 544,
+    "w": 440,
+    "h": 280
+  },
+  "dpr": 2,
+  "cssSize": {
+    "w": 440,
+    "h": 280
+  },
+  "rootClass": "gl-feature-2",
+  "backdrop": {
+    "hex": "#fbfcfd",
+    "flat": false
+  },
+  "thresholds": {
+    "structuralDistance": 0.02,
+    "edgeEnergyRatio": [
+      0.95,
+      1.05
+    ],
+    "worstCell": 0.02
+  },
+  "neighbors": {
+    "left": "feature-1",
+    "right": "feature-3",
+    "top": "stats",
+    "bottom": "footer"
+  },
+  "gutters": {
+    "left": 0,
+    "right": 0,
+    "top": 0,
+    "bottom": 0
+  },
+  "notes": "Cartao 'Escala automatica' (icone verde #10b981); reutiliza o padrao do feature-1 com textos/cores proprios. Caixa inclui as margens do vao.",
+  "gridStepPx": 92,
+  "zoomFactor": 1,
+  "files": {
+    "ref": "ref.png",
+    "refGrid": "ref-grid.png",
+    "refZoom": "ref-zoom.png"
+  },
+  "gl": "/home/ondokai/Agent-Skills/grid-layout/skills/grid-layout/scripts/gl.mjs",
+  "ws": "/home/ondokai/Agent-Skills/grid-layout/examples/demo"
+}

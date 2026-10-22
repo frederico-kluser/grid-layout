@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/frederico-kluser/grid-layout/skills/grid-layout/assets/layout.schema.json",
+  "title": "plan.json — manifesto de decomposição de layout (grid-layout)",
+  "type": "object",
+  "required": ["version", "reference", "tree"],
+  "additionalProperties": true,
+  "properties": {
+    "version": { "const": 1 },
+    "reference": {
+      "type": "object",
+      "required": ["image", "width", "height"],
+      "properties": {
+        "image": { "type": "string", "description": "caminho relativo ao workspace (ex.: reference/ref.png)" },
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 },
+        "dpr": { "type": "number", "minimum": 0.5, "maximum": 4, "default": 1 }
+      }
+    },
+    "viewport": {
+      "type": "object",
+      "description": "viewport CSS da referência (px ÷ dpr)",
+      "properties": {
+        "width": { "type": "number" },
+        "height": { "type": "number" }
+      }
+    },
+    "stack": { "enum": ["html", "react", "vue", "svelte", "solid", "other"] },
+    "tokens": { "type": "string", "description": "ficheiro de tokens partilhados (ex.: tokens.css)" },
+    "pageBackground": { "type": "string", "description": "cor de fundo da página montada (hex)" },
+    "thresholds": {
+      "type": "object",
+      "description": "limiares por omissão (podem ser sobrepostos por folha)",
+      "properties": {
+        "structuralDistance": { "type": "number", "minimum": 0 },
+        "edgeEnergyRatio": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "worstCell": { "type": "number", "minimum": 0 }
+      }
+    },
+    "tree": { "$ref": "#/definitions/node" }
+  },
+  "definitions": {
+    "box": {
+      "type": "array",
+      "items": { "type": "integer" },
+      "minItems": 4,
+      "maxItems": 4,
+      "description": "[x, y, w, h] em píxeis da imagem de referência"
+    },
+    "node": {
+      "type": "object",
+      "required": ["box"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]{0,31}$",
+          "description": "obrigatório em folhas; único em toda a árvore"
+        },
+        "type": { "enum": ["row", "col", "abs", "leaf"] },
+        "box": { "$ref": "#/definitions/box" },
+        "children": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/node" },
+          "description": "row/col têm de particionar a caixa do pai EXATAMENTE; abs permite sobreposição"
+        },
+        "kind": {
+          "enum": ["ui", "text", "photo", "chart", "icon", "svg", "mixed"],
+          "description": "só em folhas; determina tier por omissão e política de ativos"
+        },
+        "tier": {
+          "enum": ["strict", "standard", "loose"],
+          "description": "só em folhas: limiares de aceitação"
+        },
+        "notes": { "type": "string", "description": "contexto para o BRIEF do construtor" },
+        "reuse": {
+          "type": "string",
+          "description": "id da instância canónica (família de elementos repetidos)"
+        }
+      }
+    }
+  }
+}

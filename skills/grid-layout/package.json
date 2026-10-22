@@ -1,0 +1,25 @@
+{
+  "name": "grid-layout-skill-engine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Motor determinístico da skill grid-layout: grelha rotulada, zoom contextual, sondas de píxeis, paridade visual e multi-subagentes.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "gl": "./scripts/gl.mjs"
+  },
+  "scripts": {
+    "gl": "node scripts/gl.mjs",
+    "doctor": "node scripts/gl.mjs doctor",
+    "validate-skill": "node scripts/validate-skill.mjs",
+    "test": "node --test --test-concurrency=1 ../../tests/unit/*.test.mjs ../../tests/integration/*.test.mjs"
+  },
+  "dependencies": {
+    "pixelmatch": "^7.1.0",
+    "playwright-core": "^1.49.0",
+    "pngjs": "^7.0.0"
+  }
+}

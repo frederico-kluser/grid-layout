@@ -1,0 +1,58 @@
+{
+  "id": "stats",
+  "kind": "ui",
+  "tier": "standard",
+  "trivial": false,
+  "box": {
+    "x": 0,
+    "y": 768,
+    "w": 2880,
+    "h": 320
+  },
+  "cssBox": {
+    "x": 0,
+    "y": 384,
+    "w": 1440,
+    "h": 160
+  },
+  "dpr": 2,
+  "cssSize": {
+    "w": 1440,
+    "h": 160
+  },
+  "rootClass": "gl-stats",
+  "backdrop": {
+    "hex": "#f8fafc",
+    "flat": true
+  },
+  "thresholds": {
+    "structuralDistance": 0.02,
+    "edgeEnergyRatio": [
+      0.95,
+      1.05
+    ],
+    "worstCell": 0.02
+  },
+  "neighbors": {
+    "left": null,
+    "right": null,
+    "top": "hero",
+    "bottom": "feature-1"
+  },
+  "gutters": {
+    "left": null,
+    "right": null,
+    "top": 0,
+    "bottom": 0
+  },
+  "notes": "Faixa branca com 3 estatisticas (valor 36px bold + rotulo 14px) separadas por linhas verticais 1px #e2e8f0.",
+  "gridStepPx": 52,
+  "zoomFactor": 1,
+  "files": {
+    "ref": "ref.png",
+    "refGrid": "ref-grid.png",
+    "refZoom": "ref-zoom.png"
+  },
+  "gl": "/home/ondokai/Agent-Skills/grid-layout/skills/grid-layout/scripts/gl.mjs",
+  "ws": "/home/ondokai/Agent-Skills/grid-layout/examples/demo"
+}

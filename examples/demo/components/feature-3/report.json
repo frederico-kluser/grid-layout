@@ -1,0 +1,110 @@
+{
+  "id": "feature-3",
+  "pass": true,
+  "checkedAt": "2026-10-22T23:43:57.560Z",
+  "metrics": {
+    "sizeMismatch": false,
+    "size": [
+      1000,
+      560
+    ],
+    "mae": 0.002,
+    "rmse": 0.49,
+    "diffRatio32": 0,
+    "pixelmatchRatio": 0,
+    "edgeDiffRatio32": 0.0001,
+    "edgeEnergyRef": 7.53,
+    "edgeEnergyCand": 7.54,
+    "edgeEnergyRatio": 1.002,
+    "structuralDistance": 0.0004,
+    "worstCell": {
+      "cell": "D1",
+      "box": [
+        0,
+        280,
+        166,
+        93
+      ],
+      "diffRatio": 0.0024
+    },
+    "hotspots": [
+      {
+        "cell": "D1",
+        "box": [
+          0,
+          280,
+          166,
+          93
+        ],
+        "diffRatio": 0.0024
+      }
+    ],
+    "shiftHint": null,
+    "thresholds": {
+      "structuralDistance": 0.02,
+      "edgeEnergyRatio": [
+        0.95,
+        1.05
+      ],
+      "worstCell": 0.02
+    },
+    "pass": true,
+    "scene": {
+      "ref": {
+        "colorEntropyBits": 0.38,
+        "dominantColorShare": 0.9584,
+        "edgeDensity": 0.04326,
+        "edgeEnergy": 7.53,
+        "luminanceContrast": 0.0211,
+        "transparentShare": 0,
+        "looksBlank": false,
+        "reasons": []
+      },
+      "cand": {
+        "colorEntropyBits": 0.381,
+        "dominantColorShare": 0.9584,
+        "edgeDensity": 0.04332,
+        "edgeEnergy": 7.54,
+        "luminanceContrast": 0.0211,
+        "transparentShare": 0,
+        "looksBlank": false,
+        "reasons": []
+      }
+    },
+    "problems": []
+  },
+  "boxCheck": {
+    "selectorFound": true,
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 500,
+      "height": 280
+    },
+    "expected": {
+      "width": 500,
+      "height": 280
+    },
+    "overflow": {
+      "x": 0,
+      "y": 0
+    },
+    "ok": true,
+    "delta": {
+      "w": 0,
+      "h": 0
+    }
+  },
+  "lint": {
+    "problems": [],
+    "warnings": []
+  },
+  "problems": [],
+  "blockedRequests": [],
+  "artifacts": {
+    "ref": "ref.png",
+    "cand": "cand.png",
+    "diff": "diff.png",
+    "side": "side-by-side.png"
+  }
+}

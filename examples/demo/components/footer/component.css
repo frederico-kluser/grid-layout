@@ -1,0 +1,49 @@
+/* componente footer — todos os seletores sob .gl-footer
+   valores 100% medidos sobre a imagem de referência (sondas gl probe / zoom) */
+.gl-footer {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  /* fundo medido: probe palette → #0f172a (98.9% da região) */
+  background: #0f172a;
+  /* tinta medida: probe runs/palette → #94a3b8 */
+  color: #94a3b8;
+  /* fonte identificada por calibração: Liberation Sans 13px reproduz
+     as 4 caixas de tinta da ref ao píxeis (269x25, 133x20, 85x19, 78x20) */
+  font-family: "Liberation Sans", Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  /* line-height 30 + padding-top 24 → linha-base em y=43.5 CSS (87 px @d2),
+     topo da tinta em y=33.5 CSS (67 px @d2) — igual à ref */
+  line-height: 30px;
+  /* esquerda 80 (ink do copyright em x=80.5), direita 69.5 (fim do ink
+     de "Estado" em x=1370.5) — ambos medidos, assimétricos na referência */
+  padding: 24px 69.5px 22px 80px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.gl-footer__copy {
+  margin: 0;
+}
+
+.gl-footer__links {
+  display: flex;
+  align-items: flex-start;
+}
+
+.gl-footer__link {
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+/* gaps medidos (caixa-a-caixa): 32 px antes de "Termos",
+   37.5 px antes de "Estado" — desiguais na referência, reproduzidos à medida */
+.gl-footer__link + .gl-footer__link {
+  margin-left: 32px;
+}
+
+.gl-footer__link:last-child {
+  margin-left: 37.5px;
+}

@@ -1,0 +1,58 @@
+{
+  "id": "footer",
+  "kind": "ui",
+  "tier": "standard",
+  "trivial": false,
+  "box": {
+    "x": 0,
+    "y": 1648,
+    "w": 2880,
+    "h": 152
+  },
+  "cssBox": {
+    "x": 0,
+    "y": 824,
+    "w": 1440,
+    "h": 76
+  },
+  "dpr": 2,
+  "cssSize": {
+    "w": 1440,
+    "h": 76
+  },
+  "rootClass": "gl-footer",
+  "backdrop": {
+    "hex": "#f8fafc",
+    "flat": true
+  },
+  "thresholds": {
+    "structuralDistance": 0.02,
+    "edgeEnergyRatio": [
+      0.95,
+      1.05
+    ],
+    "worstCell": 0.02
+  },
+  "neighbors": {
+    "left": null,
+    "right": null,
+    "top": "feature-1",
+    "bottom": null
+  },
+  "gutters": {
+    "left": null,
+    "right": null,
+    "top": 0,
+    "bottom": null
+  },
+  "notes": "Rodape escuro (#0f172a): copyright a 80px css e 3 links (Privacidade · Termos · Estado) a direita, tom #94a3b8 13px.",
+  "gridStepPx": 24,
+  "zoomFactor": 1,
+  "files": {
+    "ref": "ref.png",
+    "refGrid": "ref-grid.png",
+    "refZoom": "ref-zoom.png"
+  },
+  "gl": "/home/ondokai/Agent-Skills/grid-layout/skills/grid-layout/scripts/gl.mjs",
+  "ws": "/home/ondokai/Agent-Skills/grid-layout/examples/demo"
+}

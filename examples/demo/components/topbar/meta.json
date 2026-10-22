@@ -1,0 +1,58 @@
+{
+  "id": "topbar",
+  "kind": "ui",
+  "tier": "standard",
+  "trivial": false,
+  "box": {
+    "x": 0,
+    "y": 0,
+    "w": 2880,
+    "h": 128
+  },
+  "cssBox": {
+    "x": 0,
+    "y": 0,
+    "w": 1440,
+    "h": 64
+  },
+  "dpr": 2,
+  "cssSize": {
+    "w": 1440,
+    "h": 64
+  },
+  "rootClass": "gl-topbar",
+  "backdrop": {
+    "hex": "#f8fafc",
+    "flat": true
+  },
+  "thresholds": {
+    "structuralDistance": 0.02,
+    "edgeEnergyRatio": [
+      0.95,
+      1.05
+    ],
+    "worstCell": 0.02
+  },
+  "neighbors": {
+    "left": null,
+    "right": null,
+    "top": null,
+    "bottom": "hero"
+  },
+  "gutters": {
+    "left": null,
+    "right": null,
+    "top": null,
+    "bottom": 0
+  },
+  "notes": "Barra superior escura (#0f172a): logotipo quadrado azul com marca branca + wordmark NIMBUS, navegacao (Produto · Precos · Docs) em tom claro e avatar circular azul a direita.",
+  "gridStepPx": 20,
+  "zoomFactor": 1,
+  "files": {
+    "ref": "ref.png",
+    "refGrid": "ref-grid.png",
+    "refZoom": "ref-zoom.png"
+  },
+  "gl": "/home/ondokai/Agent-Skills/grid-layout/skills/grid-layout/scripts/gl.mjs",
+  "ws": "/home/ondokai/Agent-Skills/grid-layout/examples/demo"
+}

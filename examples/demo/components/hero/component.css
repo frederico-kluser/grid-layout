@@ -1,0 +1,58 @@
+/* componente hero — todos os seletores sob .gl-hero */
+.gl-hero {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 67px 80px 0;
+  background: var(--gl-color-bg);
+  font-family: var(--gl-font-sans);
+}
+
+.gl-hero__title {
+  margin: 0;
+  font-size: 48px;
+  line-height: 57.6px;
+  font-weight: 700;
+  color: var(--gl-color-ink);
+}
+
+.gl-hero__subtitle {
+  margin: 13.6px 0 0;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: var(--gl-color-body);
+}
+
+.gl-hero__actions {
+  display: flex;
+  align-items: center;
+  margin-top: 21.8px;
+}
+
+.gl-hero__cta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  width: 180px;
+  height: 48px;
+  padding-left: 24px;
+  border-radius: 10px;
+  background: var(--gl-color-primary);
+  color: var(--gl-color-surface);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.gl-hero__link {
+  margin-left: 32px;
+  padding-top: 2px;
+  color: var(--gl-color-primary);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+}

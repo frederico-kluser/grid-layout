@@ -1,0 +1,112 @@
+{
+  "label": "caso-b",
+  "dir": "/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-b-sem-skill",
+  "package_json": {
+    "name": "orbit-finance-dashboard",
+    "private": true,
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+      "dev": "vite",
+      "build": "tsc --noEmit && vite build",
+      "preview": "vite preview"
+    },
+    "dependencies": {
+      "@emotion/react": "^11.14.0",
+      "@emotion/styled": "^11.14.1",
+      "@fontsource/roboto": "^5.3.0",
+      "@mui/icons-material": "9.5.0",
+      "@mui/material": "9.5.0",
+      "lucide-react": "^1.61.0",
+      "react": "^19.3.1",
+      "react-dom": "^19.3.1"
+    },
+    "devDependencies": {
+      "@types/react": "^19.3.0",
+      "@types/react-dom": "^19.3.0",
+      "@vitejs/plugin-react": "^6.1.2",
+      "typescript": "^7.0.2",
+      "vite": "^8.3.5"
+    }
+  },
+  "lockfiles": [
+    "pnpm-lock.yaml"
+  ],
+  "readme": true,
+  "source": {
+    "files": 18,
+    "lines_of_code": 2800,
+    "bytes": 85344
+  },
+  "installed": {
+    "mui": "9.5.0",
+    "icons": "9.5.0",
+    "react": "19.3.1",
+    "vite": "8.3.5",
+    "emotion": "11.14.0"
+  },
+  "build": {
+    "cmd": "pnpm build",
+    "seconds": 0.75,
+    "code": 0,
+    "stdout_tail": "vite v8.3.5 building client environment for production...\ntransforming...\n\u2713 2841 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                                       0.93 kB \u2502 gzip:   0.54 kB\ndist/assets/roboto-latin-400-normal-D27F5sTu.woff    21.06 kB\ndist/assets/roboto-latin-500-normal-fsTFPL3E.woff    21.16 kB\ndist/assets/roboto-latin-600-normal-X4S5XP0J.woff    21.20 kB\ndist/assets/roboto-latin-700-normal-YuyVweIx.woff    21.21 kB\ndist/assets/roboto-latin-400-normal-BqEyEoaF.woff2   21.88 kB\ndist/assets/roboto-latin-500-normal-7RbcRiD8.woff2   22.20 kB\ndist/assets/roboto-latin-600-normal-CzqH9ZEY.woff2   22.24 kB\ndist/assets/roboto-latin-700-normal-BZpUvMxY.woff2   22.24 kB\ndist/assets/index-DrGcG0uk.css                        0.87 kB \u2502 gzip:   0.25 kB\ndist/assets/index-C0tbilKC.js                       516.48 kB \u2502 gzip: 160.64 kB\n\n\u2713 built in 186ms\n",
+    "stderr_tail": "$ tsc --noEmit && vite build\n"
+  },
+  "dist": {
+    "exists": true,
+    "files": 11,
+    "bytes": 691500,
+    "js_bytes": 516486,
+    "js_gzip_bytes": 158747,
+    "css_bytes": 873,
+    "css_gzip_bytes": 255
+  },
+  "flags": {
+    "grid_legacy": 0,
+    "input_props_textfield": 0,
+    "autocomplete_renderTags": 0,
+    "menu_list_props": 0,
+    "speeddial_tooltipTitle": 0,
+    "dialog_disableEscapeKeyDown": 0,
+    "grid_item_prop": 0,
+    "system_prop_stack": 0,
+    "system_prop_box_spacing": 0
+  },
+  "imports": {
+    "path_imports": 12,
+    "barrel_mui": 17,
+    "barrel_icons": 0,
+    "path_ratio": 0.414
+  },
+  "usage": {
+    "slotProps": 2,
+    "grid_size": 0,
+    "colorSchemes": 0,
+    "useColorScheme": 0,
+    "CssBaseline": 2,
+    "ThemeProvider": 3,
+    "InitColorSchemeScript": 0,
+    "fontsource_roboto": 4,
+    "styled": 0,
+    "aria_label": 24,
+    "drawer": 3,
+    "useMediaQuery": 0
+  },
+  "viewport_meta": true,
+  "checks": {
+    "mui_v9": true,
+    "build_ok": true,
+    "no_barrel_imports": false,
+    "path_imports_ratio": false,
+    "no_removed_apis": true,
+    "no_system_props": true,
+    "theme_provider_cssbaseline": true,
+    "color_schemes_dark": false,
+    "slot_props": true,
+    "fontsource": true,
+    "grid_v2": true,
+    "a11y_labels": true
+  },
+  "skill_adherence": 75.0,
+  "checks_passed": "9/12"
+}

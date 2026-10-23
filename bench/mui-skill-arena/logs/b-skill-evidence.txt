@@ -1,0 +1,8 @@
+BEFORE removal 2026-10-23T16:06:21-03:00
+lrwxr-xr-x   1 minim1  staff    75 Oct 22 08:55 mui-agent-skill -> /Volumes/Ext2TB/Agent-Skills/mui-agent-skill/.claude/skills/mui-agent-skill
+AFTER removal 2026-10-23T16:06:21-03:00
+mui-agent-skill ABSENT
+confirmed absent
+RESTORED 2026-10-23T16:38:24-03:00
+lrwxr-xr-x   1 minim1  staff    75 Oct 23 16:38 mui-agent-skill -> /Volumes/Ext2TB/Agent-Skills/mui-agent-skill/.claude/skills/mui-agent-skill
+skill link OK

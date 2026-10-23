@@ -1,0 +1,60 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Benchmark — 3 telas AI assistant</title>
+<style>
+:root{--ink:#0f172a;--muted:#5b6478;--line:#e6e8f0;--bg:#f4f5f7;--brand:#4f46e5}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+header{background:linear-gradient(135deg,#1c1917,#3f3f46 55%,#365314);color:#fff;padding:40px 32px 32px}
+header h1{margin:0 0 8px;font-size:30px;letter-spacing:-.02em}header p{margin:0;max-width:950px;opacity:.9}
+main{max-width:1180px;margin:0 auto;padding:24px 18px 60px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:20px 0}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px}
+.card .k{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.card .v{font-size:30px;font-weight:700;margin-top:4px}.card .s{font-size:12px;color:var(--muted)}
+section{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;margin:16px 0}
+h2{font-size:20px;margin:0 0 12px}table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:8px 9px;border-bottom:1px solid var(--line)}
+th{font-weight:600;color:var(--muted)}td.delta{font-weight:700;color:var(--brand)}tr:last-child th,tr:last-child td{border-bottom:0}
+.note{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px;color:#312e81;font-size:13px}
+.figures{display:grid;grid-template-columns:1fr 1fr;gap:16px}figure{margin:0}figure img{width:100%;border:1px solid var(--line);border-radius:12px;display:block}
+figcaption{font-size:12px;color:var(--muted);margin-top:5px}ul{margin:8px 0 0 18px;padding:0}li{margin:4px 0}
+@media(max-width:800px){.figures{grid-template-columns:1fr}}
+</style></head><body>
+<header><h1>Três telas, dois clones — a skill ajuda?</h1>
+<p>Referência: mockup 1024×768 com três iPhones (splash, home, listening). Dois agentes independentes, mesmo modelo e briefing; um com <code>mui-agent-skill</code>, outro sem. Métricas: SSIM, píxeis, bordas, paleta, zonas; engenharia e processo.</p></header>
+<main>
+<div class="cards">
+<div class="card"><div class="k">Referência</div><div class="v">100</div><div class="s">composto · SSIM 100%</div></div>
+<div class="card"><div class="k">caso-a · com skill</div><div class="v">80.0</div><div class="s">SSIM 83.5%</div></div>
+<div class="card"><div class="k">caso-b · sem skill</div><div class="v">80.7</div><div class="s">SSIM 86.3%</div></div>
+<div class="card"><div class="k">Diferença</div><div class="v">+0.7 pp</div><div class="s">a favor de caso-b</div></div>
+</div>
+<section><h2>Fidelidade global</h2><table><thead><tr><th>Métrica</th><th>caso-a</th><th>caso-b</th><th>Δ</th></tr></thead><tbody><tr><th>SSIM</th><td>83.5%</td><td>86.3%</td><td class="delta">-2.8 pp</td></tr><tr><th>Píxeis até Δ16</th><td>83.4%</td><td>77.7%</td><td class="delta">+5.7 pp</td></tr><tr><th>Píxeis até Δ32</th><td>92.7%</td><td>92.8%</td><td class="delta">-0.1 pp</td></tr><tr><th>Píxeis até Δ64</th><td>96.2%</td><td>96.9%</td><td class="delta">-0.7 pp</td></tr><tr><th>Bordas (Sobel)</th><td>53.2%</td><td>57.9%</td><td class="delta">-4.7 pp</td></tr><tr><th>Paleta (similaridade)</th><td>94.4%</td><td>94.1%</td><td class="delta">+0.3 pp</td></tr><tr><th>MAE (menor melhor)</th><td>10.59</td><td>11.26</td><td class="delta">-0.66</td></tr><tr><th>ΔE paleta (menor melhor)</th><td>2.81</td><td>2.96</td><td class="delta">-0.15</td></tr></tbody></table>
+<p class="note">SSIM 1.0 = idêntico. “Pixels até Δ16” = fração de píxeis com maior diferença de canal ≤ 16/255. A referência é o próprio PNG 1024×768; o composto é 50% SSIM + 25% pixels≤Δ16 + 15% bordas + 10% paleta.</p></section>
+<section><h2>Fidelidade por região (SSIM)</h2><table><thead><tr><th>Região</th><th>caso-a</th><th>caso-b</th><th>Δ</th></tr></thead><tbody><tr><th>left_glow</th><td>70.7%</td><td>73.4%</td><td class="delta">-2.6 pp</td></tr><tr><th>left_phone</th><td>82.4%</td><td>83.3%</td><td class="delta">-0.8 pp</td></tr><tr><th>left_star</th><td>86.7%</td><td>84.7%</td><td class="delta">+2.0 pp</td></tr><tr><th>middle_cards</th><td>81.9%</td><td>87.5%</td><td class="delta">-5.6 pp</td></tr><tr><th>middle_fab</th><td>50.4%</td><td>66.5%</td><td class="delta">-16.1 pp</td></tr><tr><th>middle_phone</th><td>73.4%</td><td>79.9%</td><td class="delta">-6.5 pp</td></tr><tr><th>middle_tabs</th><td>71.7%</td><td>79.5%</td><td class="delta">-7.8 pp</td></tr><tr><th>middle_top</th><td>61.8%</td><td>67.1%</td><td class="delta">-5.3 pp</td></tr><tr><th>right_buttons</th><td>80.1%</td><td>80.4%</td><td class="delta">-0.3 pp</td></tr><tr><th>right_orb</th><td>79.5%</td><td>86.4%</td><td class="delta">-6.9 pp</td></tr><tr><th>right_phone</th><td>78.2%</td><td>82.3%</td><td class="delta">-4.1 pp</td></tr><tr><th>right_title</th><td>75.3%</td><td>81.9%</td><td class="delta">-6.6 pp</td></tr><tr><th>right_top</th><td>66.4%</td><td>68.2%</td><td class="delta">-1.8 pp</td></tr></tbody></table></section>
+<section><h2>Como cada um performou</h2><table><thead><tr><th>Engenharia</th><th>caso-a</th><th>caso-b</th></tr></thead><tbody><tr><th>Build OK</th><td>sim</td><td>sim</td></tr><tr><th>Tempo de build</th><td>2.07s</td><td>1.00s</td></tr><tr><th>JS+CSS gzip</th><td>146.2 KiB</td><td>118.9 KiB</td></tr><tr><th>Linhas de código</th><td>1737</td><td>1944</td></tr><tr><th>FCP / LCP</th><td>176 / 176 ms</td><td>180 / 180 ms</td></tr><tr><th>Nós DOM / MUI</th><td>365 / 158</td><td>257 / 25</td></tr><tr><th>axe (violações / nós)</th><td>0 / 0</td><td>1 / 1</td></tr><tr><th>Overflow 390px</th><td>não</td><td>não</td></tr><tr><th>Textos-chave encontrados</th><td>11/11</td><td>11/11</td></tr><tr><th>Tab muda estado</th><td>sim</td><td>sim</td></tr><tr><th>Mic muda estado</th><td>sim</td><td>sim</td></tr><tr><th>Adesão v9</th><td>83.3% (10/12)</td><td>50.0% (6/12)</td></tr><tr><th>Duração</th><td>36.8 min</td><td>34.3 min</td></tr><tr><th>Passos</th><td>115</td><td>148</td></tr><tr><th>Chamadas de ferramenta</th><td>205</td><td>165</td></tr><tr><th>Tokens entrada</th><td>459,619</td><td>357,578</td></tr><tr><th>Tokens saída</th><td>216,136</td><td>220,345</td></tr><tr><th>Chamadas da skill</th><td>1</td><td>0</td></tr><tr><th>Arquivos da skill lidos</th><td>5</td><td>0</td></tr><tr><th>Acessos indevidos</th><td>0</td><td>0</td></tr></tbody></table>
+<h3>Checagens MUI v9</h3><ul><li><strong>caso-a</strong>: color_schemes_dark, slot_props</li><li><strong>caso-b</strong>: no_barrel_imports, path_imports_ratio, theme_provider_cssbaseline, color_schemes_dark, slot_props, fontsource</li></ul>
+<p class="note">Neste alvo <strong>dark-only</strong>, sem alternância de tema e sem formulário/TextField, as checagens <code>color_schemes_dark</code> e <code>slot_props</code> não se aplicam; <code>fontsource</code> no check é específico de Roboto, mas o B usou Inter (fonte equivalente permitida). Falhas reais do B: barrel/path imports e ausência de ThemeProvider/CssBaseline. Aplicáveis: A 10/10, B 6/9.</p></section>
+<section><h2>Leitura</h2>
+<p><strong>Melhor fidelidade: caso-b</strong> — composto 80.7/100, +0.7 pp sobre caso-a.
+SSIM 83.5% vs 86.3%; píxeis ≤Δ16 83.4% vs 77.7%.</p>
+<p><strong>Engenharia:</strong> caso-a 83.3% (10/12) vs
+caso-b 50.0% (6/12); payload 146.2 vs 118.9 KiB.
+Axe: 0 vs 1 violações.</p>
+<p><strong>Semelhança direta:</strong> SSIM 84.7%, píxeis ≤Δ16 72.7%.</p>
+
+<ul>
+<li><strong>Fidelidade:</strong> B foi 0.7 pp melhor no composto e 2.8 pp melhor no SSIM; A foi 5.7 pp melhor em píxeis ≤Δ16 e teve MAE menor. B ganhou em 11 das 13 zonas; A ganhou em <code>left_star</code> (+2,0 pp). O empate técnico é mais correto que “um venceu”.</li>
+<li><strong>Engenharia MUI:</strong> A 10/12 (10/10 aplicáveis) com 0 barrel imports, ThemeProvider/CssBaseline e CSS variables; B 6/12 (6/9 aplicáveis), com 2 barrels MUI + 2 de ícones e <strong>sem ThemeProvider/CssBaseline</strong>. A é o código mais idiomático; B é mais leve (118,9 vs 146,2 KiB gzip).</li>
+<li><strong>Fonte:</strong> A seguiu o padrão da skill (Roboto, fonte default do MUI); B escolheu Inter. A referência é um mockup Apple/SF-like; o Inter do B ficou mais próximo, o que ajuda a explicar parte da vantagem de SSIM do B. É um trade-off real da recomendação de fonte da skill para um design não-Material.</li>
+<li><strong>A11y:</strong> A 0 violações axe; B 1 (<code>aria-prohibited-attr</code>, 1 nó). A verificou a11y e chegou a 0; B também afirma a11y, mas a medição achou 1.</li>
+<li><strong>Processo:</strong> A 36,8 min/676k tokens (1 chamada da skill, 5 arquivos lidos); B 34,3 min/578k (0/0). A carregou mais contexto (max input 291k vs 19k), mas B teve mais passos (148 vs 115) e mais chamadas de bash (103 vs 73).</li>
+<li><strong>Isolamento:</strong> a referência é só o PNG; não há app-fonte, servidor 4180 nem scripts de medição na arena. O B rodou com o symlink da skill removido; <strong>0 chamadas/leituras</strong> e 0 acessos indevidos nas duas sessões.</li>
+</ul>
+</section>
+<section><h2>Imagens</h2><div class="figures"><figure><img src="strip-desktop.png" alt="strip"><figcaption>Referência · caso-a · caso-b</figcaption></figure>
+<figure><img src="captures/caso-a-desktop.png" alt="caso-a"><figcaption>caso-a — 1024×768</figcaption></figure>
+<figure><img src="diff-caso-a.png" alt="diff caso-a"><figcaption>Diferença ×2.4 — caso-a</figcaption></figure>
+
+<figure><img src="captures/caso-b-desktop.png" alt="caso-b"><figcaption>caso-b — 1024×768</figcaption></figure>
+<figure><img src="diff-caso-b.png" alt="diff caso-b"><figcaption>Diferença ×2.4 — caso-b</figcaption></figure>
+</div></section>
+</main></body></html>

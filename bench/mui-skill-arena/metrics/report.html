@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MUI Agent Skill — benchmark de fidelidade</title>
+<style>
+:root{--ink:#0f172a;--muted:#5b6478;--line:#e6e8f0;--bg:#f5f6fa;--brand:#4f46e5;--teal:#0ea5a4;--good:#15803d;--bad:#b91c1c}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+header{background:linear-gradient(135deg,#312e81,#4f46e5 55%,#0f766e);color:#fff;padding:44px 36px 36px}
+header h1{margin:0 0 8px;font-size:30px;letter-spacing:-.02em}header p{margin:0;opacity:.88;max-width:900px}
+main{max-width:1180px;margin:0 auto;padding:28px 20px 60px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:22px 0}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
+.card .k{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.card .v{font-size:30px;font-weight:700;letter-spacing:-.02em;margin-top:4px}
+.card .s{font-size:12px;color:var(--muted)}
+section{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;margin:18px 0}
+h2{font-size:20px;margin:0 0 14px;letter-spacing:-.01em}h3{font-size:15px;margin:18px 0 8px}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+th{font-weight:600;color:var(--muted)}td.delta{font-weight:700;color:var(--brand)}
+tr:last-child th,tr:last-child td{border-bottom:0}
+.note{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px 14px;font-size:13px;color:#312e81}
+.figures{display:grid;grid-template-columns:1fr 1fr;gap:18px}figure{margin:0}figure img{width:100%;border:1px solid var(--line);border-radius:12px;display:block}
+figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+.wide{grid-column:1/-1}
+ul{margin:8px 0 0 18px;padding:0}li{margin:4px 0}
+code{background:#f1f5f9;padding:1px 5px;border-radius:5px;font-size:12px}
+@media(max-width:800px){.figures{grid-template-columns:1fr}header{padding:30px 20px}}
+</style></head><body>
+<header><h1>MUI Agent Skill — o print vira código?</h1>
+<p>Benchmark isolado: a referência foi construída com <code style="background:rgba(255,255,255,.16);color:#fff">mui-agent-skill</code> e capturada em PNG. Dois agentes independentes, mesmo modelo e mesmo briefing, tentaram reconstruí-la — um com a skill, outro sem. Medição por SSIM, píxeis, geometria, paleta, bordas, performance e auditoria do processo.</p></header>
+<main>
+<div class="cards">
+  <div class="card"><div class="k">Referência</div><div class="v">100</div><div class="s">composto · SSIM 100%</div></div>
+  <div class="card"><div class="k">caso-a · com skill</div><div class="v">89.9</div><div class="s">composto · SSIM 88.5%</div></div>
+  <div class="card"><div class="k">caso-b · sem skill</div><div class="v">91.7</div><div class="s">composto · SSIM 90.8%</div></div>
+  <div class="card"><div class="k">Diferença entre clones</div><div class="v">+1.8 pp</div><div class="s">a favor de caso-b</div></div>
+</div>
+
+<section><h2>Quanto nos aproximamos</h2>
+<table><thead><tr><th>Métrica</th><th>caso-a</th><th>caso-b</th><th>Δ (caso-a−caso-b)</th></tr></thead><tbody>
+<tr><th>SSIM</th><td>88.5%</td><td>90.8%</td><td class='delta'>-2.3 pp</td></tr><tr><th>Pixels até Δ16</th><td>94.3%</td><td>95.1%</td><td class='delta'>-0.8 pp</td></tr><tr><th>Pixels até Δ64</th><td>97.3%</td><td>97.6%</td><td class='delta'>-0.3 pp</td></tr><tr><th>Similaridade de bordas</th><td>67.0%</td><td>71.6%</td><td class='delta'>-4.5 pp</td></tr><tr><th>Similaridade de paleta</th><td>99.6%</td><td>99.5%</td><td class='delta'>+0.1 pp</td></tr><tr><th>Geometria (12 âncoras)</th><td>98.5%</td><td>99.5%</td><td class='delta'>-1.0 pp</td></tr><tr><th>SSIM mobile</th><td>85.1%</td><td>86.7%</td><td class='delta'>-1.7 pp</td></tr><tr><th>SSIM mobile (fold)</th><td>91.0%</td><td>88.5%</td><td class='delta'>+2.5 pp</td></tr><tr><th>MAE (0–255)</th><td>4.5</td><td>3.788</td><td class='delta'>+0.71</td></tr><tr><th>ΔE paleta (menor melhor)</th><td>0.21</td><td>0.25</td><td class='delta'>-0.04</td></tr><tr><th>Δ de altura desktop (px)</th><td>0 px</td><td>0 px</td><td class='delta'>—</td></tr>
+</tbody></table>
+<p class="note">SSIM mede estrutura/luminância (1.0 = idêntico). “Pixels até Δ16” é a fração de píxeis cuja maior diferença de canal é ≤ 16/255. Geometria compara 12 âncoras de texto (posição e caixa). A coluna Δ é a diferença em pontos percentuais para métricas 0–1; MAE e ΔE aparecem em unidades próprias (menor é melhor).</p>
+</section>
+
+<section><h2>Fidelidade por região (SSIM)</h2>
+<table><thead><tr><th>Região</th><th>caso-a</th><th>caso-b</th><th>Δ</th></tr></thead><tbody><tr><th>charts</th><td>92.8%</td><td>93.7%</td><td class='delta'>-0.9 pp</td></tr><tr><th>footer</th><td>93.3%</td><td>100.0%</td><td class='delta'>-6.7 pp</td></tr><tr><th>hero</th><td>97.3%</td><td>96.7%</td><td class='delta'>+0.6 pp</td></tr><tr><th>kpis</th><td>83.9%</td><td>94.4%</td><td class='delta'>-10.4 pp</td></tr><tr><th>sidebar</th><td>88.0%</td><td>88.8%</td><td class='delta'>-0.8 pp</td></tr><tr><th>table</th><td>83.2%</td><td>83.4%</td><td class='delta'>-0.1 pp</td></tr><tr><th>topbar</th><td>83.4%</td><td>87.2%</td><td class='delta'>-3.9 pp</td></tr></tbody></table>
+</section>
+
+<section><h2>Como cada um performou</h2>
+<table><thead><tr><th>Engenharia</th><th>caso-a</th><th>caso-b</th></tr></thead><tbody><tr><th>Build OK</th><td>sim</td><td>sim</td></tr><tr><th>Tempo de build</th><td>3.87s</td><td>0.75s</td></tr><tr><th>JS gzip</th><td>170.9 KB</td><td>155.0 KB</td></tr><tr><th>CSS gzip</th><td>25.9 KB</td><td>0.2 KB</td></tr><tr><th>Linhas de código</th><td>2605</td><td>2800</td></tr><tr><th>Arquivos fonte</th><td>16</td><td>18</td></tr><tr><th>Instalação (se rodou)</th><td>—</td><td>—</td></tr><tr><th>FCP</th><td>148 ms</td><td>176 ms</td></tr><tr><th>LCP</th><td>148 ms</td><td>176 ms</td></tr><tr><th>Nós DOM</th><td>604</td><td>527</td></tr><tr><th>Nós MUI</th><td>511</td><td>363</td></tr><tr><th>Erros de console</th><td>0</td><td>0</td></tr><tr><th>Violações axe (nós)</th><td>1 (21)</td><td>0 (0)</td></tr><tr><th>Overflow horizontal 390px</th><td>não</td><td>não</td></tr><tr><th>Toggle de tema funciona</th><td>sim</td><td>sim</td></tr><tr><th>Drawer mobile abre</th><td>sim</td><td>sim</td></tr><tr><th>Adesão à skill (checagens)</th><td>12/12 · 100.0%</td><td>9/12 · 75.0%</td></tr></tbody></table>
+<h3>Checagens de boas práticas MUI v9</h3>
+<ul><li><strong>caso-a</strong>: nenhuma falha</li><li><strong>caso-b</strong>: no_barrel_imports, path_imports_ratio, color_schemes_dark</li></ul>
+<p class="note">Aderência = 12 checagens estáticas: MUI v9, build, path imports, APIs removidas, system props, ThemeProvider/CssBaseline, colorSchemes/useColorScheme, slotProps, Roboto, Grid v2, aria-labels.</p>
+</section>
+
+<section><h2>Processo</h2>
+<table><thead><tr><th>Sinal</th><th>caso-a</th><th>caso-b</th></tr></thead><tbody><tr><th>Duração</th><td>29.6 min</td><td>31.0 min</td></tr><tr><th>Passos do agente</th><td>177</td><td>166</td></tr><tr><th>Chamadas de ferramenta</th><td>210</td><td>207</td></tr><tr><th>Tokens de entrada</th><td>1,218,725</td><td>421,227</td></tr><tr><th>Tokens de saída</th><td>231,005</td><td>336,303</td></tr><tr><th>Chamadas da skill</th><td>1</td><td>0</td></tr><tr><th>Arquivos da skill lidos</th><td>6</td><td>0</td></tr><tr><th>Acessos indevidos (auditoria)</th><td>0</td><td>0</td></tr></tbody></table>
+<p class="note">A auditoria de sessão verifica chamadas da skill, leituras de arquivos e acessos fora da pasta do caso. O caso B rodou com o symlink da skill removido do sistema; a sessão foi auditada para confirmar zero uso.</p>
+</section>
+
+<section><h2>Veredito</h2>
+      <p><strong>Melhor fidelidade: caso-b</strong> — composto 91.7/100,
+      +1.8 pp sobre caso-a. SSIM global 88.5% vs
+      90.8%; píxeis até Δ16 94.3% vs
+      95.1%.</p>
+      <p><strong>Melhor disciplina de engenharia:</strong> caso-a — adesão 100.0%
+      (12/12) contra 75.0%
+      (9/12); caso-a não usa barrel imports e adota CSS variables/colorSchemes.</p>
+      <p><strong>Peso (JS+CSS gzip):</strong> caso-a 196.8 KB vs caso-b 155.3 KB.
+      <strong>A11y (axe):</strong> caso-a 1 violações
+      (21 nós) vs caso-b
+      0 (0 nós).</p>
+      <p><strong>Leitura:</strong> a skill não melhorou a fidelidade visual neste teste — o caso sem skill foi
+      1.8 pp melhor. O ganho mensurável da skill está na <em>forma</em> do código (v9 idiomático,
+      CSS variables, path imports), não no resultado visual nem na acessibilidade. Semelhança direta entre os
+      dois clones: SSIM 86.9% / 93.0% de píxeis até Δ16.</p>
+    
+</section>
+
+<section><h2>Imagens</h2>
+<div class="figures">
+<figure class="wide"><img src="strip-desktop.png" alt="referência, A e B"><figcaption>Referência · caso-a · caso-b (1440px)</figcaption></figure>
+
+        <figure><img src="captures/caso-a-desktop.png" alt="caso-a desktop"><figcaption>caso-a — desktop 1440×1340</figcaption></figure>
+        <figure><img src="captures/caso-a-mobile-fold.png" alt="caso-a mobile"><figcaption>caso-a — mobile 390×844 (fold) · <a href="captures/caso-a-mobile.png">página completa</a></figcaption></figure>
+        <figure><img src="diff-caso-a.png" alt="diff caso-a"><figcaption>Diferença ×2.4 contra a referência — caso-a</figcaption></figure>
+        
+        <figure><img src="captures/caso-b-desktop.png" alt="caso-b desktop"><figcaption>caso-b — desktop 1440×1340</figcaption></figure>
+        <figure><img src="captures/caso-b-mobile-fold.png" alt="caso-b mobile"><figcaption>caso-b — mobile 390×844 (fold) · <a href="captures/caso-b-mobile.png">página completa</a></figcaption></figure>
+        <figure><img src="diff-caso-b.png" alt="diff caso-b"><figcaption>Diferença ×2.4 contra a referência — caso-b</figcaption></figure>
+        
+</div>
+</section>
+
+<section><h2>Achados sobre a skill</h2>
+<ul>
+<li><strong>Ganho real:</strong> adesão às APIs v9 — 100% vs 75%. caso-a usa 0 barrel imports; caso-b usa 17. caso-a usa CSS variables + <code>colorSchemes</code>; caso-b recria o tema com <code>palette.mode</code> (padrão legado).</li>
+<li><strong>Sem ganho visual:</strong> caso-b foi 1.8 pp melhor no composto e 2.3 pp melhor no SSIM. Para um modelo forte, a skill não foi o fator de fidelidade.</li>
+<li><strong>A11y:</strong> caso-b teve 0 violações axe; caso-a teve 21 nós de contraste. A skill pede contraste ≥4.5:1, mas não instrui rodar axe — checar foi decisão do agente.</li>
+<li><strong>Peso:</strong> caso-a 196.8 KB vs caso-b 155.3 KB (JS+CSS gzip). Parte da diferença são subconjuntos de fonte carregados por caso-a.</li>
+<li><strong>Gap de packaging:</strong> o índice da skill referencia <code>quick-actions/</code>, mas a pasta não existe na instalação (só SKILL.md, subskills e references) — caso-a relatou e não pôde usar snippets.</li>
+<li><strong>Nuance de dark mode:</strong> a receita do §2 de <code>theming</code> omite que o seletor default é <code>media</code>; sem <code>colorSchemeSelector</code> (§6.3) o <code>setMode</code> não aplica. caso-a configurou; caso-b usou o padrão legado e também funciona.</li>
+</ul></section>
+
+<section><h2>Método</h2>
+<ul>
+<li>Referência: Vite + React 19 + MUI 9.5.0, construída por mim seguindo a skill; screenshots em 1440×1340 e 390×844 (Chrome headless, DPR 1).</li>
+<li>Os dois agentes receberam o mesmo briefing e o mesmo PNG; a única diferença textual foi a cláusula “use a skill” vs “não use skills”.</li>
+<li>Caso B: symlink <code>~/.dsh/skills/mui-agent-skill</code> removido durante a execução; sessão auditada.</li>
+<li>Métricas de imagem: scikit-image SSIM (gaussiano, σ=1.5), MAE, correspondência de píxeis, correlação Sobel, ΔE de paleta e deltas de caixa de 12 âncoras.</li>
+<li>Compósito: 42% SSIM + 20% pixels≤Δ16 + 12% bordas + 8% paleta + 10% geometria + 8% altura.</li>
+<li>Limitação: texto e dados inventados/diferentes penalizam SSIM mesmo com layout correto; a geometria por âncoras isola parte disso.</li>
+</ul>
+</section>
+</main></body></html>

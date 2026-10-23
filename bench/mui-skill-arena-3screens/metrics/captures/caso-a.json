@@ -1,0 +1,171 @@
+{
+  "label": "caso-a",
+  "url": "http://127.0.0.1:4193",
+  "capturedAt": "2026-10-23T21:44:51.161Z",
+  "desktop": {
+    "perf": {
+      "fcp": 176,
+      "lcp": 176,
+      "domContentLoaded": 42,
+      "load": 42,
+      "transferBytes": 459561,
+      "resourceCount": 3,
+      "domNodes": 365,
+      "muiNodes": 158,
+      "title": "Sona — AI voice assistant, three screens",
+      "h1": [
+        "Sona — AI voice assistant concept in three screens"
+      ],
+      "h2": [],
+      "bodyBg": "rgb(219, 219, 219)",
+      "fontFamily": "-apple-system, \"system-ui\", \"SF Pro Display\", \"SF Pro Text\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+      "robotoLoaded": false,
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "scrollHeight": 768,
+      "bodyScrollWidth": 1024,
+      "bodyScrollHeight": 768
+    },
+    "boxes": {
+      "9:41": {
+        "x": 418,
+        "y": 159,
+        "w": 31,
+        "h": 21,
+        "matches": 2,
+        "partial": false
+      },
+      "All": {
+        "x": 399,
+        "y": 251,
+        "w": 41,
+        "h": 26,
+        "matches": 1,
+        "partial": false
+      },
+      "Scheduled": {
+        "x": 440,
+        "y": 251,
+        "w": 62,
+        "h": 26,
+        "matches": 3,
+        "partial": false
+      },
+      "Favorites": {
+        "x": 502,
+        "y": 251,
+        "w": 54,
+        "h": 26,
+        "matches": 1,
+        "partial": false
+      },
+      "In Projects": {
+        "x": 555,
+        "y": 251,
+        "w": 62,
+        "h": 26,
+        "matches": 1,
+        "partial": false
+      },
+      "Library": {
+        "x": 530,
+        "y": 406,
+        "w": 37,
+        "h": 12,
+        "matches": 2,
+        "partial": false
+      },
+      "Projects": {
+        "x": 413,
+        "y": 551,
+        "w": 44,
+        "h": 12,
+        "matches": 2,
+        "partial": false
+      },
+      "Listening...": {
+        "x": 681,
+        "y": 213,
+        "w": 262,
+        "h": 16,
+        "matches": 1,
+        "partial": false
+      },
+      "How Do You See the Future of Artificial Intelligence?": null,
+      "Artificial Intelligence": null,
+      "How Do You See the Future of": null
+    },
+    "textPresent": [
+      "9:41",
+      "All",
+      "Scheduled",
+      "Favorites",
+      "In Projects",
+      "Library",
+      "Projects",
+      "Listening...",
+      "How Do You See the Future of Artificial Intelligence?",
+      "Artificial Intelligence",
+      "How Do You See the Future of"
+    ],
+    "axe": {
+      "violations": [],
+      "violationCount": 0,
+      "nodeCount": 0
+    },
+    "interactions": {
+      "tab": {
+        "clicked": true,
+        "before": [
+          "All"
+        ],
+        "after": [
+          "Scheduled"
+        ],
+        "changed": true
+      },
+      "mic": {
+        "found": true,
+        "before": "true",
+        "after": "false",
+        "labelBefore": "Pause listening",
+        "labelAfter": "Start listening",
+        "changed": true
+      }
+    },
+    "scrollHeight": 768
+  },
+  "mobile": {
+    "perf": {
+      "fcp": 104,
+      "lcp": 104,
+      "domContentLoaded": 36,
+      "load": 36,
+      "transferBytes": 459561,
+      "resourceCount": 3,
+      "domNodes": 366,
+      "muiNodes": 159,
+      "title": "Sona — AI voice assistant, three screens",
+      "h1": [
+        "Sona — AI voice assistant concept in three screens"
+      ],
+      "h2": [],
+      "bodyBg": "rgb(219, 219, 219)",
+      "fontFamily": "-apple-system, \"system-ui\", \"SF Pro Display\", \"SF Pro Text\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+      "robotoLoaded": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "scrollHeight": 2303,
+      "bodyScrollWidth": 390,
+      "bodyScrollHeight": 2303
+    },
+    "overflowX": false,
+    "axe": {
+      "violations": [],
+      "violationCount": 0,
+      "nodeCount": 0
+    },
+    "scrollHeight": 2303
+  },
+  "consoleErrors": []
+}

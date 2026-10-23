@@ -1,0 +1,10 @@
+The working directory changed from "/Volumes/Ext2TB/Projects/grid-layout" to "/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-b-sem-skill".
+Você é o agente do CASO B de um benchmark isolado, trabalhando em /Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-b-sem-skill.
+
+PRIMEIRO leia `TASK.md` nesta pasta e siga-o integralmente. Resumo: recrie o dashboard do `reference-desktop.png` (1440x1340) e `reference-mobile.png` (390x844) como um app Vite + React 19 + TypeScript + MUI v9.5.0 (`@mui/material@9.5.0`, `@mui/icons-material@9.5.0`), com build `pnpm build` funcionando e `dist/` gerado. Inclua README.
+
+NESTE CASO B NÃO HÁ SKILL: não chame a ferramenta `skill`, não leia nada em `~/.dsh/skills` nem em `/Volumes/Ext2TB/Agent-Skills`, e não tente localizar a skill de MUI — ela foi removida deste ambiente para este caso. Use apenas seu conhecimento próprio e o PNG de referência. Se consultar uma skill, o caso é invalidado.
+
+Regras do benchmark: trabalhe SOMENTE nesta pasta. Não procure o código-fonte da referência (não está disponível nesta arena), não leia `../screenshot`, `../caso-a-com-skill` nem outras pastas. Não rode scripts `oss-*`, não crie commits/branches/PRs, não altere o repositório grid-layout. Pode instalar pacotes npm e usar `node ../tools/shot.mjs <url> .` para se auto-verificar; não altere ../tools.
+
+Trabalhe de forma autônoma até o app estar completo e o build passar. Não pare no meio. No relatório final, informe: versões instaladas, comandos para rodar, o que replicou e diferenças conhecidas. Your parent agent id is "session-37d57333-55d0-40b1-a994-193418d36cdb". Before you finish, send your result to that agent with send_message({ agent_id: "session-37d57333-55d0-40b1-a994-193418d36cdb", message: "<self-contained result>" }). The parent shares your workspace but does not automatically receive your transcript, tool output, or reasoning. Send earlier messages as well when a finding changes what the parent should do next; sending a message does not end your turn.

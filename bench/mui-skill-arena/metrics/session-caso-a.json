@@ -1,0 +1,747 @@
+{
+  "label": "caso-a",
+  "session": "/Users/minim1/.dsh/sessions/--Volumes-Ext2TB-Projects-grid-layout--/c136f96d-884f-4045-a6d0-1c84edf233b6",
+  "duration_seconds": 1778.8,
+  "start": 1792780362030,
+  "end": 1792782140867,
+  "steps": 177,
+  "tool_calls": 210,
+  "tool_names": {
+    "read": 7,
+    "bash": 133,
+    "skill": 1,
+    "read_image": 39,
+    "write": 25,
+    "edit": 1,
+    "job_kill": 2,
+    "send_message": 1,
+    "present": 1
+  },
+  "tokens": {
+    "input_sum": 1218725,
+    "output_sum": 231005,
+    "cache_read_sum": 35497216,
+    "max_input": 337379
+  },
+  "skill_tool_calls": [
+    {
+      "name": "mui-agent-skill"
+    }
+  ],
+  "skill_file_reads": [
+    "/Users/minim1/.dsh/skills/mui-agent-skill/subskills/instalacao/SKILL.md",
+    "/Users/minim1/.dsh/skills/mui-agent-skill/subskills/estrutura-paginas/SKILL.md",
+    "/Users/minim1/.dsh/skills/mui-agent-skill/subskills/theming/SKILL.md",
+    "/Users/minim1/.dsh/skills/mui-agent-skill/subskills/referencias/SKILL.md",
+    "/Users/minim1/.dsh/skills/mui-agent-skill/subskills/componentes/SKILL.md",
+    "/Users/minim1/.dsh/skills/mui-agent-skill/subskills/INDEX.md"
+  ],
+  "forbidden_hits": [
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/TASK.md\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "dsh_skills_path",
+      "tool": "bash",
+      "match": ".dsh/skills",
+      "snippet": "{\"description\": \"List skill directory tree\", \"command\": \"find /Users/minim1/.dsh/skills/mui-agent-skill -maxdepth 3 -type f | head -100; echo '---'; ls /Users/minim1/.dsh/skills/mui-agent-skill\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/reference-desktop.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/reference-mobile.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "dsh_skills_path",
+      "tool": "bash",
+      "match": ".dsh/skills",
+      "snippet": "{\"description\": \"List skill subskills and references files\", \"command\": \"find /Users/minim1/.dsh/skills/mui-agent-skill -type f | sed 's|/Users/minim1/.dsh/skills/mui-agent-skill/||' | sort; echo '--- quick-actions? ---'; ls /Users/minim1/."
+    },
+    {
+      "case": "caso-a",
+      "pattern": "dsh_skills_path",
+      "tool": "bash",
+      "match": ".dsh/skills",
+      "snippet": "{\"description\": \"Read migration reference and check subskill paths\", \"command\": \"ls -la /Users/minim1/.dsh/skills/mui-agent-skill; echo '--- search for subskills dirs relevant to mui skill ---'; ls -d /Users/minim1/.dsh/skills/*/subskills 2"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "dsh_skills_path",
+      "tool": "bash",
+      "match": ".dsh/skills",
+      "snippet": "{\"description\": \"List skill files via resolved symlink\", \"command\": \"find -L /Users/minim1/.dsh/skills/mui-agent-skill -maxdepth 3 -type f | sed 's|.*/mui-agent-skill/||' | sort\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "dsh_skills_path",
+      "tool": "bash",
+      "match": ".dsh/skills",
+      "snippet": "{\"description\": \"Count lines in skill subskill docs\", \"command\": \"wc -l /Users/minim1/.dsh/skills/mui-agent-skill/subskills/*/SKILL.md /Users/minim1/.dsh/skills/mui-agent-skill/subskills/INDEX.md\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "dsh_skills_path",
+      "tool": "read",
+      "match": ".dsh/skills",
+      "snippet": "{\"file_path\": \"/Users/minim1/.dsh/skills/mui-agent-skill/subskills/instalacao/SKILL.md\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "dsh_skills_path",
+      "tool": "read",
+      "match": ".dsh/skills",
+      "snippet": "{\"file_path\": \"/Users/minim1/.dsh/skills/mui-agent-skill/subskills/estrutura-paginas/SKILL.md\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "dsh_skills_path",
+      "tool": "read",
+      "match": ".dsh/skills",
+      "snippet": "{\"file_path\": \"/Users/minim1/.dsh/skills/mui-agent-skill/subskills/theming/SKILL.md\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "dsh_skills_path",
+      "tool": "read",
+      "match": ".dsh/skills",
+      "snippet": "{\"file_path\": \"/Users/minim1/.dsh/skills/mui-agent-skill/subskills/referencias/SKILL.md\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "dsh_skills_path",
+      "tool": "bash",
+      "match": ".dsh/skills",
+      "snippet": "{\"description\": \"Show component guide table of contents\", \"command\": \"grep -n '^#\\\\|^##\\\\|^###' /Users/minim1/.dsh/skills/mui-agent-skill/subskills/componentes/SKILL.md\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "dsh_skills_path",
+      "tool": "read",
+      "match": ".dsh/skills",
+      "snippet": "{\"file_path\": \"/Users/minim1/.dsh/skills/mui-agent-skill/subskills/componentes/SKILL.md\", \"offset\": 250, \"limit\": 300}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/sidebar.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/topbar.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/kpi1.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/revenue-top.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/traffic2x.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/table-top.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/activity-top.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/pagehead.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/footer.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/m-top.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/m-kpi1.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/m-revenue.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/m-traffic.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/m-table.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/m-activity.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/m-footer.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "write",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/package.json\", \"content\": \"{\\n  \\\"name\\\": \\\"orbit-finance-dashboard\\\",\\n  \\\"private\\\": true,\\n  \\\"version\\\": \\\"1.0.0\\\",\\n  \\\"type\\\": \\\"module\\\",\\n  \\"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "write",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/index.html\", \"content\": \"<!doctype html>\\n<html lang=\\\"en\\\">\\n  <head>\\n    <meta charset=\\\"UTF-8\\\" />\\n    <meta name=\\\"viewport\\\" content=\\\"initial"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "write",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/vite.config.ts\", \"content\": \"import { defineConfig } from 'vite';\\nimport react from '@vitejs/plugin-react';\\n\\n// Vite + MUI needs no extra bundler "
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "write",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/tsconfig.json\", \"content\": \"{\\n  \\\"files\\\": [],\\n  \\\"references\\\": [\\n    { \\\"path\\\": \\\"./tsconfig.app.json\\\" },\\n    { \\\"path\\\": \\\"./tsconfig.node.j"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "write",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/tsconfig.app.json\", \"content\": \"{\\n  \\\"compilerOptions\\\": {\\n    \\\"tsBuildInfoFile\\\": \\\"./node_modules/.tmp/tsconfig.app.tsbuildinfo\\\",\\n    \\\"target"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "write",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/tsconfig.node.json\", \"content\": \"{\\n  \\\"compilerOptions\\\": {\\n    \\\"tsBuildInfoFile\\\": \\\"./node_modules/.tmp/tsconfig.node.tsbuildinfo\\\",\\n    \\\"targ"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "edit",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/package.json\", \"old_string\": \"  \\\"devDependencies\\\": {\\n    \\\"@types/react\\\": \\\"^19.2.0\\\",\\n    \\\"@types/react-dom\\\": \\\"^19.2.0\\\",\\n    \\\"@vitejs/plu"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "write",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"content\": \"import { chromium } from '/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/tools/node_modules/playwright/index.mjs';\\nimport { writeFileSync } from 'node:fs';\\n\\nconst base = '/Volumes/Ext2TB/Projects/grid-layout/benc"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "write",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"content\": \"import { chromium } from '/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/tools/node_modules/playwright/index.mjs';\\nimport { writeFileSync } from 'node:fs';\\n\\nconst base = '/Volumes/Ext2TB/Projects/grid-layout/benc"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/word-title-8x.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/word-value-8x.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "write",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"content\": \"import { chromium } from '/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/tools/node_modules/playwright/index.mjs';\\nimport { writeFileSync } from 'node:fs';\\n\\nconst base = '/Volumes/Ext2TB/Projects/grid-layout/benc"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/fontrender-crop.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/traffic-title-8x.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/team-title-8x.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/icon1.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/nav1.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/icon2.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/icon3.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/icon4.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "write",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"content\": \"import { createTheme } from '@mui/material/styles';\\nimport type { PaletteOptions } from '@mui/material/styles';\\n\\nconst fontFamily = ['Roboto', 'Helvetica', 'Arial', 'sans-serif'].join(',');\\n\\nconst lightPalette: PaletteOpti"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "write",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"content\": \"export type NavItem = {\\n  id: string;\\n  label: string;\\n  badge?: string;\\n};\\n\\nexport type NavSection = {\\n  id: string;\\n  label: string;\\n  items: NavItem[];\\n};\\n\\nexport const navigation: NavSection[] = [\\n  {\\n    id: "
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "write",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"content\": \"import * as React from 'react';\\nimport Box from '@mui/material/Box';\\nimport ButtonBase from '@mui/material/ButtonBase';\\nimport Typography from '@mui/material/Typography';\\nimport ArrowForwardRounded from '@mui/icons-material"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "write",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"content\": \"import * as React from 'react';\\nimport Box from '@mui/material/Box';\\nimport ButtonBase from '@mui/material/ButtonBase';\\nimport Divider from '@mui/material/Divider';\\nimport IconButton from '@mui/material/IconButton';\\nimport"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "write",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"content\": \"import * as React from 'react';\\nimport AppBar from '@mui/material/AppBar';\\nimport Badge from '@mui/material/Badge';\\nimport Box from '@mui/material/Box';\\nimport Button from '@mui/material/Button';\\nimport IconButton from '@m"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "write",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"content\": \"import * as React from 'react';\\nimport Box from '@mui/material/Box';\\nimport Card from '@mui/material/Card';\\nimport Stack from '@mui/material/Stack';\\nimport Typography from '@mui/material/Typography';\\nimport AccountBalanceW"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "write",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"content\": \"import * as React from 'react';\\nimport Box from '@mui/material/Box';\\nimport ButtonBase from '@mui/material/ButtonBase';\\nimport Card from '@mui/material/Card';\\nimport IconButton from '@mui/material/IconButton';\\nimport Menu "
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "write",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"content\": \"import * as React from 'react';\\nimport Box from '@mui/material/Box';\\nimport Card from '@mui/material/Card';\\nimport Typography from '@mui/material/Typography';\\nimport { trafficChannels } from '../data';\\nimport { CardLink, D"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "write",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"content\": \"import * as React from 'react';\\nimport Box from '@mui/material/Box';\\nimport Card from '@mui/material/Card';\\nimport Table from '@mui/material/Table';\\nimport TableBody from '@mui/material/TableBody';\\nimport TableCell from '@"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "write",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"content\": \"import * as React from 'react';\\nimport Avatar from '@mui/material/Avatar';\\nimport Box from '@mui/material/Box';\\nimport Card from '@mui/material/Card';\\nimport IconButton from '@mui/material/IconButton';\\nimport Tooltip from "
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "write",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"content\": \"import * as React from 'react';\\nimport Box from '@mui/material/Box';\\nimport Typography from '@mui/material/Typography';\\nimport { LiveIndicator } from './ui';\\n\\nexport function PageHeader() {\\n  return (\\n    <Box\\n      com"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "write",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"content\": \"import * as React from 'react';\\nimport Box from '@mui/material/Box';\\nimport Link from '@mui/material/Link';\\nimport Typography from '@mui/material/Typography';\\n\\nconst footerLinks = ['Documentation', 'Status', 'Privacy'];\\n\\"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "write",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"content\": \"import * as React from 'react';\\nimport Alert from '@mui/material/Alert';\\nimport Box from '@mui/material/Box';\\nimport Snackbar from '@mui/material/Snackbar';\\nimport useMediaQuery from '@mui/material/useMediaQuery';\\nimport {"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "write",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"content\": \"import * as React from 'react';\\nimport * as ReactDOM from 'react-dom/client';\\nimport CssBaseline from '@mui/material/CssBaseline';\\nimport InitColorSchemeScript from '@mui/material/InitColorSchemeScript';\\nimport { ThemeProvi"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/desktop.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/mobile.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/desktop.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/desktop.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/mobile.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/desktop.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/mobile.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/dark-desktop.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/mobile-drawer.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/diff-desktop.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "read_image",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.crops/mobile-drawer2.png\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "dsh_skills_path",
+      "tool": "read",
+      "match": ".dsh/skills",
+      "snippet": "{\"file_path\": \"/Users/minim1/.dsh/skills/mui-agent-skill/subskills/INDEX.md\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "dsh_skills_path",
+      "tool": "bash",
+      "match": ".dsh/skills",
+      "snippet": "{\"description\": \"Read v9 migration guide sections\", \"command\": \"sed -n '1,120p' /Users/minim1/.dsh/skills/mui-agent-skill/references/migracao-v9.md\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "write",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"content\": \"# Orbit Finance \u2014 Financial overview\\n\\nDashboard de finan\u00e7as reconstru\u00eddo a partir de `reference-desktop.png` (1440\u00d71340) e\\n`reference-mobile.png` (390\u00d7844) como uma SPA **Vite + React 19 + TypeScript + Material UI v9**.\\n\\nO"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "write",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"content\": \"node_modules/\\n.crops/\\ndist/\\n*.local\\n.DS_Store\\n\", \"file_path\": \"/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/.gitignore\"}"
+    },
+    {
+      "case": "caso-a",
+      "pattern": "other_case_a",
+      "tool": "send_message",
+      "match": "caso-a-com-skill",
+      "snippet": "{\"agent_id\": \"session-37d57333-55d0-40b1-a994-193418d36cdb\", \"message\": \"CASO A (com skill) \u2014 CONCLU\u00cdDO com sucesso.\\n\\nPasta: /Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill\\n\\nRESULTADO\\n- App Vite + React 19 +"
+    }
+  ],
+  "real_violations": [],
+  "final_text": "## \u2705 Caso A conclu\u00eddo \u2014 build OK, `dist/` gerado\n\nO dashboard **Orbit Finance** foi recriado em `caso-a-com-skill` com Vite + React 19 + TypeScript + MUI v9.5.0. A skill `mui-agent-skill` foi carregada **antes de qualquer c\u00f3digo** e seguida no fluxo completo (detec\u00e7\u00e3o de vers\u00e3o, subskills, Regras Globais 1\u20135).\n\n### Vers\u00f5es instaladas\n\n| Pacote | Vers\u00e3o |\n|---|---|\n| `@mui/material` / `@mui/icons-material` | **9.5.0** |\n| `react` / `react-dom` | 19.3.1 |\n| `@emotion/react` / `@emotion/styled` | 11.14.0 / 11.14.1 |\n| `@fontsource/roboto` | 5.3.0 |\n| `vite` | 7.3.7 |\n| `typescript` | 5.9.3 |\n\n### Comandos\n\n```bash\npnpm install\npnpm dev --port 4190        # http://localhost:4190\npnpm build                  # gera dist/\npnpm preview --port 4190    # serve o dist/ na raiz /\n```\n\nVerifica\u00e7\u00e3o: `node ../tools/shot.mjs http://localhost:4190 .`\n\n### O que foi replicado\n\n- **Desktop 1440\u00d71340 exato** e **mobile 390\u00d72752** (1 px da refer\u00eancia), sem overflow horizontal.\n- Sidebar de 248 px com workspace switcher, nav em 3 grupos, item ativo, badge, upgrade card, storage e usu\u00e1rio.\n- Topbar com breadcrumb, busca `\u2318K`, ranges 7d/30d/90d, sino com badge, tema, Export e New report.\n- 4 KPIs com sparklines SVG, Revenue (\u00e1rea + despesas tracejadas), Traffic sources, tabela sem\u00e2ntica de transa\u00e7\u00f5es, Team activity e footer.\n- Intera\u00e7\u00f5es reais: navega\u00e7\u00e3o selecion\u00e1vel (`aria-current` + breadcrumb), toggle claro/escuro (`colorSchemes` + `useColorScheme`), Drawer `temporary` no mobile, menus, Monthly e snackbars.\n- A11y: 0 bot\u00f5es s\u00f3-\u00edcone sem `aria-label`, tabela com `thead`/`scope=\"col\"`, headings sem saltos, progressbars rotuladas, contraste AA.\n- `dist/` validado em preview de produ\u00e7\u00e3o, sem erros de console.\n\n![Desktop final](desktop.png)\n![Mobile final](mobile.png)\n\n### Skill consultada\n\n`SKILL.md` \u00b7 `subskills/INDEX.md` \u00b7 `instalacao` \u00b7 `estrutura-paginas` \u00b7 `theming` \u00b7 `componentes` \u00b7 `referencias` \u00b7 `references/migracao-v9.md`.\n\n> O diret\u00f3rio `quick-actions/` **n\u00e3o existe** nesta instala\u00e7\u00e3o da skill (s\u00f3 `SKILL.md`, `subskills/` e `references/`), ent\u00e3o n\u00e3o usei snippets prontos \u2014 validei tudo contra as APIs v9 via `tsc -b`.\n\n### Diferen\u00e7as conhecidas\n\n- Curvas dos gr\u00e1ficos e alguns \u00edcones foram derivados visualmente do PNG; pequenos desvios de **1\u20132 px** de rasteriza\u00e7\u00e3o s\u00e3o esperados.\n- Dados est\u00e1ticos, sem backend; actions e links demonstram snackbars.\n- Dark mode \u00e9 uma adi\u00e7\u00e3o (n\u00e3o h\u00e1 refer\u00eancia visual) e, no mobile, o toggle fica no drawer para preservar o topbar do print.\n- O conte\u00fado permanece \u201cFinancial overview\u201d ao selecionar outros itens de navega\u00e7\u00e3o \u2014 s\u00f3 o item e o breadcrumb mudam.\n\nMais detalhes no [README.md](README.md). Nenhum arquivo fora desta pasta foi alterado.",
+  "bash_commands": [
+    "ls -la",
+    "find /Users/minim1/.dsh/skills/mui-agent-skill -maxdepth 3 -type f | head -100; echo '---'; ls /Users/minim1/.dsh/skills/mui-agent-skill",
+    "find /Users/minim1/.dsh/skills/mui-agent-skill -type f | sed 's|/Users/minim1/.dsh/skills/mui-agent-skill/||' | sort; echo '--- quick-actions? ---'; ls /Users/minim1/.dsh/skills/mui-agent-skill/references",
+    "ls -la /Users/minim1/.dsh/skills/mui-agent-skill; echo '--- search for subskills dirs relevant to mui skill ---'; ls -d /Users/minim1/.dsh/skills/*/subskills 2>/dev/null | head; echo '--- read migration head ---'; wc -l /Users/minim1/.dsh/skills/mui-agent-skill/references/migracao-v9.md",
+    "node -v; pnpm -v; python3 -V; python3 -c 'import PIL; print(\"PIL\", PIL.__version__)' 2>&1 | head -2; ls ../tools",
+    "find -L /Users/minim1/.dsh/skills/mui-agent-skill -maxdepth 3 -type f | sed 's|.*/mui-agent-skill/||' | sort",
+    "wc -l /Users/minim1/.dsh/skills/mui-agent-skill/subskills/*/SKILL.md /Users/minim1/.dsh/skills/mui-agent-skill/subskills/INDEX.md",
+    "grep -n '^#\\|^##\\|^###' /Users/minim1/.dsh/skills/mui-agent-skill/subskills/componentes/SKILL.md",
+    "which sips magick convert ffmpeg; echo '---'; ls ../tools/node_modules | head -20; echo '---shot.mjs---'; sed -n 1,120p ../tools/shot.mjs",
+    "pnpm view @mui/material@9.5.0 version 2>&1 | tail -5; pnpm view react version 2>&1 | tail -2",
+    "mkdir -p .crops\nffmpeg -loglevel error -y -i reference-desktop.png -vf \"crop=280:1340:0:0\" .crops/sidebar.png\nffmpeg -loglevel error -y -i reference-desktop.png -vf \"crop=1160:76:280:0\" .crops/topbar.png\nffmpeg -loglevel error -y -i reference-desktop.png -vf \"crop=1160:220:280:160\" .crops/kpis.png\nffmpeg -loglevel error -y -i reference-desktop.png -vf \"crop=760:410:275:392\" .crops/revenue.png\nffmpeg -loglevel error -y -i reference-desktop.png -vf \"crop=390:410:1035:392\" .crops/traffic.png\nffmpeg -loglevel error -y -i reference-desktop.png -vf \"crop=760:440:275:810\" .crops/table.png\nffmpeg -loglevel error -y -i reference-desktop.png -vf \"crop=390:440:1035:810\" .crops/activity.png\nls -la .crops",
+    "ffmpeg -loglevel error -y -i reference-desktop.png -f rawvideo -pix_fmt rgb24 .crops/desktop.raw\nffmpeg -loglevel error -y -i reference-mobile.png -f rawvideo -pix_fmt rgb24 .crops/mobile.raw\npython3 - <<'PY'\nW,H=1440,1340\ndata=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(data[i:i+3])\ndef hx(c): return '#%02x%02x%02x'%c\n# sample common backgrounds\npts={'page_bg':(1200,140),'sidebar_bg':(100,700),'topbar_bg':(600,40),'card_bg':(500,300),'border_sidebar':(254,700),'kpi_icon_blue':(508,217),'kpi_icon_teal':(793,217),'kpi_icon_orange':(1078,217),'kpi_icon_green':(1363,217),'purple_btn':(1350,35),'active_nav':(120,183)}\nfor k,(x,y) in pts.items(): print(k,(x,y),hx(px(x,y)))\n# scan horizontal line y=700 for color changes\nprev=None\nfor x in range(0,320):\n    c=px(x,700)\n    if c!=prev:\n        print('x',x,hx(c))\n        prev=c\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\ndata=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(data[i:i+3])\ndef hx(c): return '#%02x%02x%02x'%c\ndef scan(y,x0,x1,step=1):\n    prev=None; out=[]\n    for x in range(x0,x1,step):\n        c=px(x,y)\n        if c!=prev:\n            out.append((x,hx(c)))\n            prev=c\n    return out\nfor y in [20,60,100,500,900,1000,1200,1300]:\n    print('y',y, scan(y,0,330)[:20])\nprint('--- vertical scan x=700 from 0 to 200 ---')\nprev=None\nfor y in range(0,200):\n    c=px(700,y)\n    if c!=prev:\n        print(y,hx(c)); prev=c\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\ndata=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(data[i:i+3])\ndef hx(c): return '#%02x%02x%02x'%c\ndef runs(y,x0,x1):\n    prev=None;out=[]\n    for x in range(x0,x1):\n        c=px(x,y)\n        if c!=prev:\n            out.append((x,hx(c)))\n            prev=c\n    return out\nprint('KPI row y=300'); print(runs(300,248,1440)[:40]); print('...tail'); print(runs(300,248,1440)[-20:])\nprint('Revenue row y=600'); print(runs(600,248,1440)[:30]); print(runs(600,248,1440)[-15:])\nprint('vertical at x=300 y=160-1340'); \nprev=None\nfor y in range(150,1340):\n    c=px(300,y)\n    if c!=prev:\n        print(y,hx(c)); prev=c\n}",
+    "python3 - <<'PY'\nW,H=1440,1340\ndata=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(data[i:i+3])\ndef hx(c): return '#%02x%02x%02x'%c\ndef runs(y,x0,x1):\n    prev=None;out=[]\n    for x in range(x0,x1):\n        c=px(x,y)\n        if c!=prev:\n            out.append((x,hx(c)))\n            prev=c\n    return out\nprint('KPI row y=300'); print(runs(300,248,1440)[:30]); print('tail', runs(300,248,1440)[-10:])\nprint('Revenue row y=600'); print(runs(600,248,1440)[:25]); print('tail', runs(600,248,1440)[-10:])\nprint('vertical at x=300')\nprev=None\nfor y in range(150,1340):\n    c=px(300,y)\n    if c!=prev:\n        print(y,hx(c)); prev=c\nPY",
+    "ffmpeg -loglevel error -y -i reference-desktop.png -vf \"crop=300:220:275:170,scale=600:440:flags=neighbor\" .crops/kpi1.png\nffmpeg -loglevel error -y -i reference-desktop.png -vf \"crop=760:210:275:390,scale=1520:420:flags=neighbor\" .crops/revenue-top.png\nffmpeg -loglevel error -y -i reference-desktop.png -vf \"crop=390:410:1035:390,scale=780:820:flags=neighbor\" .crops/traffic2x.png\nffmpeg -loglevel error -y -i reference-desktop.png -vf \"crop=760:240:275:810,scale=1520:480:flags=neighbor\" .crops/table-top.png\nffmpeg -loglevel error -y -i reference-desktop.png -vf \"crop=390:240:1035:810,scale=780:480:flags=neighbor\" .crops/activity-top.png",
+    "ffmpeg -loglevel error -y -i reference-desktop.png -vf \"crop=700:100:275:85,scale=1400:200:flags=neighbor\" .crops/pagehead.png\nffmpeg -loglevel error -y -i reference-desktop.png -vf \"crop=1160:90:275:1250,scale=1740:135:flags=neighbor\" .crops/footer.png\nffmpeg -loglevel error -y -i reference-desktop.png -vf \"crop=760:270:275:1220,scale=1520:540:flags=neighbor\" .crops/table-bottom.png",
+    "python3 - <<'PY'\nW,H=390,2752\ndata=open('.crops/mobile.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(data[i:i+3])\ndef hx(c): return '#%02x%02x%02x'%c\n# vertical scan at x=195 to find card boundaries\nprev=None\nfor y in range(0,400):\n    c=px(195,y)\n    if c!=prev:\n        print(y,hx(c)); prev=c\nprint('---- horizontal at y=200 ----')\nprev=None\nfor x in range(0,390):\n    c=px(x,200)\n    if c!=prev:\n        print(x,hx(c)); prev=c\nPY",
+    "python3 - <<'PY'\nW,H=390,2752\ndata=open('.crops/mobile.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(data[i:i+3])\ndef hx(c): return '#%02x%02x%02x'%c\nprev=None\nfor y in range(380,2752):\n    c=px(195,y)\n    if c!=prev:\n        print(y,hx(c)); prev=c\nPY",
+    "ffmpeg -loglevel error -y -i reference-mobile.png -vf \"crop=390:200:0:0,scale=780:400:flags=neighbor\" .crops/m-top.png\nffmpeg -loglevel error -y -i reference-mobile.png -vf \"crop=390:220:0:180,scale=780:440:flags=neighbor\" .crops/m-kpi1.png\nffmpeg -loglevel error -y -i reference-mobile.png -vf \"crop=390:420:0:1000,scale=780:840:flags=neighbor\" .crops/m-revenue.png\nffmpeg -loglevel error -y -i reference-mobile.png -vf \"crop=390:300:0:1470,scale=780:600:flags=neighbor\" .crops/m-traffic.png\nffmpeg -loglevel error -y -i reference-mobile.png -vf \"crop=390:440:0:1800,scale=780:880:flags=neighbor\" .crops/m-table.png",
+    "ffmpeg -loglevel error -y -i reference-mobile.png -vf \"crop=390:440:0:2240,scale=780:880:flags=neighbor\" .crops/m-activity.png\nffmpeg -loglevel error -y -i reference-mobile.png -vf \"crop=390:120:0:2630,scale=780:240:flags=neighbor\" .crops/m-footer.png",
+    "python3 - <<'PY'\nW,H=1440,1340\ndata=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(data[i:i+3])\ndef hx(c): return '#%02x%02x%02x'%c\npts={\n'new_report_btn':(1350,37),'export_border':(1240,37),'search_bg':(750,37),\n'live_dot':(1264,116),'logo_tile_center':(43,37),\n'kpi1_icon_bg':(507,217),'kpi2_icon_bg':(793,217),'kpi3_icon_bg':(1078,217),'kpi4_icon_bg':(1363,217),\n'kpi1_chip_bg':(320,295),'kpi2_chip_bg':(605,295),\n'heading_text':(290,111),'sub_text':(300,140),\n'divider_table':(700,951),'row_divider':(700,1005),\n'traffic_bar_track':(1300,571),'traffic_direct':(1100,571),\n'purple_chart':(800,555),'expense_dash':(600,600),\n'green_paid_bg':(946,962),'pending_bg':(953,1057),'refunded_bg':(958,1152),\n'storage_bar':(50,1182),'storage_track':(200,1182),\n'upgrade_grad_left':(30,650),'upgrade_grad_right':(220,760),\n'avatar_am_bg':(43,1300),\n}\nfor k,(x,y) in pts.items(): print(f'{k:20s}',hx(px(x,y)))\n# text colors: darkest pixels in heading region\nregions={'heading':(280,95,520,125),'subtitle':(280,130,700,150),'kpi_value':(305,235,450,275),'table_name':(345,945,450,965),'muted':(525,1005,555,1025)}\nfor name,(x0,y0,x1,y1) in regions.items():\n    from collections import Counter\n    c=Counter()\n    for y in range(y0,y1):\n        for x in range(x0,x1):\n            c[px(x,y)]+=1\n    common=c.most_common(8)\n    print(name, [(hx(col),n) for col,n in common])\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\ndata=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(data[i:i+3])\ndef hx(c): return '#%02x%02x%02x'%c\ndef runs(y,x0,x1):\n    prev=None;out=[]\n    for x in range(x0,x1):\n        c=px(x,y)\n        if c!=prev:\n            out.append((x,hx(c)))\n            prev=c\n    return out\n# find chip rows: y around 962? scan table area column 990 vertically 900-1200\nprint('rows scan x=960'); print(runs(960,900,960)[:0])\nprev=None\nfor y in range(880,1200):\n    c=px(960,y)\n    if c!=prev:\n        print(y,hx(c)); prev=c\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\ndata=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(data[i:i+3])\ndef hx(c): return '#%02x%02x%02x'%c\ndef runs(y,x0,x1):\n    prev=None;out=[]\n    for x in range(x0,x1):\n        c=px(x,y)\n        if c!=prev:\n            out.append((x,hx(c)))\n            prev=c\n    return out\nfor y in [960,962,970,1075,1170]:\n    print('y',y, runs(y,900,1010))\n# traffic bars: card 1046..1407; bar y? Direct 570? find runs at columns. scan vertical x=1100 430-750\nprev=None\nfor y in range(430,760):\n    c=px(1100,y)\n    if c!=prev:\n        if y>520: print('traffic y',y,hx(c))\n        prev=c\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\ndata=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(data[i:i+3])\ndef hx(c): return '#%02x%02x%02x'%c\nprint('activity x=1070 vertical')\nprev=None\nfor y in range(816,1230):\n    c=px(1070,y)\n    if c!=prev:\n        if c in [(230,232,240),(255,255,255)] or True:\n            print(y,hx(c)); prev=c\nprint('--- gridlines in revenue: scan x=700 y=460..740')\nfor y in range(460,745):\n    c=px(700,y)\n    if c!=(255,255,255):\n        print(y,hx(c))\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\ndata=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(data[i:i+3])\ndef near(c,t,tol=30): return all(abs(a-b)<=tol for a,b in zip(c,t))\npurple=(79,70,229)\ngray=(148,163,184)\nprint('purple line y at month xs, desktop:')\nmonths=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']\nxs=[292,356,421,486,550,615,680,744,809,874,938,1003]\nfor m,x in zip(months,xs):\n    ys=[y for y in range(480,710) if near(px(x,y),purple,40)]\n    ysg=[y for y in range(560,710) if near(px(x,y),gray,15)]\n    print(m,x, ys[:3], ys[-3:] if ys else None, 'gray', ysg[:3])\n# chart bounds dashed line y=532\nrow=[x for x in range(280,1030) if px(x,532)==(239,240,245)]\nprint('dash line y532 x range', min(row), max(row), len(row))\n# x label positions: find dark text columns near y=726\nprint('x labels rows')\nfor y in [720,722,724,726]:\n    cols=[x for x in range(280,1030) if px(x,y)[0]<150]\n    print(y, cols[:10], cols[-10:] if cols else None)\n# mobile chart line extraction\nW2,H2=390,2752\nd2=open('.crops/mobile.raw','rb').read()\ndef px2(x,y):\n    i=(y*W2+x)*3\n    return tuple(d2[i:i+3])\nprint('mobile purple line:')\nfor m,x in zip(months,[40+ i*(350/11) for i in range(12)]):\n    x=int(round(x))\n    ys=[y for y in range(1180,1390) if near(px2(x,y),purple,40)]\n    ysg=[y for y in range(1200,1390) if near(px2(x,y),gray,15)]\n    print(m,x,ys[:2],ys[-2:] if ys else None,'gray',ysg[:2])\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\ndata=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(data[i:i+3])\ndef isp(c,tol=60):\n    return abs(c[0]-79)<tol and abs(c[1]-70)<tol and abs(c[2]-229)<tol\ndef isg(c,tol=18):\n    return abs(c[0]-148)<tol and abs(c[1]-163)<tol and abs(c[2]-184)<tol\n# purple extents across chart\ncols={}\nfor x in range(290,1010):\n    ys=[y for y in range(480,710) if isp(px(x,y))]\n    if ys: cols[x]=(min(ys),max(ys))\nxs=sorted(cols)\nprint('purple x range',xs[0],xs[-1],'samples', [ (x,cols[x]) for x in xs[::40]])\n# group dark label runs at y=726\nruns=[]; inrun=False\nfor x in range(280,1030):\n    dark = any(px(x,y)[0]<120 for y in range(718,732))\n    if dark and not inrun: start=x; inrun=True\n    if not dark and inrun: runs.append((start,x-1)); inrun=False\nprint('label runs',runs)\ncenters=[(a+b)/2 for a,b in runs]\nprint('centers', centers)\nfor c in [int(round(v)) for v in centers]:\n    cands=[x for x in range(c-3,c+4) if x in cols]\n    if cands:\n        ys=[cols[x][0] for x in cands]\n        print('line at',c,sum(ys)/len(ys))\nprint('purple at chart last x', cols[xs[-1]])\n# gray line sample at month centers around 560-700\nfor c in [int(round(v)) for v in centers]:\n    best=None\n    for x in range(c-2,c+3):\n        ys=[y for y in range(560,710) if isg(px(x,y))]\n        if ys: best=(x,ys[0],ys[-1])\n    print('gray',c,best)\nPY",
+    "python3 - <<'PY'\nW,H=390,2752\nd=open('.crops/mobile.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef hx(c): return '#%02x%02x%02x'%c\ndef nonwhite_bounds(y0,y1,x0,x1,thresh=245):\n    xs=[];ys=[]\n    for y in range(y0,y1):\n        for x in range(x0,x1):\n            c=px(x,y)\n            if sum(c)/3<thresh:\n                xs.append(x);ys.append(y)\n    return (min(xs),max(xs),min(ys),max(ys)) if xs else None\nfor name,box in {\n 'title_area':(215,240,16,373),\n 'value_area':(240,290,16,373),\n 'chip_area':(290,330,16,373),\n 'spark':(330,386,16,373),\n 'card1_all':(199,386,16,373),\n 'rev_title':(1035,1065,16,373),\n}.items():\n    print(name, box, nonwhite_bounds(*box))\n# scan one row through title\nfor y in [226,230,250,270,300,350]:\n    xs=[x for x in range(16,374) if sum(px(x,y))/3<200]\n    print('y',y,'first/last',(xs[0],xs[-1]) if xs else None)\n# desktop kpi1 title bounds\nW=1440;d=open('.crops/desktop.raw','rb').read()\ndef p2(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\nfor name,box in {'kpi_title':(200,225,280,546),'kpi_value':(230,275,280,546),'kpi_chip':(280,315,280,546),'spark':(315,360,280,546),'icon':(200,235,450,540)}.items():\n    xs=[];ys=[]\n    for y in range(box[1],box[3]):\n        for x in range(box[0],box[2]):\n            if sum(p2(x,y))/3<235:\n                xs.append(x);ys.append(y)\n    print(name,(min(xs),max(xs),min(ys),max(ys)) if xs else None)\nPY",
+    "python3 - <<'PY'\nW,H=390,2752\nd=open('.crops/mobile.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef bounds(y0,y1,x0=20,x1=370,thr=180):\n    xs=[];ys=[]\n    for y in range(y0,y1):\n        for x in range(x0,x1):\n            c=px(x,y)\n            if (c[0]+c[1]+c[2])/3<thr:\n                xs.append(x);ys.append(y)\n    return (min(xs),max(xs),min(ys),max(ys)) if xs else None\nfor name,box in {\n 'title':(215,240,20,370,180),\n 'value':(240,290,20,370,150),\n 'chip_text':(285,315,20,370,150),\n 'vs_text':(285,315,20,370,200),\n 'sparkline':(330,380,20,370,240),\n}.items():\n    print(name, bounds(*box))\n# icon circle bounds based on purple-ish\nxs=[];ys=[]\nfor y in range(205,245):\n    for x in range(320,370):\n        c=px(x,y)\n        if c!=(255,255,255) and (c[2]-c[0])>6:\n            xs.append(x);ys.append(y)\nprint('icon', (min(xs),max(xs),min(ys),max(ys)))\n# desktop precise\nW=1440;d=open('.crops/desktop.raw','rb').read()\ndef p2(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef b2(y0,y1,x0,x1,thr=170):\n    xs=[];ys=[]\n    for y in range(y0,y1):\n        for x in range(x0,x1):\n            c=p2(x,y)\n            if (c[0]+c[1]+c[2])/3<thr:\n                xs.append(x);ys.append(y)\n    return (min(xs),max(xs),min(ys),max(ys)) if xs else None\nfor name,box in {\n 'kpi_title':(195,225,290,540,200),\n 'kpi_value':(225,275,290,540,120),\n 'kpi_chip':(275,310,290,540,210),\n 'kpi_spark':(310,365,282,545,240),\n 'kpi_icon':(195,240,470,540,250),\n}.items(): print(name,b2(*box))\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\nd=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef hx(c): return '#%02x%02x%02x'%c\n# find dominant saturated colors in each kpi chart area\ncards=[(280,546,'kpi1'),(567,833,'kpi2'),(854,1120,'kpi3'),(1141,1407,'kpi4')]\nfor x0,x1,name in cards:\n    from collections import Counter\n    c=Counter()\n    for y in range(310,360):\n        for x in range(x0+5,x1-5):\n            col=px(x,y)\n            if max(col)-min(col)>30: c[col]+=1\n    print(name, [(hx(k),v) for k,v in c.most_common(6)])\n    # line y at 24 x positions\n    xs=[x0+20+int(i*((x1-x0-40)/23)) for i in range(24)]\n    out=[]\n    for x in xs:\n        ys=[y for y in range(300,365) if max(px(x,y))-min(px(x,y))>25]\n        out.append((x,(ys[0]+ys[-1])//2 if ys else None))\n    print(out)\n# is there fill below line in kpi1? sample\nfor y in [330,340,350,355,360]:\n    print('kpi1 tint y',y, hx(px(400,y)))\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\nd=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef b(y0,y1,x0,x1,thr=140):\n    xs=[];ys=[]\n    for y in range(y0,y1):\n        for x in range(x0,x1):\n            c=px(x,y)\n            if (c[0]+c[1]+c[2])/3<thr:\n                xs.append(x);ys.append(y)\n    return (min(xs),max(xs),min(ys),max(ys)) if xs else None\nprint('rev title', b(410,440,285,700))\nprint('rev subtitle', b(438,465,285,700,190))\nprint('rev value', b(475,520,285,560,100))\nprint('rev link', b(745,780,285,520,190))\nprint('table title', b(830,865,285,700))\nprint('table subtitle', b(858,885,285,700,190))\nprint('table viewall', b(830,865,850,1000,190))\nprint('traffic title', b(410,440,1050,1400))\nprint('activity title', b(830,865,1050,1400))\nprint('page title', b(90,130,270,800,100))\nprint('page sub', b(130,150,270,800,190))\nprint('live', b(100,130,1200,1410,190))\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\nd=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\nfor name,(cx,cy) in {'kpi':(280,180),'rev':(280,396),'traffic':(1046,396)}.items():\n    print(name)\n    for y in range(cy,cy+16):\n        xs=[x for x in range(cx-2,cx+25) if px(x,y)==(230,232,240)]\n        print(y-cy, xs[:1], xs[-1:] if xs else None)\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\nd=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef hx(c): return '#%02x%02x%02x'%c\n# active nav bg vertical extent at x=200\nprev=None\nfor y in range(155,215):\n    c=px(200,y)\n    if c!=prev:\n        print(y,hx(c)); prev=c\nprint('--- upgrade card bounds: scan x=16..247 for purple rows at x=20')\nprev=None\nfor y in range(600,800):\n    c=px(20,y)\n    if c!=prev:\n        print(y,hx(c)); prev=c\nprint('--- storage card top/bottom at x=20')\nprev=None\nfor y in range(1100,1340):\n    c=px(20,y)\n    if c!=prev:\n        print(y,hx(c)); prev=c\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\nd=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\nrows=[]\nfor y in range(0,1340):\n    n=sum(1 for x in range(16,240) if sum(px(x,y))/3<170)\n    rows.append(n)\n# find runs of rows with dark pixels\nruns=[];inrun=False\nfor y,n in enumerate(rows):\n    if n>0 and not inrun: start=y;inrun=True\n    if n==0 and inrun:\n        if y-start>=3: runs.append((start,y-1))\n        inrun=False\nprint(runs)\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\nd=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef hx(c): return '#%02x%02x%02x'%c\nfor y,label in [(183,'active nav'),(90,'switcher'),(1200,'storage'),(1300,'user avatar'),(40,'logo row')]:\n    print(label,y)\n    prev=None\n    for x in range(0,248):\n        c=px(x,y)\n        if c!=prev:\n            if x<30 or x>220: print(' ',x,hx(c))\n            prev=c\n# active bg precise bounds\nxs=[x for x in range(0,248) if px(x,170)==(239,238,253)]\nprint('active bg x',min(xs),max(xs))\nys=[y for y in range(150,215) if px(120,y)==(239,238,253)]\nprint('active bg y',min(ys),max(ys))\n# switcher border\nxs=[x for x in range(0,248) if px(x,100)==(230,232,240)]\nprint('switcher border at y=100 x',xs)\n# upgrade card exact\nxs=[x for x in range(0,248) if px(x,700)!=(255,255,255)]\nprint('upgrade extent y700',min(xs),max(xs))\n# sidebar text left positions\nxs=[]\nfor y in range(176,190):\n    for x in range(16,100):\n        if sum(px(x,y))/3<170: xs.append(x); break\nprint('nav text left',xs)\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\nd=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef hx(c): return '#%02x%02x%02x'%c\n# find border boxes by color scan rows\nfor y in [14,20,36,50,54]:\n    runs=[];prev=None\n    for x in range(248,1440):\n        c=px(x,y)\n        if c!=prev:\n            if prev is not None and (x-start)>1: runs.append((start,x-1,hx(prev)))\n            start=x;prev=c\n    print('y',y, [r for r in runs if r[2] not in ('#ffffff','#f5f6fa')][:30])\nPY",
+    "pnpm install 2>&1 | tail -25",
+    "pnpm install 2>&1 | tail -12; echo \"EXIT:$?\"",
+    "python3 - <<'PY'\nimport json\np='package.json'\nd=json.load(open(p))\nd.pop('pnpm',None)\njson.dump(d,open(p,'w'),indent=2)\nopen(p,'a').write('\\n')\nPY\nprintf 'onlyBuiltDependencies:\\n  - esbuild\\n' > pnpm-workspace.yaml\npnpm install 2>&1 | tail -8; echo \"EXIT:${PIPESTATUS[0]}\"",
+    "pnpm approve-builds --help 2>&1 | head -40; echo '---settings---'; pnpm config list 2>&1 | head -30",
+    "pnpm approve-builds --all 2>&1 | tail -10; echo \"EXIT:$?\"; pnpm install 2>&1 | tail -5; echo \"INSTALL_EXIT:$?\"",
+    "ls node_modules/@fontsource/inter | head -20; ls node_modules/@fontsource/inter/files | grep 'latin-.*normal.woff2' | head -12; echo '---roboto---'; ls node_modules/@fontsource/roboto/files | grep 'latin-.*normal.woff2' | head -8",
+    "node -e \"console.log(require.resolve('playwright',{paths:['../tools']}))\" 2>&1; ls ../tools/node_modules/playwright | head",
+    "node .crops/fontcheck.mjs",
+    "python3 - <<'PY'\nW,H=1440,1340\nd=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef b(y0,y1,x0,x1,thr=170):\n    xs=[];ys=[]\n    for y in range(y0,y1):\n        for x in range(x0,x1):\n            c=px(x,y)\n            if (c[0]+c[1]+c[2])/3<thr:\n                xs.append(x);ys.append(y)\n    return (min(xs),max(xs),min(ys),max(ys),max(xs)-min(xs)+1,max(ys)-min(ys)+1) if xs else None\nprint('kpi title', b(200,230,290,460,200))\nprint('kpi value', b(235,280,290,500,120))\nprint('kpi caption vs', b(280,310,340,520,200))\nprint('page title', b(90,130,270,700,100))\nprint('team activity title', b(835,865,1060,1300,140))\nprint('traffic value', b(475,520,1060,1200,100))\nprint('traffic label sessions', b(475,520,1200,1300,200))\nprint('nav overview', b(170,195,25,230,150))\nPY",
+    "node .crops/fontcheck.mjs",
+    "python3 - <<'PY'\nW,H=1440,1340\nd=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\nfor y0,y1,label in [(136,155,'subtitle'),(95,130,'title')]:\n    xs=[]\n    for y in range(y0,y1):\n        for x in range(270,1000):\n            c=px(x,y)\n            if (c[0]+c[1]+c[2])/3<235:\n                xs.append(x)\n    print(label, min(xs), max(xs), 'width', max(xs)-min(xs)+1)\n# print column projection tail for subtitle\ncols=sorted(set(xs))\nprint(cols[-30:])\n# subtitle row y values\nys=[]\nfor y in range(130,160):\n    for x in range(270,1000):\n        if sum(px(x,y))/3<200: ys.append(y)\nprint('subtitle y',min(ys),max(ys))\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\nd=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef b(y0,y1,x0,x1,thr):\n    xs=[];ys=[]\n    for y in range(y0,y1):\n        for x in range(x0,x1):\n            c=px(x,y)\n            if (c[0]+c[1]+c[2])/3<thr:\n                xs.append(x);ys.append(y)\n    return (min(xs),max(xs),min(ys),max(ys),max(xs)-min(xs)+1,max(ys)-min(ys)+1) if xs else None\nfor thr in (120,180,220,240):\n    print('thr',thr,'rev value', b(470,520,290,600,thr), 'kpi value', b(235,280,290,500,thr), 'traffic value', b(470,520,1060,1200,thr))\nprint('revenue title', b(415,440,290,400,220))\nprint('view all', b(838,865,900,1010,220))\nprint('traffic heading', b(415,440,1060,1200,220))\nprint('table amount', b(950,975,700,850,150))\nprint('status paid', b(948,975,900,1010,150))\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\nd=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef hx(c): return '#%02x%02x%02x'%c\nprev=None\nfor x in range(290,560):\n    c=px(x,495)\n    if c!=prev:\n        print(x,hx(c)); prev=c\nPY\nffmpeg -loglevel error -y -i reference-desktop.png -vf \"crop=220:40:295:478,scale=880:160:flags=neighbor\" .crops/revvalue.png",
+    "python3 - <<'PY'\nW,H=1440,1340\nd=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef words(y0,y1,x0,x1,thr=200,gap=6):\n    cols=set()\n    for y in range(y0,y1):\n        for x in range(x0,x1):\n            c=px(x,y)\n            if (c[0]+c[1]+c[2])/3<thr: cols.add(x)\n    cols=sorted(cols); runs=[]\n    if not cols: return []\n    start=prev=cols[0]\n    for x in cols[1:]:\n        if x-prev>gap:\n            runs.append((start,prev,prev-start+1)); start=x\n        prev=x\n    runs.append((start,prev,prev-start+1))\n    return runs\nprint('rev value row', words(480,510,290,560,200,8))\nprint('traffic value row', words(480,510,1060,1300,200,8))\nprint('kpi value row', words(240,275,290,540,200,8))\nprint('page title', words(95,130,270,700,150,8))\nprint('subtitle', words(135,155,270,800,220,8))\nprint('revenue subtitle', words(445,465,290,700,220,8))\nprint('table header', words(900,920,290,1010,220,8))\nprint('table row1', words(948,980,290,1010,220,10))\nprint('activity row1', words(900,940,1060,1400,200,10))\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\nd=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef words(y0,y1,x0,x1,thr=200,gap=6):\n    cols=set()\n    for y in range(y0,y1):\n        for x in range(x0,x1):\n            c=px(x,y)\n            if (c[0]+c[1]+c[2])/3<thr: cols.add(x)\n    cols=sorted(cols); runs=[]\n    if not cols: return []\n    start=prev=cols[0]\n    for x in cols[1:]:\n        if x-prev>gap:\n            runs.append((start,prev,prev-start+1)); start=x\n        prev=x\n    runs.append((start,prev,prev-start+1))\n    return runs\nprint('rev value row', words(480,510,290,560,200,8))\nprint('traffic value row', words(480,510,1060,1300,200,8))\nprint('kpi value row', words(240,275,290,540,200,8))\nprint('page title', words(95,130,270,700,150,8))\nprint('subtitle', words(135,155,270,800,220,8))\nprint('revenue subtitle', words(445,465,290,700,220,8))\nprint('table header', words(900,920,290,1010,220,8))\nprint('table row1', words(948,980,290,1010,220,10))\nprint('activity row1', words(900,940,1060,1400,200,10))\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\nd=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef bounds(y0,y1,x0,x1,thr=230):\n    xs=[];ys=[]\n    for y in range(y0,y1):\n        for x in range(x0,x1):\n            c=px(x,y)\n            if (c[0]+c[1]+c[2])/3<thr:\n                xs.append(x);ys.append(y)\n    return (min(xs),max(xs),min(ys),max(ys),max(xs)-min(xs)+1,max(ys)-min(ys)+1) if xs else None\nprint('revenue title',bounds(418,440,295,420,230))\nprint('traffic title',bounds(418,440,1060,1250,230))\nprint('recent title',bounds(838,862,295,470,230))\nprint('team title',bounds(838,862,1060,1250,230))\nprint('page title',bounds(97,128,275,700,230))\nprint('subtitle',bounds(134,155,275,700,230))\nprint('kpi title',bounds(205,225,295,430,230))\nprint('value kpi',bounds(238,278,295,470,230))\nprint('revenue value',bounds(480,510,295,380,230))\nprint('traffic value',bounds(478,505,1060,1130,230))\nprint('sessions',bounds(478,505,1170,1250,230))\nPY",
+    "ffmpeg -loglevel error -y -i reference-desktop.png -vf \"crop=245:30:278:98,scale=1960:240:flags=neighbor\" .crops/word-title-8x.png\nffmpeg -loglevel error -y -i reference-desktop.png -vf \"crop=120:34:298:240,scale=960:272:flags=neighbor\" .crops/word-value-8x.png",
+    "node .crops/fontrender.mjs && ffmpeg -loglevel error -y -i .crops/fontrender.png -vf \"crop=1500:480:0:0\" .crops/fontrender-crop.png",
+    "ffmpeg -loglevel error -y -i reference-desktop.png -vf \"crop=130:24:1062:415,scale=1040:192:flags=neighbor\" .crops/traffic-title-8x.png\nffmpeg -loglevel error -y -i reference-desktop.png -vf \"crop=160:24:1062:836,scale=1280:192:flags=neighbor\" .crops/team-title-8x.png",
+    "ffmpeg -loglevel error -y -i reference-desktop.png -vf \"crop=36:36:492:199,scale=288:288:flags=neighbor\" .crops/icon1.png\nffmpeg -loglevel error -y -i reference-desktop.png -vf \"crop=36:36:777:199,scale=288:288:flags=neighbor\" .crops/icon2.png\nffmpeg -loglevel error -y -i reference-desktop.png -vf \"crop=36:36:1062:199,scale=288:288:flags=neighbor\" .crops/icon3.png\nffmpeg -loglevel error -y -i reference-desktop.png -vf \"crop=36:36:1347:199,scale=288:288:flags=neighbor\" .crops/icon4.png\nffmpeg -loglevel error -y -i reference-desktop.png -vf \"crop=380:60:16:160,scale=1140:180:flags=neighbor\" .crops/nav1.png",
+    "python3 - <<'PY'\nW,H=390,2752\nd=open('.crops/mobile.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef hx(c): return '#%02x%02x%02x'%c\n# gridlines at x=100 between 1100 and 1400\nfor y in range(1100,1400):\n    c=px(100,y)\n    if c!= (255,255,255) and c[0]>220 and c[1]>220:\n        print('light',y,hx(c))\n# dark text rows projection in revenue card\nrows=[]\nfor y in range(1017,1409):\n    n=sum(1 for x in range(20,370) if sum(px(x,y))/3<170)\n    rows.append((y,n))\nruns=[];inrun=False\nfor y,n in rows:\n    if n>0 and not inrun: start=y;inrun=True\n    if n==0 and inrun:\n        if y-start>=2: runs.append((start,y-1))\n        inrun=False\nprint('text runs',runs)\n# purple line bounds\nys=[]\nfor y in range(1100,1400):\n    for x in range(20,370):\n        c=px(x,y)\n        if abs(c[0]-79)<50 and abs(c[1]-70)<50 and abs(c[2]-229)<50:\n            ys.append(y)\nprint('purple y',min(ys),max(ys))\n# gridline positions at x=30 (outside fill?) \nprev=None\nfor y in range(1120,1380):\n    c=px(30,y)\n    if c!=prev:\n        if c[0]>230 and c!=(255,255,255): print('grid?',y,hx(c))\n        prev=c\nPY",
+    "python3 - <<'PY'\nW,H=390,2752\nd=open('.crops/mobile.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef words(y0,y1,x0,x1,thr=200,gap=5):\n    cols=set()\n    for y in range(y0,y1):\n        for x in range(x0,x1):\n            c=px(x,y)\n            if (c[0]+c[1]+c[2])/3<thr: cols.add(x)\n    cols=sorted(cols); runs=[]\n    if not cols: return []\n    start=prev=cols[0]\n    for x in cols[1:]:\n        if x-prev>gap: runs.append((start,prev,prev-start+1)); start=x\n        prev=x\n    runs.append((start,prev,prev-start+1))\n    return runs\nprint('x labels', words(1332,1350,16,374,230,8))\nprint('link', words(1365,1385,16,374,230,8))\nprint('value', words(1095,1130,16,374,150,8))\nprint('kpi title', words(222,242,16,374,200,8))\nprint('kpi value', words(250,292,16,374,150,8))\nprint('kpi chip', words(295,320,16,374,200,8))\nprint('traffic title', words(1440,1460,16,374,200,8))\nPY",
+    "python3 - <<'PY'\nW,H=390,2752\nd=open('.crops/mobile.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef hx(c): return '#%02x%02x%02x'%c\nfor y in [1167,1200,1240,1260,1300,1310]:\n    xs=[x for x in range(16,374) if px(x,y)!=(255,255,255)]\n    print(y, (min(xs),max(xs)) if xs else None, hx(px(30,y)) if xs else '')\n# fill extents at y=1300\nprev=None\nfor x in range(16,374):\n    c=px(x,1300)\n    if c!=prev:\n        print(x,hx(c)); prev=c\nPY",
+    "python3 - <<'PY'\nW,H=390,2752\nd=open('.crops/mobile.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef bounds(y0,y1,x0=20,x1=370,thr=200):\n    xs=[];ys=[]\n    for y in range(y0,y1):\n        for x in range(x0,x1):\n            c=px(x,y)\n            if (c[0]+c[1]+c[2])/3<thr: xs.append(x);ys.append(y)\n    return (min(xs),max(xs),min(ys),max(ys)) if xs else None\n# find text rows per card and first x\nfor top,bottom,name in [(1017,1408,'revenue'),(1425,1790,'traffic'),(1807,2237,'table'),(2254,2634,'activity'),(199,386,'kpi1')]:\n    print('==',name)\n    inrun=False;runs=[]\n    for y in range(top,bottom):\n        n=sum(1 for x in range(20,370) if sum(px(x,y))/3<160)\n        if n>0 and not inrun: start=y;inrun=True\n        if n==0 and inrun:\n            if y-start>=2:\n                b=bounds(start,y,20,370,200)\n                runs.append((start,y-1,b))\n            inrun=False\n    for r in runs[:8]: print(r)\nPY",
+    "python3 - <<'PY'\nW,H=390,2752\nd=open('.crops/mobile.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef bounds(y0,y1,x0,x1,thr=200):\n    xs=[];ys=[]\n    for y in range(y0,y1):\n        for x in range(x0,x1):\n            c=px(x,y)\n            if (c[0]+c[1]+c[2])/3<thr: xs.append(x);ys.append(y)\n    return (min(xs),max(xs),min(ys),max(ys)) if xs else None\nprint('h1',bounds(80,125,0,390,150))\nprint('subtitle',bounds(120,145,0,390,220))\nprint('live',bounds(145,180,0,390,220))\n# topbar items row\nprint('topbar',bounds(0,60,0,390,240))\n# footer\nprint('footer1',bounds(2680,2710,0,390,220))\nprint('footer2',bounds(2710,2740,0,390,220))\n# activity link\nprint('activity link',bounds(2590,2620,0,390,220))\nPY",
+    "for i in MenuRounded SearchRounded NotificationsNoneRounded DarkModeOutlined LightModeOutlined FileDownloadOutlined AddRounded ChevronRightRounded UnfoldMoreRounded DashboardOutlined ReceiptLongOutlined QueryStatsOutlined DescriptionOutlined PeopleAltOutlined InsertChartOutlined CalendarMonthOutlined SettingsOutlined HelpOutlineRounded ArrowForwardRounded MoreHorizRounded AccountBalanceWalletOutlined GroupsOutlined PercentRounded TrendingDownRounded WalletOutlined PaymentsOutlined SpaceDashboardOutlined EventNoteOutlined; do test -f node_modules/@mui/icons-material/$i.js && echo \"OK $i\" || echo \"MISSING $i\"; done",
+    "for i in ShowChartRounded InsightsOutlined TimelineOutlined StackedLineChartOutlined ArrowOutwardRounded NorthEastRounded SouthRounded; do test -f node_modules/@mui/icons-material/$i.js && echo \"OK $i\" || echo \"MISSING $i\"; done",
+    "python3 - <<'PY'\nW,H=1440,1340\nd=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef isp(c): return abs(c[0]-79)<70 and abs(c[1]-70)<70 and abs(c[2]-229)<70\nfor x in range(830,1004,4):\n    ys=[y for y in range(520,650) if isp(px(x,y))]\n    print(x, ys[:2], ys[-2:] if ys else None)\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\nd=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef words(y0,y1,x0,x1,thr=200,gap=8):\n    cols=set()\n    for y in range(y0,y1):\n        for x in range(x0,x1):\n            c=px(x,y)\n            if (c[0]+c[1]+c[2])/3<thr: cols.add(x)\n    cols=sorted(cols);runs=[]\n    if not cols:return []\n    s=p=cols[0]\n    for x in cols[1:]:\n        if x-p>gap:runs.append((s,p,p-s+1));s=x\n        p=x\n    runs.append((s,p,p-s+1));return runs\nprint('rev link',words(748,775,285,550,220))\nprint('traffic link',words(748,775,1055,1300,220))\nprint('table view',words(840,865,900,1010,220))\nprint('activity link',words(1155,1185,1055,1300,220))\nprint('activity more',words(838,860,1350,1400,220))\nprint('card subtitle activity',words(862,890,1055,1390,220))\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\nd=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef words(y0,y1,x0,x1,thr=200,gap=8):\n    cols=set()\n    for y in range(y0,y1):\n        for x in range(x0,x1):\n            c=px(x,y)\n            if (c[0]+c[1]+c[2])/3<thr: cols.add(x)\n    cols=sorted(cols);runs=[]\n    if not cols:return []\n    s=p=cols[0]\n    for x in cols[1:]:\n        if x-p>gap:runs.append((s,p,p-s+1));s=x\n        p=x\n    runs.append((s,p,p-s+1));return runs\nprint(words(1150,1200,1055,1300,220))\n# activity row names / timestamps positions\nprint('row1',words(905,940,1055,1390,200))\nprint('row2',words(975,1015,1055,1390,200))\n# table header y\nprint('table header',words(896,922,290,1010,220))\nprint('table row1',words(948,985,290,1010,220,12))\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\nd=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef hx(c): return '#%02x%02x%02x'%c\nfor y in [25,30,37,45]:\n    print('y',y)\n    prev=None\n    for x in range(190,248):\n        c=px(x,y)\n        if c!=prev:\n            print(' ',x,hx(c));prev=c\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\nd=open('.crops/desktop.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef hx(c): return '#%02x%02x%02x'%c\n# classify non-white pixels at y=36\nfor y in [18,22,36,52,56]:\n    print('--- y',y)\n    prev=None;start=None\n    for x in range(248,1440):\n        c=px(x,y)\n        kind = 'white' if c==(255,255,255) else ('bg' if c[0]>235 and c[1]>235 else 'ink')\n        if kind!=prev:\n            if prev and prev!='white': print(prev,start,x-1, hx(px((start+x-1)//2,y)))\n            start=x;prev=kind\n    if prev and prev!='white': print(prev,start,1439,hx(px((start+1439)//2,y)))\nPY",
+    "python3 - <<'PY'\nfrom pathlib import Path\np=Path('src/components/Sidebar.tsx')\ns=p.read_text()\ns=s.replace(\"import Divider from '@mui/material/Divider';\\n\", \"import Drawer from '@mui/material/Drawer';\\n\")\nstart=s.index('export function MobileSidebar(')\nend=s.index('export function SidebarDivider(')\nnew='''export function MobileSidebar({\n  open,\n  onClose,\n  activeItem,\n  onSelect,\n}: {\n  open: boolean;\n  onClose: () => void;\n  activeItem: string;\n  onSelect: (item: NavItem) => void;\n}) {\n  return (\n    <Drawer\n      anchor=\"left\"\n      open={open}\n      onClose={onClose}\n      ModalProps={{ keepMounted: true }}\n      aria-label=\"Navigation drawer\"\n      sx={{\n        zIndex: (theme) => theme.zIndex.drawer + 1,\n        '& .MuiDrawer-paper': {\n          width: 288,\n          maxWidth: '82vw',\n          boxSizing: 'border-box',\n          backgroundColor: 'background.paper',\n          borderRight: '1px solid',\n          borderColor: 'divider',\n          px: 2,\n          pt: 2.5,\n          pb: 0,\n          overflowY: 'auto',\n        },\n      }}\n    >\n      <SidebarContent activeItem={activeItem} onSelect={onSelect} onNavigate={onClose} />\n    </Drawer>\n  );\n}\n'''\ns=s[:start]+new+s[end:]\ns=s.replace('export function SidebarDivider() {\\n  return <Divider />;\\n}\\n','')\np.write_text(s)\nPY",
+    "grep -n \"slotProps\\|inputProps\" node_modules/@mui/material/InputBase/InputBase.d.ts | head -30; echo '--- TextField ---'; grep -n \"slotProps\\|inputProps\" node_modules/@mui/material/TextField/TextField.d.ts | head -20; echo '--- Drawer ---'; grep -n \"slotProps\" node_modules/@mui/material/Drawer/Drawer.d.ts | head",
+    "sed -n '150,200p' node_modules/@mui/material/InputBase/InputBase.d.ts",
+    "python3 - <<'PY'\nW,H=390,2752\nd=open('.crops/mobile.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef words(y0,y1,x0,x1,thr=210,gap=8):\n    cols=set()\n    for y in range(y0,y1):\n        for x in range(x0,x1):\n            c=px(x,y)\n            if (c[0]+c[1]+c[2])/3<thr: cols.add(x)\n    cols=sorted(cols);runs=[]\n    if not cols:return []\n    s=p=cols[0]\n    for x in cols[1:]:\n        if x-p>gap:runs.append((s,p,p-s+1));s=x\n        p=x\n    runs.append((s,p,p-s+1));return runs\nprint('table header',words(1920,1940,16,374,210,9))\n# chips row1 (paid) find colored bg bounds y 1980-2010\ndef colored(y0,y1):\n    xs=[];ys=[]\n    for y in range(y0,y1):\n        for x in range(16,374):\n            c=px(x,y)\n            if max(c)-min(c)>12 and c!=(255,255,255):\n                xs.append(x);ys.append(y)\n    return (min(xs),max(xs),min(ys),max(ys)) if xs else None\nprint('paid chip',colored(1980,2010))\nprint('pending chip',colored(2085,2115))\nprint('refund chip',colored(2190,2220))\nprint('amounts',words(1960,2000,180,290,210,10))\nPY",
+    "python3 - <<'PY'\nW,H=390,2752\nd=open('.crops/mobile.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef hx(c): return '#%02x%02x%02x'%c\nfor y0,y1,name in [(1980,2010,'paid'),(2085,2115,'pending'),(2190,2220,'refund')]:\n    xs=[];ys=[]\n    for y in range(y0,y1):\n        for x in range(280,370):\n            c=px(x,y)\n            if c!=(255,255,255) and min(c)>180:\n                xs.append(x);ys.append(y)\n    print(name, (min(xs),max(xs),min(ys),max(ys)) if xs else None)\n    if xs:\n        y=(min(ys)+max(ys))//2\n        prev=None\n        out=[]\n        for x in range(280,370):\n            c=px(x,y)\n            if c!=prev: out.append((x,hx(c)));prev=c\n        print(out[:8], out[-4:])\nPY",
+    "ls node_modules/@mui/material/InitColorSchemeScript* 2>/dev/null; ls node_modules/@mui/material | grep -i init; grep -n \"defaultMode\\|attribute\" node_modules/@mui/material/InitColorSchemeScript/InitColorSchemeScript.d.ts | head -20",
+    "sed -n '1,80p' node_modules/@mui/material/InitColorSchemeScript/InitColorSchemeScript.d.ts",
+    "pnpm build 2>&1 | tail -40",
+    "python3 - <<'PY'\nfrom pathlib import Path\n# remove unused React imports\nfor f in ['src/components/ActivityCard.tsx','src/components/Footer.tsx','src/components/PageHeader.tsx','src/components/TrafficCard.tsx','src/components/TransactionsCard.tsx']:\n    p=Path(f); s=p.read_text()\n    s=s.replace(\"import * as React from 'react';\\n\",'')\n    p.write_text(s)\n# Stack alignItems -> sx\nfor f in ['src/components/KpiGrid.tsx','src/components/Topbar.tsx']:\n    p=Path(f); s=p.read_text()\n    s=s.replace('<Stack direction=\"row\" alignItems=\"center\" spacing={1} sx={{ mt: 1.25, minWidth: 0 }}>',\n                '<Stack direction=\"row\" spacing={1} sx={{ mt: 1.25, minWidth: 0, alignItems: \\'center\\' }}>')\n    s=s.replace('<Stack direction=\"row\" alignItems=\"center\" sx={{ gap: { xs: 0.5, md: 1 } }}>',\n                '<Stack direction=\"row\" sx={{ gap: { xs: 0.5, md: 1 }, alignItems: \\'center\\' }}>')\n    p.write_text(s)\nPath('src/vite-env.d.ts').write_text('/// <reference types=\"vite/client\" />\\n')\nPY\npnpm build 2>&1 | tail -30",
+    "pnpm dev --port 4190 --host 127.0.0.1",
+    "sleep 3; curl -s -o /dev/null -w '%{http_code}\\n' http://127.0.0.1:4190; node ../tools/shot.mjs http://127.0.0.1:4190 . 2>&1 | tail -20",
+    "ffmpeg -loglevel error -y -i desktop.png -f rawvideo -pix_fmt rgb24 .crops/ours.raw\npython3 - <<'PY'\nW,H=1440,1340\nd=open('.crops/ours.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef hx(c): return '#%02x%02x%02x'%c\ndef words(y0,y1,x0,x1,thr=200,gap=8):\n    cols=set()\n    for y in range(y0,y1):\n        for x in range(x0,x1):\n            c=px(x,y)\n            if (c[0]+c[1]+c[2])/3<thr: cols.add(x)\n    cols=sorted(cols);runs=[]\n    if not cols:return []\n    s=p=cols[0]\n    for x in cols[1:]:\n        if x-p>gap:runs.append((s,p,p-s+1));s=x\n        p=x\n    runs.append((s,p,p-s+1));return runs\nprint('page title',words(80,140,270,700,150))\n# KPI card boundaries vertical/horizontal\nprint('kpi1 title',words(200,230,290,470,210))\nprint('kpi1 value',words(230,280,290,500,120))\nprint('revenue title',words(410,440,290,500,210))\nprint('rev subtitle',words(438,470,290,600,220))\nprint('rev value',words(470,520,290,380,120))\nprint('rev link',words(730,770,285,550,220))\nprint('traffic rows',words(520,560,1050,1400,200))\nprint('table header',words(890,930,290,1020,220))\nprint('table row1',words(930,990,290,1020,220,12))\nprint('activity rows',words(870,940,1050,1400,200))\nprint('sidebar text rows')\nrows=[]\nfor y in range(0,1340):\n    n=sum(1 for x in range(16,240) if sum(px(x,y))/3<170)\n    rows.append(n)\nruns=[];inrun=False\nfor y,n in enumerate(rows):\n    if n>0 and not inrun: start=y;inrun=True\n    if n==0 and inrun:\n        if y-start>=3: runs.append((start,y-1))\n        inrun=False\nprint(runs)\nPY",
+    "cat > .crops/inspect.mjs <<'EOF'\nimport { chromium } from '/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/tools/node_modules/playwright/index.mjs';\nconst browser = await chromium.launch({ channel: 'chrome' });\nconst page = await browser.newPage({ viewport: { width: 1440, height: 1340 } });\nawait page.goto('http://127.0.0.1:4190', { waitUntil: 'networkidle' });\nawait page.evaluate(() => document.fonts.ready);\nconst data = await page.evaluate(() => {\n  const sel = (s) => document.querySelector(s);\n  const rect = (el) => el ? (() => { const r = el.getBoundingClientRect(); return {x:r.x,y:r.y,w:r.width,h:r.height}; })() : null;\n  const cards = [...document.querySelectorAll('.MuiCard-root')].map((el) => ({ cls: el.className, ...rect(el) }));\n  const table = sel('table');\n  const cells = table ? [...table.querySelectorAll('thead th')].map((el) => ({ text: el.textContent, ...rect(el), style: getComputedStyle(el).padding })) : [];\n  const rows = table ? [...table.querySelectorAll('tbody tr')].slice(0,2).map((tr) => [...tr.querySelectorAll('td')].map((td) => rect(td))) : [];\n  const topbarEls = [...document.querySelectorAll('header .MuiToolbar-root > *')].map((el) => ({ tag: el.tagName, text: el.textContent?.slice(0,20), ...rect(el) }));\n  const h1 = rect(sel('h1'));\n  const kpiTitle = sel('[id^=\"kpi-\"][id$=\"-label\"]');\n  const drawer = rect(sel('aside'));\n  return { cards, table: rect(table), tableContainer: rect(sel('.MuiTableContainer-root')), cells, rows, topbarEls, h1, kpiTitle: kpiTitle ? { ...rect(kpiTitle), fs: getComputedStyle(kpiTitle).fontSize, ls: getComputedStyle(kpiTitle).letterSpacing } : null, drawer };\n});\nconsole.log(JSON.stringify(data, null, 2));\nawait browser.close();\nEOF\nnode .crops/inspect.mjs 2>&1 | head -150",
+    "node .crops/inspect.mjs 2>&1 | tail -80",
+    "python3 - <<'PY'\nW,H=1440,1340\nd=open('.crops/ours.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef bounds(y0,y1,x0,x1,thr=200):\n    xs=[];ys=[]\n    for y in range(y0,y1):\n        for x in range(x0,x1):\n            c=px(x,y)\n            if (c[0]+c[1]+c[2])/3<thr: xs.append(x);ys.append(y)\n    return (min(xs),max(xs),min(ys),max(ys)) if xs else None\nprint('h1',bounds(85,140,275,700,150))\nprint('subtitle',bounds(130,165,275,700,220))\nprint('live',bounds(100,130,1230,1410,220))\nprint('kpi title',bounds(195,225,295,430,220))\nprint('kpi value',bounds(230,280,295,470,120))\nprint('kpi cap',bounds(285,320,295,530,220))\nprint('kpi spark',bounds(315,365,285,540,240))\nprint('rev title',bounds(410,440,295,400,220))\nprint('rev subtitle',bounds(440,470,295,560,220))\nprint('rev value',bounds(470,520,295,380,120))\nprint('rev chart first gridline?',bounds(490,540,300,1000,250))\nprint('rev labels',bounds(680,710,295,1010,220))\nprint('rev link',bounds(730,780,295,520,220))\nprint('traffic title',bounds(410,440,1050,1200,220))\nprint('traffic row1',bounds(520,550,1050,1400,220))\nprint('table title',bounds(830,865,295,470,220))\nprint('table subtitle',bounds(860,890,295,600,220))\nprint('table header',bounds(890,925,295,1010,220))\nprint('table row1 name',bounds(930,975,340,450,220))\nprint('activity title',bounds(830,865,1050,1200,220))\nprint('activity subtitle',bounds(860,890,1050,1310,220))\nprint('activity row1',bounds(880,940,1105,1360,220))\nprint('footer txt',bounds(1270,1310,275,700,220))\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\nd=open('.crops/ours.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\ndef runs(y0,y1,x0,x1,thr=180):\n    rows=[]\n    for y in range(y0,y1):\n        n=sum(1 for x in range(x0,x1) if sum(px(x,y))/3<thr)\n        rows.append(n)\n    out=[];inrun=False\n    for i,n in enumerate(rows):\n        y=y0+i\n        if n>0 and not inrun: start=y;inrun=True\n        if n==0 and inrun:\n            if y-start>=2: out.append((start,y-1))\n            inrun=False\n    return out\nprint('table card rows',runs(790,1240,290,1010,180))\nprint('traffic card rows',runs(390,790,1050,1400,180))\nprint('activity card rows',runs(790,1240,1050,1400,180))\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\ndef analyze(path):\n    d=open(path,'rb').read()\n    def px(x,y):\n        i=(y*W+x)*3\n        return tuple(d[i:i+3])\n    def runs(y0,y1,x0,x1,thr=180):\n        out=[];inrun=False\n        for y in range(y0,y1):\n            n=sum(1 for x in range(x0,x1) if sum(px(x,y))/3<thr)\n            if n>0 and not inrun: start=y;inrun=True\n            if n==0 and inrun:\n                if y-start>=2: out.append((start,y-1))\n                inrun=False\n        return out\n    print(path, 'activity', runs(810,1240,1050,1400,180))\n    print(path, 'table', runs(810,1240,290,1010,180))\nanalyze('.crops/desktop.raw')\nanalyze('.crops/ours.raw')\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\nfor path in ['.crops/desktop.raw','.crops/ours.raw']:\n    d=open(path,'rb').read()\n    def px(x,y):\n        i=(y*W+x)*3\n        return tuple(d[i:i+3])\n    print(path)\n    # find horizontal border lines in sidebar between y=60 and 140, x=20..230\n    for y in range(60,140):\n        n=sum(1 for x in range(14,234) if px(x,y) in [(230,232,240),(231,233,241),(233,235,242)])\n        if n>100: print(' border y',y,n)\n    # upgrade card bounds detect purple rows\n    ys=[y for y in range(600,820) if px(40,y)[2]-px(40,y)[0]>40 or px(40,y)[2]>200 and px(40,y)[0]<200]\n    if ys: print(' upgrade y',min(ys),max(ys))\n    # storage border box y\n    for y in range(1120,1280):\n        n=sum(1 for x in range(12,236) if px(x,y)==(230,232,240))\n        if n>150: print(' storage border y',y,n)\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\nfor path in ['.crops/desktop.raw','.crops/ours.raw']:\n    d=open(path,'rb').read()\n    def px(x,y):\n        i=(y*W+x)*3\n        return tuple(d[i:i+3])\n    print(path)\n    for x in [60,120]:\n        ys=[y for y in range(600,800) if px(x,y)[2]-px(x,y)[0]>60 and px(x,y)[2]>150]\n        print(' x',x,'purple',min(ys),max(ys))\n    # text rows inside card y region\n    out=[];inrun=False\n    for y in range(620,800):\n        n=sum(1 for x in range(26,228) if sum(px(x,y))/3>230 or (px(x,y)[0]>200 and px(x,y)[1]>200))\n        # skip\n    # use white-ish text detection: bright pixels inside purple card\n    rows=[]\n    for y in range(620,800):\n        n=sum(1 for x in range(30,225) if px(x,y)[0]>230 and px(x,y)[1]>230 and px(x,y)[2]>230)\n        rows.append((y,n))\n    runs=[];inrun=False\n    for y,n in rows:\n        if n>2 and not inrun: start=y;inrun=True\n        if n<=2 and inrun:\n            if y-start>=2: runs.append((start,y-1))\n            inrun=False\n    print(' white text runs',runs)\nPY",
+    "cat > .crops/inspect2.mjs <<'EOF'\nimport { chromium } from '/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/tools/node_modules/playwright/index.mjs';\nconst browser = await chromium.launch({ channel: 'chrome' });\nconst page = await browser.newPage({ viewport: { width: 1440, height: 1340 } });\nawait page.goto('http://127.0.0.1:4190', { waitUntil: 'networkidle' });\nawait page.evaluate(() => document.fonts.ready);\nconst data = await page.evaluate(() => {\n  const r = (el) => { if (!el) return null; const b = el.getBoundingClientRect(); return { x:+b.x.toFixed(1), y:+b.y.toFixed(1), w:+b.width.toFixed(1), h:+b.height.toFixed(1) }; };\n  const cards = [...document.querySelectorAll('.MuiCard-root')];\n  const rev = cards[4];\n  const tr = cards[5];\n  const tab = cards[6];\n  const act = cards[7];\n  const find = (card, sel) => card.querySelector(sel);\n  const revInfo = {\n    card: r(rev),\n    title: r(find(rev,'h2')),\n    subtitle: r(find(rev,'h2 + p')),\n    value: r([...rev.querySelectorAll('p')].find(e=>e.textContent.includes('$1.24M'))),\n    chart: r(find(rev,'svg')),\n    labels: r(rev.querySelector('svg')?.parentElement?.nextElementSibling),\n    link: r(find(rev,'.MuiButtonBase-root[href], button.MuiButtonBase-root')),\n    buttons: [...rev.querySelectorAll('button')].map(r),\n    text: rev.textContent,\n  };\n  const tabInfo = {\n    card: r(tab),\n    title: r(find(tab,'h2')),\n    tableContainer: r(find(tab,'.MuiTableContainer-root')),\n    table: r(find(tab,'table')),\n    header: [...find(tab,'thead').querySelectorAll('th')].map((e)=>({t:e.textContent,...r(e)})),\n    row1: [...find(tab,'tbody tr').querySelectorAll('td')].map(r),\n    link: r([...tab.querySelectorAll('button')].find(e=>e.textContent.includes('View all'))),\n  };\n  return { revInfo, tr: {card:r(tr), title:r(find(tr,'h2')), subtitle:r(find(tr,'h2 + p')), rows:[...tr.querySelectorAll('[role=\"progressbar\"]')].map(r), link:r([...tr.querySelectorAll('button')].find(e=>e.textContent.includes('View full')))}, tabInfo, act: {card:r(act), title:r(find(act,'h2')), subtitle:r(find(act,'h2 + p')), rows:[...act.querySelectorAll('li')].map(r), link:r([...act.querySelectorAll('button')].find(e=>e.textContent.includes('View activity')))}};\n});\nconsole.log(JSON.stringify(data, null, 2));\nawait browser.close();\nEOF\nnode .crops/inspect2.mjs 2>&1 | head -220",
+    "python3 - <<'PY'\nfrom pathlib import Path\n# 1. import Roboto 600\np=Path('src/main.tsx'); s=p.read_text()\ns=s.replace(\"import '@fontsource/roboto/500.css';\\n\", \"import '@fontsource/roboto/500.css';\\nimport '@fontsource/roboto/600.css';\\n\")\np.write_text(s)\n# 2. overline font size 11\np=Path('src/theme.ts'); s=p.read_text()\ns=s.replace(\"    overline: {\\n      fontSize: '0.625rem',\\n      lineHeight: 1.6,\", \"    overline: {\\n      fontSize: '0.6875rem',\\n      lineHeight: 1.5,\")\np.write_text(s)\n# 3. KPI spacing\np=Path('src/components/KpiGrid.tsx'); s=p.read_text()\ns=s.replace(\"sx={{ color: 'text.secondary', mt: 0.25 }}\", \"sx={{ color: 'text.secondary', mt: 0.625 }}\")\ns=s.replace(\"          mt: 0.75,\\n          fontSize: 30,\", \"          mt: 0,\\n          fontSize: 30,\")\ns=s.replace(\"sx={{ mt: 1.25, minWidth: 0, alignItems: 'center' }}\", \"sx={{ mt: 0.75, minWidth: 0, alignItems: 'center' }}\")\np.write_text(s)\n# 4. Topbar margins\np=Path('src/components/Topbar.tsx'); s=p.read_text()\ns=s.replace(\"              borderColor: 'divider',\\n              backgroundColor: 'background.paper',\\n              '&:hover': { backgroundColor: 'rgba(15, 23, 42, 0.03)', borderColor: 'text.disabled' },\",\n            \"              borderColor: 'divider',\\n              backgroundColor: 'background.paper',\\n              ml: 1,\\n              '&:hover': { backgroundColor: 'rgba(15, 23, 42, 0.03)', borderColor: 'text.disabled' },\")\ns=s.replace(\"              fontSize: 13,\\n              whiteSpace: 'nowrap',\\n            }}\", \"              fontSize: 13,\\n              whiteSpace: 'nowrap',\\n              ml: 1,\\n            }}\")\np.write_text(s)\n# 5. Footer padding bottom\np=Path('src/components/Footer.tsx'); s=p.read_text()\ns=s.replace(\"pb: { xs: 3, md: 5 },\", \"pb: { xs: 3, md: '43px' },\")\np.write_text(s)\nPY",
+    "python3 - <<'PY'\nfrom pathlib import Path\np=Path('src/components/Sidebar.tsx'); s=p.read_text()\n# upgrade card\ns=s.replace(\"        position: 'relative',\\n        overflow: 'hidden',\\n        mt: '22px',\\n        borderRadius: '18px',\\n        px: 2,\\n        pt: 2,\\n        pb: 1.75,\",\n            \"        position: 'relative',\\n        overflow: 'hidden',\\n        mt: '19px',\\n        borderRadius: '18px',\\n        px: 2,\\n        pt: 2,\\n        pb: 2.25,\")\ns=s.replace(\"      <Typography sx={{ fontSize: 14.5, fontWeight: 700, lineHeight: 1.35 }}>\",\n            \"      <Typography sx={{ fontSize: 15, fontWeight: 700, lineHeight: 1.35 }}>\")\ns=s.replace(\"        sx={{ mt: 0.5, fontSize: 10.5, lineHeight: 1.5, color: 'rgba(255,255,255,0.82)' }}\",\n            \"        sx={{ mt: 0.5, fontSize: 11.5, lineHeight: 1.45, color: 'rgba(255,255,255,0.82)' }}\")\n# storage widget spacing\ns=s.replace(\"          px: 1.75,\\n          pt: 1.5,\\n          pb: 1.5,\\n          backgroundColor: 'background.paper',\",\n            \"          minHeight: 122,\\n          px: 1.75,\\n          pt: 1.75,\\n          pb: 2.625,\\n          backgroundColor: 'background.paper',\")\ns=s.replace(\"      <Typography sx={{ mt: 1, fontSize: 10, color: 'text.secondary', lineHeight: 1.4 }}>\\n        6.8 GB of 10 GB used\\n      </Typography>\",\n            \"      <Typography sx={{ mt: 1.625, fontSize: 10, color: 'text.secondary', lineHeight: 1.4 }}>\\n        6.8 GB of 10 GB used\\n      </Typography>\")\ns=s.replace(\"          mt: 0.75,\\n          gap: 0.5,\", \"          mt: 1.75,\\n          gap: 0.5,\")\n# switcher / nav spacing\ns=s.replace(\"          mt: '22px',\\n          mx: -0.5,\", \"          mt: '14px',\\n          mx: -0.5,\")\ns=s.replace(\"          mt: '22px',\\n          flexShrink: 0,\", \"          mt: '28px',\\n          flexShrink: 0,\")\ns=s.replace(\"sx={{ mt: sectionIndex === 0 ? 0 : 1.5 }}\", \"sx={{ mt: sectionIndex === 0 ? 0 : 1 }}\")\n# user section margin\ns=s.replace(\"mt: 2.25, borderTop: '1px solid'\", \"mt: 1.125, borderTop: '1px solid'\")\n# user row vertical alignment\ns=s.replace(\"        display: 'flex',\\n        alignItems: 'center',\\n        gap: 1.25,\\n        py: 1.5,\\n        flexShrink: 0,\",\n            \"        display: 'flex',\\n        alignItems: 'center',\\n        gap: 1.25,\\n        py: 1,\\n        flexShrink: 0,\")\np.write_text(s)\nPY\ngrep -n \"mt: '14px'\\|mt: '28px'\\|sectionIndex\\|minHeight: 122\\|mt: 1.75\\|mt: 1.125\\|py: 1,\" src/components/Sidebar.tsx | head -20",
+    "sed -n '205,275p' src/components/Sidebar.tsx",
+    "python3 - <<'PY'\nfrom pathlib import Path\np=Path('src/components/RevenueCard.tsx'); s=p.read_text()\n# card padding + min height\ns=s.replace(\"      sx={{ p: { xs: 2, md: 2.5 }, display: 'flex', flexDirection: 'column', minWidth: 0 }}\",\n            \"      sx={{\\n        p: { xs: 2, md: 2.5 },\\n        pt: { xs: 2, md: '23px' },\\n        minHeight: { xs: 391, md: 399 },\\n        display: 'flex',\\n        flexDirection: 'column',\\n        minWidth: 0,\\n      }}\")\n# restructure header: remove subtitle from left block, close header after controls and add subtitle below\nold = \"\"\"      <Box sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 2 }}>\n        <Box sx={{ minWidth: 0 }}>\n          <Typography id=\"revenue-title\" variant=\"h2\" component=\"h2\" sx={{ color: 'text.primary' }}>\n            Revenue\n          </Typography>\n          <Typography sx={{ mt: 0.25, fontSize: 12, color: 'text.secondary', lineHeight: 1.5 }}>\n            Net revenue and expenses, last 12 months\n          </Typography>\n        </Box>\n        <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, flexShrink: 0 }}>\n\"\"\"\nnew = \"\"\"      <Box sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 2 }}>\n        <Typography\n          id=\"revenue-title\"\n          variant=\"h2\"\n          component=\"h2\"\n          sx={{ color: 'text.primary', minWidth: 0 }}\n        >\n          Revenue\n        </Typography>\n        <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, flexShrink: 0 }}>\n\"\"\"\nassert old in s\ns=s.replace(old,new)\n# close header and add subtitle after control Box closing. Find the segment after the Menu button:\nold2 = \"\"\"        </Box>\n      </Box>\n\n      <Box\n        sx={{\n          mt: { xs: 1.5, md: 2.25 },\n\"\"\"\nnew2 = \"\"\"        </Box>\n      </Box>\n\n      <Typography sx={{ mt: 0.75, fontSize: 12, color: 'text.secondary', lineHeight: 1.5 }}>\n        Net revenue and expenses, last 12 months\n      </Typography>\n\n      <Box\n        sx={{\n          mt: { xs: 1.5, md: 2 },\n\"\"\"\nassert old2 in s\ns=s.replace(old2,new2)\n# chart mt\ns=s.replace(\"          mt: { xs: 1.75, md: 2.75 },\\n          height: 164,\", \"          mt: { xs: 2, md: 3 },\\n          height: 164,\")\n# labels mt\ns=s.replace(\"          mt: 1.5,\\n          display: 'flex',\\n          justifyContent: 'space-between',\", \"          mt: 2.25,\\n          display: 'flex',\\n          justifyContent: 'space-between',\")\n# link margin bottom\ns=s.replace(\"        sx={{ mt: 'auto', pt: 2, alignSelf: 'flex-start' }}\", \"        sx={{ mt: 'auto', pt: 2, mb: 0.5, alignSelf: 'flex-start' }}\")\np.write_text(s)\nPY\nsed -n '55,140p' src/components/RevenueCard.tsx",
+    "python3 - <<'PY'\nfrom pathlib import Path\np=Path('src/components/TrafficCard.tsx'); s=p.read_text()\ns=s.replace(\"        p: { xs: 2, md: 2.5 },\\n        display: 'flex',\", \"        p: { xs: 2, md: 2.5 },\\n        minHeight: { md: 399 },\\n        display: 'flex',\")\ns=s.replace(\"sx={{ mt: 0.25, fontSize: 12, color: 'text.secondary', lineHeight: 1.5 }}\", \"sx={{ mt: 0.75, fontSize: 12, color: 'text.secondary', lineHeight: 1.5 }}\")\ns=s.replace(\"sx={{ mt: 2.25, display: 'flex', flexDirection: 'column', gap: 1.75 }}\", \"sx={{ mt: 2.25, display: 'flex', flexDirection: 'column', gap: 2.25 }}\")\ns=s.replace(\"        sx={{ mt: 'auto', pt: 3, alignSelf: 'flex-start' }}\", \"        sx={{ mt: 'auto', pt: 3, mb: 0.5, alignSelf: 'flex-start' }}\")\np.write_text(s)\n\np=Path('src/components/ActivityCard.tsx'); s=p.read_text()\ns=s.replace(\"      sx={{ p: { xs: 2, md: 2.5 }, display: 'flex', flexDirection: 'column', minWidth: 0 }}\",\n            \"      sx={{\\n        p: { xs: 2, md: 2.5 },\\n        minHeight: { md: 414 },\\n        display: 'flex',\\n        flexDirection: 'column',\\n        minWidth: 0,\\n      }}\")\ns=s.replace(\"sx={{ mt: 0.25, fontSize: 12, color: 'text.secondary', lineHeight: 1.5 }}\", \"sx={{ mt: 0.75, fontSize: 12, color: 'text.secondary', lineHeight: 1.5 }}\")\ns=s.replace(\"sx={{ listStyle: 'none', m: 0, p: 0, mt: 0.5 }}\", \"sx={{ listStyle: 'none', m: 0, p: 0, mt: 1.75 }}\")\ns=s.replace(\"              py: 1.5,\\n              borderBottom:\", \"              py: 1.625,\\n              borderBottom:\")\ns=s.replace(\"        sx={{ mt: 'auto', pt: 2.5, alignSelf: 'flex-start' }}\", \"        sx={{ mt: 'auto', pt: 2.5, mb: 0.5, alignSelf: 'flex-start' }}\")\np.write_text(s)\n\np=Path('src/components/TransactionsCard.tsx'); s=p.read_text()\ns=s.replace(\"      sx={{ p: { xs: 2, md: 2.5 }, display: 'flex', flexDirection: 'column', minWidth: 0 }}\",\n            \"      sx={{\\n        p: { xs: 2, md: 2.5 },\\n        minHeight: { md: 414 },\\n        display: 'flex',\\n        flexDirection: 'column',\\n        minWidth: 0,\\n      }}\")\ns=s.replace(\"sx={{ mt: 0.25, fontSize: 12, color: 'text.secondary', lineHeight: 1.5 }}\", \"sx={{ mt: 0.75, fontSize: 12, color: 'text.secondary', lineHeight: 1.5 }}\")\ns=s.replace(\"<TableContainer sx={{ mt: 1, width: '100%', overflowX: 'auto' }}>\", \"<TableContainer sx={{ mt: 1.75, width: '100%', overflowX: 'auto' }}>\")\np.write_text(s)\n\np=Path('src/App.tsx'); s=p.read_text()\ns=s.replace(\"                  lg: 'minmax(0, 1.486fr) minmax(0, 1fr)',\", \"                  lg: 'minmax(0, 2.055fr) minmax(0, 1fr)',\")\np.write_text(s)\nPY\npnpm build 2>&1 | tail -5",
+    "node ../tools/shot.mjs http://127.0.0.1:4190 . 2>&1 | tail -5; ffmpeg -loglevel error -y -i desktop.png -f rawvideo -pix_fmt rgb24 .crops/ours.raw; ffmpeg -loglevel error -y -i mobile.png -f rawvideo -pix_fmt rgb24 .crops/ours-mobile.raw",
+    "python3 - <<'PY'\nW,H=1440,1346\nfor path,label in [('.crops/desktop.raw','REF'),('.crops/ours.raw','OURS')]:\n    d=open(path,'rb').read()\n    def px(x,y):\n        i=(y*W+x)*3\n        return tuple(d[i:i+3])\n    def bounds(y0,y1,x0,x1,thr=200):\n        xs=[];ys=[]\n        for y in range(y0,y1):\n            for x in range(x0,x1):\n                c=px(x,y)\n                if (c[0]+c[1]+c[2])/3<thr: xs.append(x);ys.append(y)\n        return (min(xs),max(xs),min(ys),max(ys)) if xs else None\n    def runs(y0,y1,x0,x1,thr=180):\n        out=[];inrun=False\n        for y in range(y0,y1):\n            n=sum(1 for x in range(x0,x1) if sum(px(x,y))/3<thr)\n            if n>0 and not inrun: start=y;inrun=True\n            if n==0 and inrun:\n                if y-start>=2: out.append((start,y-1))\n                inrun=False\n        return out\n    print('====',label)\n    print('h1',bounds(90,135,275,700,150))\n    print('live',bounds(95,135,1230,1410,220))\n    print('rev title',bounds(410,440,295,400,220),'sub',bounds(440,470,295,560,220),'value',bounds(470,520,295,380,120))\n    print('rev label rows',runs(680,745,295,1010,220)[:3])\n    print('rev link',bounds(740,780,295,520,220))\n    print('rev card rows',runs(400,800,295,1010,140)[:20])\n    print('traffic rows',runs(410,790,1060,1400,180))\n    print('table card rows',runs(810,1245,290,1010,180))\n    print('activity card rows',runs(810,1245,1050,1400,180))\n    print('footer',runs(1240,1346,275,1410,220))\nPY",
+    "cat > .crops/boxes.mjs <<'EOF'\nimport { chromium } from '/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/tools/node_modules/playwright/index.mjs';\nconst browser = await chromium.launch({ channel: 'chrome' });\nconst page = await browser.newPage({ viewport: { width: 1440, height: 1340 } });\nawait page.goto('http://127.0.0.1:4190', { waitUntil: 'networkidle' });\nawait page.evaluate(() => document.fonts.ready);\nconst out = await page.evaluate(() => {\n  const r = (el) => { if (!el) return null; const b = el.getBoundingClientRect(); return [+b.x.toFixed(1), +b.y.toFixed(1), +b.width.toFixed(1), +b.height.toFixed(1)]; };\n  const cards = [...document.querySelectorAll('.MuiCard-root')];\n  const rev = cards[4], traf = cards[5], tab = cards[6], act = cards[7];\n  const labelRow = (card) => { const p = [...card.querySelectorAll('div')].find((el)=>el.textContent === 'JanFebMarAprMayJunJulAugSepOctNovDec'); return r(p); };\n  const chart = (card) => card.querySelector('svg[role=\"img\"]');\n  const footer = document.querySelector('footer');\n  return {\n    cards: cards.map(r),\n    rev: { card: r(rev), title: r(rev.querySelector('h2')), sub: r(rev.querySelector('h2 + p') ?? [...rev.querySelectorAll('p')][0]), chart: r(chart(rev)), labels: labelRow(rev), link: r([...rev.querySelectorAll('button')].at(-1)) },\n    traf: { card: r(traf), link: r([...traf.querySelectorAll('button')].at(-1)), bars: [...traf.querySelectorAll('[role=progressbar]')].map(r) },\n    tab: { card: r(tab), container: r(tab.querySelector('.MuiTableContainer-root')), rows: [...tab.querySelectorAll('tbody tr')].map(r) },\n    act: { card: r(act), link: r([...act.querySelectorAll('button')].at(-1)), rows: [...act.querySelectorAll('li')].map(r) },\n    footer: r(footer),\n    footerText: r(footer.querySelector('p')),\n    body: r(document.body), html: r(document.documentElement),\n  };\n});\nconsole.log(JSON.stringify(out, null, 2));\nawait browser.close();\nEOF\nnode .crops/boxes.mjs",
+    "python3 - <<'PY'\nW=1440\nfor path,label in [('.crops/desktop.raw','REF'),('.crops/ours.raw','OURS')]:\n    d=open(path,'rb').read()\n    def px(x,y):\n        i=(y*W+x)*3\n        return tuple(d[i:i+3])\n    rows=[]\n    for y in range(0,1340):\n        n=sum(1 for x in range(16,240) if sum(px(x,y))/3<170)\n        rows.append(n)\n    runs=[];inrun=False\n    for y,n in enumerate(rows):\n        if n>0 and not inrun: start=y;inrun=True\n        if n==0 and inrun:\n            if y-start>=3: runs.append((start,y-1))\n            inrun=False\n    print(label,runs)\n    for y in [70,113,633,761,1149,1270,1279]:\n        # find horizontal border rows\n        pass\n    # upgrade/bounds at x=60\n    ys=[y for y in range(600,800) if px(60,y)[2]-px(60,y)[0]>60 and px(60,y)[2]>150]\n    print(label,'upgrade purple',min(ys),max(ys))\n    # storage border\n    for y in range(1120,1290):\n        n=sum(1 for x in range(12,236) if px(x,y)==(230,232,240))\n        if n>150: print(label,'storage line',y,n)\nPY",
+    "python3 - <<'PY'\nfrom pathlib import Path\n# Revenue\np=Path('src/components/RevenueCard.tsx'); s=p.read_text()\ns=s.replace(\"<Typography sx={{ mt: 0.75, fontSize: 12, color: 'text.secondary', lineHeight: 1.5 }}>\\n        Net revenue\", \"<Typography sx={{ mt: -0.25, fontSize: 12, color: 'text.secondary', lineHeight: 1.5 }}>\\n        Net revenue\")\ns=s.replace(\"          mt: { xs: 2, md: 3 },\\n          height: 164,\", \"          mt: { xs: 2, md: 2.5 },\\n          height: 164,\")\ns=s.replace(\"          mt: 2.25,\\n          display: 'flex',\\n          justifyContent: 'space-between',\", \"          mt: 2.5,\\n          display: 'flex',\\n          justifyContent: 'space-between',\")\np.write_text(s)\n# Traffic\np=Path('src/components/TrafficCard.tsx'); s=p.read_text()\ns=s.replace(\"        p: { xs: 2, md: 2.5 },\\n        minHeight: { md: 399 },\", \"        p: { xs: 2, md: 2.5 },\\n        pt: { xs: 2, md: '23px' },\\n        minHeight: { md: 399 },\")\ns=s.replace(\"          mt: { xs: 1.5, md: 2 },\\n          display: 'flex',\", \"          mt: { xs: 1.5, md: 1.625 },\\n          display: 'flex',\")\ns=s.replace(\"sx={{ mt: 2.25, display: 'flex', flexDirection: 'column', gap: 2.25 }}\", \"sx={{ mt: 2.625, display: 'flex', flexDirection: 'column', gap: 2.25 }}\")\np.write_text(s)\n# Table\np=Path('src/components/TransactionsCard.tsx'); s=p.read_text()\ns=s.replace(\"        p: { xs: 2, md: 2.5 },\\n        minHeight: { md: 414 },\", \"        p: { xs: 2, md: 2.5 },\\n        pt: { xs: 2, md: '22px' },\\n        pb: { xs: 2, md: '18px' },\\n        minHeight: { md: 414 },\")\ns=s.replace(\"<TableContainer sx={{ mt: 1.75, width: '100%', overflowX: 'auto' }}>\", \"<TableContainer sx={{ mt: 2, width: '100%', overflowX: 'auto' }}>\")\np.write_text(s)\n# Activity\np=Path('src/components/ActivityCard.tsx'); s=p.read_text()\ns=s.replace(\"        p: { xs: 2, md: 2.5 },\\n        minHeight: { md: 414 },\", \"        p: { xs: 2, md: 2.5 },\\n        pt: { xs: 2, md: '21px' },\\n        minHeight: { md: 414 },\")\ns=s.replace(\"        sx={{ mt: 'auto', pt: 2.5, mb: 0.5, alignSelf: 'flex-start' }}\", \"        sx={{ mt: 'auto', pt: 2.5, mb: 1, alignSelf: 'flex-start' }}\")\np.write_text(s)\n# Live indicator\np=Path('src/components/PageHeader.tsx'); s=p.read_text()\ns=s.replace(\"sx={{ display: { xs: 'none', md: 'flex' }, mt: 1.25, flexShrink: 0 }}\", \"sx={{ display: { xs: 'none', md: 'flex' }, mt: 0.75, flexShrink: 0 }}\")\np.write_text(s)\n# App grid gaps\np=Path('src/App.tsx'); s=p.read_text()\ns=s.replace(\"<Box sx={{ mt: 3 }}>\\n              <KpiGrid />\", \"<Box sx={{ mt: 3 }}>\\n              <KpiGrid />\")\ns=s.replace(\"                mt: { xs: 2, md: 2.5 },\", \"                mt: { xs: 2, md: '21px' },\")\ns=s.replace(\"                rowGap: { xs: 2, md: 2.5 },\", \"                rowGap: { xs: 2, md: '21px' },\")\np.write_text(s)\n# Sidebar: section-specific margins, storage/user bottom\np=Path('src/components/Sidebar.tsx'); s=p.read_text()\ns=s.replace(\"            sx={{ mt: sectionIndex === 0 ? 0 : 1 }}\", \"            sx={{ mt: sectionIndex === 0 ? 0 : sectionIndex === 2 ? 1.5 : 1 }}\")\ns=s.replace(\"          minHeight: 122,\\n          px: 1.75,\\n          pt: 1.75,\\n          pb: 2.625,\", \"          minHeight: 121,\\n          px: 1.75,\\n          pt: 1.5,\\n          pb: 2.375,\")\ns=s.replace(\"        pb: 2.25,\\n        color: '#ffffff',\", \"        pb: 1.875,\\n        color: '#ffffff',\")\n# user section fixed height\ns=s.replace(\"<Box sx={{ flexShrink: 0, mx: -2, mt: 1.125, borderTop: '1px solid', borderColor: 'divider' }}>\\n        <Box sx={{ px: 2 }}>\\n          <UserRow />\\n        </Box>\\n      </Box>\",\n            \"<Box\\n        sx={{\\n          flexShrink: 0,\\n          mx: -2,\\n          mt: 1.125,\\n          height: 61,\\n          borderTop: '1px solid',\\n          borderColor: 'divider',\\n          display: 'flex',\\n          alignItems: 'flex-start',\\n        }}\\n      >\\n        <Box sx={{ px: 2, width: '100%' }}>\\n          <UserRow />\\n        </Box>\\n      </Box>\")\ns=s.replace(\"        display: 'flex',\\n        alignItems: 'center',\\n        gap: 1.25,\\n        py: 1,\\n        flexShrink: 0,\", \"        display: 'flex',\\n        alignItems: 'flex-start',\\n        gap: 1.25,\\n        pt: '10px',\\n        pb: 0,\\n        flexShrink: 0,\")\np.write_text(s)\nPY\npnpm build 2>&1 | tail -3",
+    "node ../tools/shot.mjs http://127.0.0.1:4190 . 2>&1 | tail -4; ffmpeg -loglevel error -y -i desktop.png -f rawvideo -pix_fmt rgb24 .crops/ours.raw; ffmpeg -loglevel error -y -i mobile.png -f rawvideo -pix_fmt rgb24 .crops/ours-mobile.raw",
+    "python3 - <<'PY'\nW,H=1440,1343\nfor path,label in [('.crops/desktop.raw','REF'),('.crops/ours.raw','OURS')]:\n    d=open(path,'rb').read()\n    def px(x,y):\n        i=(y*W+x)*3\n        return tuple(d[i:i+3])\n    def bounds(y0,y1,x0,x1,thr=200):\n        xs=[];ys=[]\n        for y in range(y0,y1):\n            for x in range(x0,x1):\n                c=px(x,y)\n                if (c[0]+c[1]+c[2])/3<thr: xs.append(x);ys.append(y)\n        return (min(xs),max(xs),min(ys),max(ys)) if xs else None\n    def runs(y0,y1,x0,x1,thr=180):\n        out=[];inrun=False\n        for y in range(y0,y1):\n            n=sum(1 for x in range(x0,x1) if sum(px(x,y))/3<thr)\n            if n>0 and not inrun: start=y;inrun=True\n            if n==0 and inrun:\n                if y-start>=2: out.append((start,y-1))\n                inrun=False\n        return out\n    print('====',label)\n    print('page title',bounds(90,135,275,700,150),'live',bounds(95,135,1230,1410,220))\n    print('rev',runs(400,800,295,1010,150))\n    print('traffic',runs(410,800,1060,1400,180))\n    print('table',runs(810,1245,290,1010,180))\n    print('activity',runs(810,1245,1050,1400,180))\n    print('footer rows',runs(1240,1343,275,1410,220))\n    print('sidebar rows',runs(0,1340,16,240,170))\nPY",
+    "node .crops/boxes.mjs 2>&1 | head -120; echo '--- borders ---'; python3 - <<'PY'\nW,H=1440,1343\nd=open('.crops/ours.raw','rb').read()\ndef px(x,y):\n    i=(y*W+x)*3\n    return tuple(d[i:i+3])\nfor y in range(1120,1290):\n    n=sum(1 for x in range(12,236) if px(x,y)==(230,232,240))\n    if n>150: print('storage line',y,n)\n# footer border\nfor y in range(1220,1300):\n    n=sum(1 for x in range(280,1408) if px(x,y)==(230,232,240))\n    if n>500: print('footer border',y,n)\nPY",
+    "node .crops/boxes.mjs 2>&1 | tail -60",
+    "python3 - <<'PY'\nW,H=390,2760\nfor path,label in [('.crops/mobile.raw','REF'),('.crops/ours-mobile.raw','OURS')]:\n    d=open(path,'rb').read()\n    def px(x,y):\n        i=(y*W+x)*3\n        return tuple(d[i:i+3])\n    print('====',label)\n    # topbar text runs at y ranges\n    def words(y0,y1,x0,x1,thr=210,gap=8):\n        cols=set()\n        for y in range(y0,y1):\n            for x in range(x0,x1):\n                c=px(x,y)\n                if (c[0]+c[1]+c[2])/3<thr: cols.add(x)\n        cols=sorted(cols);runs=[]\n        if not cols:return []\n        s=p=cols[0]\n        for x in cols[1:]:\n            if x-p>gap:runs.append((s,p,p-s+1));s=x\n            p=x\n        runs.append((s,p,p-s+1));return runs\n    print('topbar',words(5,55,0,390,230,10))\n    # table header by scanning known rows; find via row projection first\n    def runs(y0,y1,x0,x1,thr=180):\n        out=[];inrun=False\n        for y in range(y0,y1):\n            n=sum(1 for x in range(x0,x1) if sum(px(x,y))/3<thr)\n            if n>0 and not inrun: start=y;inrun=True\n            if n==0 and inrun:\n                if y-start>=2: out.append((start,y-1))\n                inrun=False\n        return out\n    # find table card top via borders\n    print('table area runs',runs(1800,2250,20,370,180)[:9])\n    print('headers',words(1915,1945,16,374,215,9))\n    # find amount header likely same y\n    # card text positions for revenue\n    print('rev text',words(1030,1140,16,374,200,8))\nPY",
+    "python3 - <<'PY'\nW,H=390,2760\nfor path,label in [('.crops/mobile.raw','REF'),('.crops/ours-mobile.raw','OURS')]:\n    d=open(path,'rb').read()\n    def px(x,y):\n        i=(y*W+x)*3\n        return tuple(d[i:i+3])\n    print('====',label)\n    # border rows at x=195 (full card widths)\n    prev=None\n    for y in range(180,2760):\n        c=px(195,y)\n        if c in [(230,232,240),(229,231,239),(231,233,241)]:\n            if prev != y-1: print(' border',y)\n            prev=y\n    # content row runs for each card area\n    def runs(y0,y1,x0,x1,thr=180):\n        out=[];inrun=False\n        for y in range(y0,y1):\n            n=sum(1 for x in range(x0,x1) if sum(px(x,y))/3<thr)\n            if n>0 and not inrun: start=y;inrun=True\n            if n==0 and inrun:\n                if y-start>=2: out.append((start,y-1))\n                inrun=False\n        return out\n    print('kpi1',runs(195,400,20,370,150))\n    print('revenue',runs(1010,1420,20,370,150))\n    print('traffic',runs(1415,1800,20,370,150))\n    print('table',runs(1795,2250,20,370,150))\n    print('activity',runs(2245,2650,20,370,150))\n    print('footer',runs(2640,2760,10,380,220))\nPY",
+    "cat > .crops/boxes-mobile.mjs <<'EOF'\nimport { chromium } from '/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/tools/node_modules/playwright/index.mjs';\nconst browser = await chromium.launch({ channel: 'chrome' });\nconst page = await browser.newPage({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });\nawait page.goto('http://127.0.0.1:4190', { waitUntil: 'networkidle' });\nawait page.evaluate(() => document.fonts.ready);\nconst out = await page.evaluate(() => {\n  const r = (el) => { if (!el) return null; const b = el.getBoundingClientRect(); return [+b.x.toFixed(1), +b.y.toFixed(1), +b.width.toFixed(1), +b.height.toFixed(1)]; };\n  const cards = [...document.querySelectorAll('.MuiCard-root')];\n  const rev = cards[4], traf = cards[5], tab = cards[6], act = cards[7];\n  const chart = (card) => card.querySelector('svg[role=\"img\"]');\n  const labelRow = (card) => [...card.querySelectorAll('div')].find((el)=>el.textContent === 'JanFebMarAprMayJunJulAugSepOctNovDec');\n  const footer = document.querySelector('footer');\n  return {\n    header: r(document.querySelector('header')),\n    h1: r(document.querySelector('h1')),\n    cards: cards.map(r),\n    rev: { card:r(rev), title:r(rev.querySelector('h2')), sub:r([...rev.querySelectorAll('p')][0]), chart:r(chart(rev)), labels:r(labelRow(rev)), link:r([...rev.querySelectorAll('button')].at(-1)) },\n    traf: { card:r(traf), title:r(traf.querySelector('h2')), sub:r([...traf.querySelectorAll('p')][0]), value:r([...traf.querySelectorAll('p')].find(e=>e.textContent.includes('48.2k'))), bars:[...traf.querySelectorAll('[role=progressbar]')].map(r), link:r([...traf.querySelectorAll('button')].at(-1)) },\n    tab: { card:r(tab), title:r(tab.querySelector('h2')), sub:r([...tab.querySelectorAll('p')][0]), container:r(tab.querySelector('.MuiTableContainer-root')), rows:[...tab.querySelectorAll('tbody tr')].map(r), link:r([...tab.querySelectorAll('button')].at(-1)) },\n    act: { card:r(act), title:r(act.querySelector('h2')), sub:r([...act.querySelectorAll('p')][0]), rows:[...act.querySelectorAll('li')].map(r), link:r([...act.querySelectorAll('button')].at(-1)) },\n    footer: r(footer), footerText:r(footer.querySelector('p')),\n    topbarEls: [...document.querySelectorAll('header .MuiToolbar-root > *')].map((el)=>({t:el.tagName, text:el.textContent?.slice(0,12), ...r(el)})).filter(e=>e[0]!==0),\n    body: r(document.documentElement),\n  };\n});\nconsole.log(JSON.stringify(out, null, 2));\nawait browser.close();\nEOF\nnode .crops/boxes-mobile.mjs 2>&1 | head -200",
+    "python3 - <<'PY'\nW,H=390,2760\nfor path,label in [('.crops/mobile.raw','REF'),('.crops/ours-mobile.raw','OURS')]:\n    d=open(path,'rb').read()\n    def px(x,y):\n        i=(y*W+x)*3\n        return tuple(d[i:i+3])\n    def bounds(y0,y1,x0,x1,thr=210):\n        xs=[];ys=[]\n        for y in range(y0,y1):\n            for x in range(x0,x1):\n                c=px(x,y)\n                if (c[0]+c[1]+c[2])/3<thr: xs.append(x);ys.append(y)\n        return (min(xs),max(xs),min(ys),max(ys)) if xs else None\n    print(label,'h1',bounds(60,125,0,390,150),'sub',bounds(115,145,0,390,220),'live',bounds(145,185,0,390,220))\nPY",
+    "python3 - <<'PY'\nfrom pathlib import Path\n# BrandLockup compact size\np=Path('src/components/ui.tsx'); s=p.read_text()\ns=s.replace(\"      <LogoMark size={compact ? 32 : 36} />\", \"      <LogoMark size={36} />\")\ns=s.replace(\"    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.25 }}>\", \"    <Box sx={{ display: 'flex', alignItems: 'center', gap: compact ? 1 : 1.25 }}>\")\np.write_text(s)\n\n# Topbar: layout + hide theme on mobile\np=Path('src/components/Topbar.tsx'); s=p.read_text()\ns=s.replace(\"        sx={{ width: 36, height: 36, color: 'text.secondary' }}\\n      >\\n        {isDark ? <LightModeOutlined\", \"        sx={{ width: 36, height: 36, color: 'text.secondary', display: { xs: 'none', md: 'inline-flex' } }}\\n      >\\n        {isDark ? <LightModeOutlined\")\ns=s.replace(\"          minHeight: { xs: '60px !important', md: '68px !important' },\\n          px: { xs: '12px', md: 4 },\\n          gap: 2,\",\n            \"          minHeight: { xs: '60px !important', md: '68px !important' },\\n          pl: { xs: '8px', md: 4 },\\n          pr: { xs: '14px', md: 4 },\\n          gap: { xs: 1.5, md: 2 },\")\ns=s.replace('        <IconButton\\n          edge=\"start\"\\n          aria-label=\"Open navigation menu\"', '        <IconButton\\n          aria-label=\"Open navigation menu\"')\np.write_text(s)\n\n# App header spacing + KPI wrapper\np=Path('src/App.tsx'); s=p.read_text()\ns=s.replace(\"            pt: { xs: 3, md: 3.5 },\", \"            pt: { xs: '19px', md: 3.5 },\")\ns=s.replace(\"<Box sx={{ mt: 3 }}>\\n              <KpiGrid />\", \"<Box sx={{ mt: { xs: '26px', md: 3 } }}>\\n              <KpiGrid />\")\ns=s.replace(\"                mt: { xs: 2, md: '21px' },\", \"                mt: { xs: 2, md: '21px' },\")\np.write_text(s)\n\n# PageHeader responsive subtitle gap and live margin\np=Path('src/components/PageHeader.tsx'); s=p.read_text()\ns=s.replace(\"sx={{ mt: 0.5, fontSize: 13, lineHeight: 1.55, color: 'text.secondary' }}\", \"sx={{ mt: { xs: '6px', md: 0.5 }, fontSize: 13, lineHeight: 1.55, color: 'text.secondary' }}\")\ns=s.replace(\"sx={{ display: { xs: 'flex', md: 'none' }, mt: 1.5 }}\", \"sx={{ display: { xs: 'flex', md: 'none' }, mt: 1.75 }}\")\np.write_text(s)\n\n# KPI responsive height\np=Path('src/components/KpiGrid.tsx'); s=p.read_text()\ns=s.replace(\"        height: { xs: 187, md: 195 },\", \"        height: { xs: 188.5, md: 195 },\")\np.write_text(s)\n\n# table mobile min height, desktop pb, header text position\np=Path('src/components/TransactionsCard.tsx'); s=p.read_text()\ns=s.replace(\"        minHeight: { md: 414 },\", \"        minHeight: { xs: 430, md: 414 },\")\ns=s.replace(\"        pb: { xs: 2, md: '18px' },\", \"        pb: { xs: 2, md: '16px' },\")\ns=s.replace(\"  py: 1.75,\\n  whiteSpace: 'nowrap',\", \"  pt: 1.5,\\n  pb: 2,\\n  whiteSpace: 'nowrap',\")\np.write_text(s)\n\n# activity link padding responsive\np=Path('src/components/ActivityCard.tsx'); s=p.read_text()\ns=s.replace(\"        sx={{ mt: 'auto', pt: 2.5, mb: 1, alignSelf: 'flex-start' }}\", \"        sx={{ mt: 'auto', pt: { xs: '14px', md: 2.5 }, mb: 1, alignSelf: 'flex-start' }}\")\np.write_text(s)\n\n# traffic value gap\np=Path('src/components/TrafficCard.tsx'); s=p.read_text()\ns=s.replace(\"          mt: { xs: 1.5, md: 1.625 },\", \"          mt: { xs: 1.5, md: 1.125 },\")\np.write_text(s)\n\n# sidebar upgrade margin\np=Path('src/components/Sidebar.tsx'); s=p.read_text()\ns=s.replace(\"        mt: '19px',\\n        borderRadius: '18px',\", \"        mt: '15px',\\n        borderRadius: '18px',\")\np.write_text(s)\n\n# footer spacing\np=Path('src/components/Footer.tsx'); s=p.read_text()\ns=s.replace(\"        mt: 4,\", \"        mt: { xs: 4, md: '33px' },\")\ns=s.replace(\"        pt: { xs: 3, md: 2 },\", \"        pt: { xs: '20px', md: '20px' },\")\ns=s.replace(\"        pb: { xs: 3, md: '43px' },\", \"        pb: { xs: '16px', md: '37px' },\")\np.write_text(s)\nPY\npnpm build 2>&1 | tail -3",
+    "python3 - <<'PY'\nfrom pathlib import Path\np=Path('src/components/Sidebar.tsx'); s=p.read_text()\ns=s.replace(\"import UnfoldMoreRounded from '@mui/icons-material/UnfoldMoreRounded';\", \"import UnfoldMoreRounded from '@mui/icons-material/UnfoldMoreRounded';\\nimport Switch from '@mui/material/Switch';\\nimport { useColorScheme } from '@mui/material/styles';\")\ns=s.replace(\"type SidebarContentProps = {\\n  activeItem: string;\\n  onSelect: (item: NavItem) => void;\\n  onNavigate?: () => void;\\n};\",\n\"\"\"type SidebarContentProps = {\n  activeItem: string;\n  onSelect: (item: NavItem) => void;\n  onNavigate?: () => void;\n  showThemeToggle?: boolean;\n};\n\nfunction ThemeRow() {\n  const { mode, setMode } = useColorScheme();\n  const isDark = mode === 'dark';\n  return (\n    <Box\n      component=\"label\"\n      sx={{\n        mt: 1,\n        height: 40,\n        px: 1,\n        display: 'flex',\n        alignItems: 'center',\n        justifyContent: 'space-between',\n        gap: 1,\n        borderRadius: '10px',\n        color: 'text.secondary',\n        cursor: 'pointer',\n        '&:hover': { backgroundColor: 'rgba(15, 23, 42, 0.03)' },\n      }}\n    >\n      <Typography component=\"span\" sx={{ fontSize: 13, fontWeight: 500, color: 'text.secondary' }}>\n        Dark mode\n      </Typography>\n      <Switch\n        size=\"small\"\n        checked={isDark}\n        onChange={(_event, checked) => setMode(checked ? 'dark' : 'light')}\n        slotProps={{ input: { 'aria-label': 'Dark mode' } }}\n      />\n    </Box>\n  );\n}\"\"\")\ns=s.replace(\"export function SidebarContent({ activeItem, onSelect, onNavigate }: SidebarContentProps) {\",\n            \"export function SidebarContent({ activeItem, onSelect, onNavigate, showThemeToggle = false }: SidebarContentProps) {\")\ns=s.replace(\"      <UpgradeCard />\\n\\n      <Box sx={{ flexGrow: 1, minHeight: 16 }} />\",\n            \"      {showThemeToggle ? <ThemeRow /> : null}\\n\\n      <UpgradeCard />\\n\\n      <Box sx={{ flexGrow: 1, minHeight: 16 }} />\")\ns=s.replace(\"<SidebarContent activeItem={activeItem} onSelect={onSelect} onNavigate={onClose} />\",\n            \"<SidebarContent\\n        activeItem={activeItem}\\n        onSelect={onSelect}\\n        onNavigate={onClose}\\n        showThemeToggle\\n      />\")\np.write_text(s)\nPY\npnpm build 2>&1 | tail -5",
+    "node ../tools/shot.mjs http://127.0.0.1:4190 . 2>&1 | tail -4; ffmpeg -loglevel error -y -i desktop.png -f rawvideo -pix_fmt rgb24 .crops/ours.raw; ffmpeg -loglevel error -y -i mobile.png -f rawvideo -pix_fmt rgb24 .crops/ours-mobile.raw",
+    "python3 - <<'PY'\nW,H=390,2760\nfor path,label in [('.crops/mobile.raw','REF'),('.crops/ours-mobile.raw','OURS')]:\n    d=open(path,'rb').read()\n    def px(x,y):\n        i=(y*W+x)*3\n        return tuple(d[i:i+3])\n    print('====',label)\n    prev=None\n    for y in range(180,2760):\n        c=px(195,y)\n        if c in [(230,232,240),(229,231,239),(231,233,241)]:\n            if prev != y-1: print(' border',y)\n            prev=y\n    def runs(y0,y1,x0,x1,thr=180):\n        out=[];inrun=False\n        for y in range(y0,y1):\n            n=sum(1 for x in range(x0,x1) if sum(px(x,y))/3<thr)\n            if n>0 and not inrun: start=y;inrun=True\n            if n==0 and inrun:\n                if y-start>=2: out.append((start,y-1))\n                inrun=False\n        return out\n    print('h1', runs(60,120,16,370,150))\n    print('kpi1',runs(195,400,20,370,150))\n    print('revenue',runs(1010,1420,20,370,150))\n    print('traffic',runs(1415,1800,20,370,150))\n    print('table',runs(1795,2250,20,370,150))\n    print('activity',runs(2245,2650,20,370,150))\n    print('footer',runs(2640,2760,10,380,220))\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\nfor path,label in [('.crops/desktop.raw','REF'),('.crops/ours.raw','OURS')]:\n    d=open(path,'rb').read()\n    def px(x,y):\n        i=(y*W+x)*3\n        return tuple(d[i:i+3])\n    def runs(y0,y1,x0,x1,thr=180):\n        out=[];inrun=False\n        for y in range(y0,y1):\n            n=sum(1 for x in range(x0,x1) if sum(px(x,y))/3<thr)\n            if n>0 and not inrun: start=y;inrun=True\n            if n==0 and inrun:\n                if y-start>=2: out.append((start,y-1))\n                inrun=False\n        return out\n    print('====',label)\n    print('rev',runs(400,800,295,1010,150))\n    print('traffic',runs(410,800,1060,1400,180))\n    print('table',runs(810,1245,290,1010,180))\n    print('activity',runs(810,1245,1050,1400,180))\n    print('footer',runs(1240,1340,275,1410,220))\n    print('sidebar',runs(0,1340,16,240,170))\n    # topbar elements\n    def words(y0,y1,x0,x1,thr=210,gap=8):\n        cols=set()\n        for y in range(y0,y1):\n            for x in range(x0,x1):\n                c=px(x,y)\n                if (c[0]+c[1]+c[2])/3<thr: cols.add(x)\n        cols=sorted(cols);rr=[]\n        if not cols:return []\n        s=p=cols[0]\n        for x in cols[1:]:\n            if x-p>gap:rr.append((s,p,p-s+1));s=x\n            p=x\n        rr.append((s,p,p-s+1));return rr\n    print('topbar',words(10,56,248,1440,235,12))\nPY",
+    "grep -n \"mt:\" src/components/TrafficCard.tsx | head -20",
+    "node .crops/inspect.mjs 2>&1 | sed -n '/topbarEls/,/h1/p'",
+    "python3 - <<'PY'\nfrom pathlib import Path\n# KPI\np=Path('src/components/KpiGrid.tsx'); s=p.read_text()\ns=s.replace(\"        p: { xs: 2, md: 2.5 },\\n        display: 'flex',\", \"        p: { xs: 2, md: 2.5 },\\n        pt: { xs: '18px', md: 2.5 },\\n        display: 'flex',\")\ns=s.replace(\"          mt: 0,\\n          fontSize: 30,\", \"          mt: { xs: '4px', md: 0 },\\n          fontSize: 30,\")\np.write_text(s)\n# Revenue\np=Path('src/components/RevenueCard.tsx'); s=p.read_text()\ns=s.replace(\"          mt: { xs: 1.5, md: 2 },\\n          display: 'flex',\", \"          mt: { xs: 2.25, md: 2 },\\n          display: 'flex',\")\ns=s.replace(\"          mt: { xs: 2, md: 2.5 },\\n          height: 164,\", \"          mt: { xs: 2.5, md: 2.5 },\\n          height: 164,\")\ns=s.replace(\"          mt: 2.5,\\n          display: 'flex',\\n          justifyContent: 'space-between',\", \"          mt: { xs: 2.625, md: 2.5 },\\n          display: 'flex',\\n          justifyContent: 'space-between',\")\ns=s.replace(\"        sx={{ mt: 'auto', pt: 2, mb: 0.5, alignSelf: 'flex-start' }}\", \"        sx={{ mt: 'auto', pt: { xs: '2px', md: 2 }, mb: 0.5, alignSelf: 'flex-start' }}\")\np.write_text(s)\n# Traffic\np=Path('src/components/TrafficCard.tsx'); s=p.read_text()\ns=s.replace(\"        pt: { xs: 2, md: '23px' },\", \"        pt: { xs: '18px', md: '23px' },\")\ns=s.replace(\"<Box sx={{ mt: 2, display: 'flex', alignItems: 'center', gap: 1.25, flexWrap: 'wrap' }}>\", \"<Box sx={{ mt: { xs: 1.75, md: 1.5 }, display: 'flex', alignItems: 'center', gap: 1.25, flexWrap: 'wrap' }}>\")\ns=s.replace(\"sx={{ mt: 2.625, display: 'flex', flexDirection: 'column', gap: 2.25 }}\", \"sx={{ mt: { xs: 2.375, md: 2.625 }, display: 'flex', flexDirection: 'column', gap: 2.25 }}\")\np.write_text(s)\n# Table\np=Path('src/components/TransactionsCard.tsx'); s=p.read_text()\ns=s.replace(\"        pt: { xs: 2, md: '22px' },\", \"        pt: { xs: '18px', md: '22px' },\")\ns=s.replace(\"        pb: { xs: 2, md: '16px' },\", \"        pb: { xs: '9px', md: '16px' },\")\ns=s.replace(\"<TableContainer sx={{ mt: 2, width: '100%', overflowX: 'auto' }}>\", \"<TableContainer sx={{ mt: { xs: 2.75, md: 2 }, width: '100%', overflowX: 'auto' }}>\")\np.write_text(s)\n# Activity\np=Path('src/components/ActivityCard.tsx'); s=p.read_text()\ns=s.replace(\"        pt: { xs: 2, md: '21px' },\", \"        pt: { xs: '19px', md: '22px' },\")\ns=s.replace(\"        sx={{ mt: 'auto', pt: { xs: '14px', md: 2.5 }, mb: 1, alignSelf: 'flex-start' }}\", \"        sx={{ mt: 'auto', pt: { xs: '11px', md: 2.5 }, mb: 1, alignSelf: 'flex-start' }}\")\np.write_text(s)\n# Footer\np=Path('src/components/Footer.tsx'); s=p.read_text()\ns=s.replace(\"        pt: { xs: '20px', md: '20px' },\", \"        pt: { xs: '21px', md: '21px' },\")\ns=s.replace(\"        gap: { xs: 1.5, md: 2 },\", \"        gap: { xs: 1, md: 2 },\")\ns=s.replace(\"        pb: { xs: '16px', md: '37px' },\", \"        pb: { xs: '18px', md: '37px' },\")\np.write_text(s)\nPY\npnpm build 2>&1 | tail -3\nnode ../tools/shot.mjs http://127.0.0.1:4190 . 2>&1 | tail -4\nffmpeg -loglevel error -y -i desktop.png -f rawvideo -pix_fmt rgb24 .crops/ours.raw\nffmpeg -loglevel error -y -i mobile.png -f rawvideo -pix_fmt rgb24 .crops/ours-mobile.raw",
+    "python3 - <<'PY'\ndef compare(ref, ours, W, H, ranges, labels):\n    for path,label in [(ref,'REF'),(ours,'OURS')]:\n        d=open(path,'rb').read()\n        def px(x,y):\n            i=(y*W+x)*3\n            return tuple(d[i:i+3])\n        def runs(y0,y1,x0,x1,thr=180):\n            out=[];inrun=False\n            for y in range(y0,y1):\n                n=sum(1 for x in range(x0,x1) if sum(px(x,y))/3<thr)\n                if n>0 and not inrun: start=y;inrun=True\n                if n==0 and inrun:\n                    if y-start>=2: out.append((start,y-1))\n                    inrun=False\n            return out\n        print('==',label)\n        for (r,name) in zip(ranges,labels):\n            print(name, runs(*r))\ncompare('.crops/desktop.raw','.crops/ours.raw',1440,1340,\n        [(400,800,295,1010,150),(410,800,1060,1400,180),(810,1245,290,1010,180),(810,1245,1050,1400,180),(1240,1345,275,1410,220),(0,1340,16,240,170)],\n        ['rev','traffic','table','activity','footer','sidebar'])\ncompare('.crops/mobile.raw','.crops/ours-mobile.raw',390,2760,\n        [(60,120,16,370,150),(195,400,20,370,150),(1010,1420,20,370,150),(1415,1800,20,370,150),(1795,2250,20,370,150),(2245,2650,20,370,150),(2640,2760,10,380,220)],\n        ['h1','kpi','rev','traffic','table','activity','footer'])\nPY",
+    "python3 - <<'PY'\nfrom pathlib import Path\np=Path('src/components/ActivityCard.tsx'); s=p.read_text()\ns=s.replace(\"        pt: { xs: '19px', md: '22px' },\", \"        pt: { xs: '21px', md: '22px' },\")\np.write_text(s)\np=Path('src/components/TransactionsCard.tsx'); s=p.read_text()\ns=s.replace(\"        pt: { xs: '18px', md: '22px' },\", \"        pt: { xs: '20px', md: '22px' },\")\ns=s.replace(\"        pb: { xs: '9px', md: '16px' },\", \"        pb: { xs: '7px', md: '16px' },\")\np.write_text(s)\np=Path('src/components/Footer.tsx'); s=p.read_text()\ns=s.replace(\"        pb: { xs: '18px', md: '37px' },\", \"        pb: { xs: '18px', md: '36px' },\")\np.write_text(s)\np=Path('src/components/TrafficCard.tsx'); s=p.read_text()\ns=s.replace(\"        sx={{ mt: 'auto', pt: 3, mb: 0.5, alignSelf: 'flex-start' }}\", \"        sx={{ mt: 'auto', pt: 3, mb: 0.75, alignSelf: 'flex-start' }}\")\np.write_text(s)\nPY\nmkdir -p public\ncat > public/favicon.svg <<'EOF'\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\">\n  <defs>\n    <linearGradient id=\"g\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\">\n      <stop offset=\"0\" stop-color=\"#7c3aed\"/>\n      <stop offset=\"0.55\" stop-color=\"#5b4ae8\"/>\n      <stop offset=\"1\" stop-color=\"#4338ca\"/>\n    </linearGradient>\n  </defs>\n  <rect width=\"32\" height=\"32\" rx=\"9\" fill=\"url(#g)\"/>\n  <path d=\"M6.5 21.5 11.7 16l4.1 3.2 6.2-7.4\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n  <circle cx=\"22.4\" cy=\"10.4\" r=\"1.6\" fill=\"#fff\"/>\n</svg>\nEOF\npython3 - <<'PY'\nfrom pathlib import Path\np=Path('index.html'); s=p.read_text()\ns=s.replace('    <meta name=\"viewport\" content=\"initial-scale=1, width=device-width\" />', '    <meta name=\"viewport\" content=\"initial-scale=1, width=device-width\" />\\n    <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon.svg\" />')\np.write_text(s)\nPY\npnpm build 2>&1 | tail -3\nnode ../tools/shot.mjs http://127.0.0.1:4190 . 2>&1 | tail -4",
+    "ffmpeg -loglevel error -y -i mobile.png -f rawvideo -pix_fmt rgb24 .crops/ours-mobile.raw\npython3 - <<'PY'\nW,H=390,2760\nfor path,label in [('.crops/mobile.raw','REF'),('.crops/ours-mobile.raw','OURS')]:\n    d=open(path,'rb').read()\n    def px(x,y):\n        i=(y*W+x)*3\n        return tuple(d[i:i+3])\n    def runs(y0,y1,x0,x1,thr=180):\n        out=[];inrun=False\n        for y in range(y0,y1):\n            n=sum(1 for x in range(x0,x1) if sum(px(x,y))/3<thr)\n            if n>0 and not inrun: start=y;inrun=True\n            if n==0 and inrun:\n                if y-start>=2: out.append((start,y-1))\n                inrun=False\n        return out\n    print(label,'table',runs(1795,2250,20,370,150)[:5])\n    print(label,'activity',runs(2245,2650,20,370,150)[-3:])\n    print(label,'footer',runs(2640,2760,10,380,220))\n    # borders\n    prev=None\n    for y in range(2200,2760):\n        c=px(195,y)\n        if c in [(230,232,240),(229,231,239),(231,233,241)]:\n            if prev != y-1: print(label,'border',y)\n            prev=y\nPY",
+    "python3 - <<'PY'\nfrom pathlib import Path\np=Path('src/components/Footer.tsx'); s=p.read_text()\ns=s.replace(\"        pt: { xs: '21px', md: '21px' },\", \"        pt: { xs: '19px', md: '21px' },\")\np.write_text(s)\nPY\npnpm build 2>&1 | tail -2",
+    "cat > .crops/interact.mjs <<'EOF'\nimport { chromium } from '/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/tools/node_modules/playwright/index.mjs';\nconst browser = await chromium.launch({ channel: 'chrome' });\nconst errors = [];\n\nconst desktop = await browser.newContext({ viewport: { width: 1440, height: 1340 } });\nconst page = await desktop.newPage();\npage.on('console', (msg) => { if (msg.type() === 'error') errors.push('desktop console: ' + msg.text()); });\npage.on('pageerror', (err) => errors.push('desktop pageerror: ' + err));\nawait page.goto('http://127.0.0.1:4190', { waitUntil: 'networkidle' });\nawait page.evaluate(() => document.fonts.ready);\n\nconst initial = await page.evaluate(() => ({\n  htmlClass: document.documentElement.className,\n  bg: getComputedStyle(document.body).backgroundColor,\n  color: getComputedStyle(document.body).color,\n  h1: document.querySelector('h1')?.textContent,\n  iconButtons: [...document.querySelectorAll('button')].filter((b) => !(b.textContent || '').trim() && !b.getAttribute('aria-label')).length,\n  tableHeaders: [...document.querySelectorAll('thead th')].map((th) => ({ scope: th.getAttribute('scope'), text: th.textContent })),\n  tableAria: document.querySelector('table')?.getAttribute('aria-label'),\n  overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,\n  navCurrent: document.querySelector('[aria-current=\"page\"]')?.textContent,\n}));\nconsole.log('INITIAL', JSON.stringify(initial, null, 2));\n\n// Nav selection\nawait page.getByRole('button', { name: 'Transactions' }).click();\nawait page.waitForTimeout(200);\nconsole.log('NAV AFTER CLICK', await page.evaluate(() => ({\n  current: document.querySelector('nav [aria-current=\"page\"]')?.textContent,\n  breadcrumb: document.querySelector('nav[aria-label=\"Breadcrumb\"]')?.textContent,\n})));\n\n// Theme toggle\nawait page.getByRole('button', { name: /Switch to dark mode/i }).click();\nawait page.waitForTimeout(500);\nconst dark = await page.evaluate(() => ({\n  htmlClass: document.documentElement.className,\n  bg: getComputedStyle(document.body).backgroundColor,\n  color: getComputedStyle(document.body).color,\n  cardBg: getComputedStyle(document.querySelector('.MuiCard-root')).backgroundColor,\n  pressed: document.querySelector('[aria-pressed]')?.getAttribute('aria-pressed'),\n}));\nconsole.log('DARK', JSON.stringify(dark, null, 2));\nawait page.addStyleTag({ content: '*,*::before,*::after{transition:none!important;animation:none!important}' });\nawait page.screenshot({ path: '.crops/dark-desktop.png', fullPage: true });\n\n// Toggle back\nawait page.getByRole('button', { name: /Switch to light mode/i }).click();\nawait page.waitForTimeout(300);\nconsole.log('LIGHT AGAIN', await page.evaluate(() => ({ htmlClass: document.documentElement.className, bg: getComputedStyle(document.body).backgroundColor })));\nawait desktop.close();\n\n// Mobile\nconst mobile = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });\nconst m = await mobile.newPage();\nm.on('console', (msg) => { if (msg.type() === 'error') errors.push('mobile console: ' + msg.text()); });\nm.on('pageerror', (err) => errors.push('mobile pageerror: ' + err));\nawait m.goto('http://127.0.0.1:4190', { waitUntil: 'networkidle' });\nawait m.evaluate(() => document.fonts.ready);\nconsole.log('MOBILE INITIAL', await m.evaluate(() => ({\n  overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,\n  width: document.documentElement.clientWidth,\n  pageHeight: document.documentElement.scrollHeight,\n  iconButtonsWithoutLabel: [...document.querySelectorAll('button')].filter((b) => !(b.textContent || '').trim() && !b.getAttribute('aria-label')).length,\n  smallTargets: [...document.querySelectorAll('button')].filter((b) => { const r = b.getBoundingClientRect(); return r.width > 0 && (r.width < 24 || r.height < 24); }).length,\n})));\nawait m.getByRole('button', { name: 'Open navigation menu' }).click();\nawait m.waitForTimeout(400);\nconsole.log('DRAWER', await m.evaluate(() => {\n  const drawer = document.querySelector('.MuiDrawer-paper');\n  return { visible: !!drawer && drawer.getBoundingClientRect().width > 0, width: drawer?.getBoundingClientRect().width, ariaHidden: drawer?.getAttribute('aria-hidden') };\n}));\nawait m.screenshot({ path: '.crops/mobile-drawer.png', fullPage: false });\nawait m.getByRole('button', { name: 'Dark mode' }).click().catch(() => {});\n// The Switch is a checkbox; use the label text if needed\nawait m.getByRole('switch', { name: 'Dark mode' }).click().catch(() => {});\nawait m.waitForTimeout(300);\nconsole.log('MOBILE DARK', await m.evaluate(() => ({ htmlClass: document.documentElement.className, bg: getComputedStyle(document.body).backgroundColor })));\n// select a nav item closes drawer\nawait m.getByRole('button', { name: 'Analytics' }).click();\nawait m.waitForTimeout(400);\nconsole.log('DRAWER CLOSED', await m.evaluate(() => {\n  const drawer = document.querySelector('.MuiDrawer-paper');\n  return { width: drawer?.getBoundingClientRect().width, current: document.querySelector('nav [aria-current=\"page\"]')?.textContent };\n}));\nawait mobile.close();\nawait browser.close();\nconsole.log('ERRORS', errors);\nEOF\nnode .crops/interact.mjs 2>&1 | tail -80",
+    "python3 - <<'PY'\nfrom pathlib import Path\n# blend using ffmpeg after re-screenshot\nPY\nnode ../tools/shot.mjs http://127.0.0.1:4190 . 2>&1 | tail -3\nffmpeg -loglevel error -y -i desktop.png -f rawvideo -pix_fmt rgb24 .crops/ours.raw\nffmpeg -loglevel error -y -i mobile.png -f rawvideo -pix_fmt rgb24 .crops/ours-mobile.raw\nffmpeg -loglevel error -y -i reference-desktop.png -i desktop.png -filter_complex \"blend=all_mode=difference\" .crops/diff-desktop.png\nffmpeg -loglevel error -y -i reference-mobile.png -i mobile.png -filter_complex \"blend=all_mode=difference\" .crops/diff-mobile.png\npython3 - <<'PY'\nW,H=1440,1340\na=open('.crops/desktop.raw','rb').read(); b=open('.crops/ours.raw','rb').read()\ndef diff(pathA,pathB,W,H):\n    a=open(pathA,'rb').read(); b=open(pathB,'rb').read()\n    n=min(len(a),len(b)); total=0; count=0\n    for i in range(0,n,3):\n        total+=abs(a[i]-b[i])+abs(a[i+1]-b[i+1])+abs(a[i+2]-b[i+2]); count+=3\n    return total/count\nprint('desktop mean abs channel diff', diff('.crops/desktop.raw','.crops/ours.raw',1440,1340))\nprint('mobile mean abs channel diff', diff('.crops/mobile.raw','.crops/ours-mobile.raw',390,2752))\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\ndef get(path):\n    d=open(path,'rb').read()\n    def px(x,y):\n        i=(y*W+x)*3\n        return tuple(d[i:i+3])\n    def isp(c): return abs(c[0]-79)<70 and abs(c[1]-70)<70 and abs(c[2]-229)<70\n    pts=[]\n    for i in range(12):\n        x=int(round(301 + (703-1) * i/11))\n        ys=[y for y in range(520,650) if isp(px(x,y))]\n        pts.append((x,sum(ys)/len(ys) if ys else None))\n    return pts\nref=get('.crops/desktop.raw'); ours=get('.crops/ours.raw')\nprint('ref',ref)\nprint('ours',ours)\n# expenses\ndef getg(path):\n    d=open(path,'rb').read()\n    def px(x,y):\n        i=(y*W+x)*3\n        return tuple(d[i:i+3])\n    def isg(c): return abs(c[0]-148)<18 and abs(c[1]-163)<18 and abs(c[2]-184)<18\n    return [ (int(round(301+702*i/11)), next((y for y in range(600,720) if isg(px(int(round(301+702*i/11)),y))),None)) for i in range(12)]\nprint('gref',getg('.crops/desktop.raw'))\nprint('gours',getg('.crops/ours.raw'))\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\ncols=[(79,70,229),(14,165,164),(245,158,11),(22,163,74)]\nnames=['rev','cust','conv','churn']\ncards=[(280,546),(567,833),(854,1120),(1141,1407)]\ndef pts(path,ci):\n    d=open(path,'rb').read()\n    def px(x,y):\n        i=(y*W+x)*3\n        return tuple(d[i:i+3])\n    t=cols[ci]\n    x0,x1=cards[ci]\n    out=[]\n    for i in range(12):\n        x=int(round(x0+20+(x1-x0-40)*i/11))\n        ys=[y for y in range(315,360) if abs(px(x,y)[0]-t[0])<45 and abs(px(x,y)[1]-t[1])<45 and abs(px(x,y)[2]-t[2])<45]\n        out.append(round(sum(ys)/len(ys),1) if ys else None)\n    return out\nfor ci,n in enumerate(names):\n    r=pts('.crops/desktop.raw',ci); o=pts('.crops/ours.raw',ci)\n    print(n,'ref',r,'ours',o)\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\ndef samples(path):\n    d=open(path,'rb').read()\n    def px(x,y):\n        i=(y*W+x)*3\n        return tuple(d[i:i+3])\n    for y in [640,660,700,740,755]:\n        print(' y',y, [('%d'%x,'#%02x%02x%02x'%px(x,y)) for x in [25,80,140,200,230]])\nfor p in ['.crops/desktop.raw','.crops/ours.raw']:\n    print(p); samples(p)\nPY",
+    "python3 - <<'PY'\nW,H=1440,1340\nfor path,label in [('.crops/desktop.raw','REF'),('.crops/ours.raw','OURS')]:\n    d=open(path,'rb').read()\n    def px(x,y):\n        i=(y*W+x)*3\n        return tuple(d[i:i+3])\n    rows=[]\n    for y in range(630,765):\n        n=sum(1 for x in range(24,230) if px(x,y)[0]>225 and px(x,y)[1]>225 and px(x,y)[2]>225)\n        rows.append((y,n))\n    runs=[];inrun=False\n    for y,n in rows:\n        if n>2 and not inrun: start=y;inrun=True\n        if n<=2 and inrun:\n            if y-start>=2: runs.append((start,y-1))\n            inrun=False\n    print(label, runs)\nPY",
+    "python3 - <<'PY'\nfrom pathlib import Path\n# premium gradient closer to reference\np=Path('src/components/Sidebar.tsx'); s=p.read_text()\ns=s.replace(\"        position: 'relative',\\n        overflow: 'hidden',\\n        mt: '15px',\", \"        position: 'relative',\\n        overflow: 'hidden',\\n        flexShrink: 0,\\n        mt: '15px',\")\ns=s.replace(\"        background:\\n          'radial-gradient(120% 120% at 88% 0%, rgba(196, 181, 253, 0.55) 0%, rgba(124, 58, 237, 0) 46%), linear-gradient(145deg, #5b3ee0 0%, #5a3be0 46%, #513eb9 100%)',\",\n            \"        background:\\n          'radial-gradient(72% 80% at 88% -6%, rgba(168, 85, 247, 0.82) 0%, rgba(126, 34, 206, 0.24) 38%, rgba(124, 58, 237, 0) 62%), linear-gradient(145deg, #5242e3 0%, #5b3ae0 52%, #4f3fba 100%)',\")\np.write_text(s)\n# revenue data shift down ~1.1%\np=Path('src/data.ts'); s=p.read_text()\nvals={\n'54.9':'56.0','51.8':'52.9','56.1':'57.2','47.0':'48.1','42.1':'43.2','43.3':'44.4','36.6':'37.7','34.1':'35.2','37.8':'38.9','30.5':'31.6','25.6':'26.7','12.2':'12.2',\n'72.0':'73.1','70.7':'71.8','73.2':'74.3','68.9':'70.0','67.1':'68.2','68.3':'69.4','64.6':'65.7','63.4':'64.5','65.2':'66.3','59.8':'60.9','59.1':'60.2','56.1':'56.1',\n}\nfor a,b in vals.items():\n    s=s.replace(f'revenue: {a}, expenses: {b}', f'revenue: {b}, expenses: {vals.get(str(b), b)}')\n# The above double replacement is unreliable; rewrite block explicitly\nimport re\nstart=s.index('export const revenueSeries')\nend=s.index('];', start)+2\nblock='''export const revenueSeries: MonthPoint[] = [\n  { month: 'Jan', revenue: 56.0, expenses: 73.1 },\n  { month: 'Feb', revenue: 52.9, expenses: 71.8 },\n  { month: 'Mar', revenue: 57.2, expenses: 74.3 },\n  { month: 'Apr', revenue: 48.1, expenses: 70.0 },\n  { month: 'May', revenue: 43.2, expenses: 68.2 },\n  { month: 'Jun', revenue: 44.4, expenses: 69.4 },\n  { month: 'Jul', revenue: 37.7, expenses: 65.7 },\n  { month: 'Aug', revenue: 35.2, expenses: 64.5 },\n  { month: 'Sep', revenue: 38.9, expenses: 66.3 },\n  { month: 'Oct', revenue: 31.6, expenses: 60.9 },\n  { month: 'Nov', revenue: 26.7, expenses: 60.2 },\n  { month: 'Dec', revenue: 12.2, expenses: 56.1 },\n];'''\ns=s[:start]+block+s[end:]\np.write_text(s)\nPY\npnpm remove @fontsource/inter 2>&1 | tail -3\npnpm build 2>&1 | tail -3",
+    "sed -n '/export const revenueSeries/,/];/p' src/data.ts; echo '--- package ---'; cat package.json; echo '--- workspace ---'; cat pnpm-workspace.yaml",
+    "node ../tools/shot.mjs http://127.0.0.1:4190 . 2>&1 | tail -3; ffmpeg -loglevel error -y -i desktop.png -f rawvideo -pix_fmt rgb24 .crops/ours.raw; ffmpeg -loglevel error -y -i mobile.png -f rawvideo -pix_fmt rgb24 .crops/ours-mobile.raw; python3 - <<'PY'\nW,H=1440,1340\na=open('.crops/desktop.raw','rb').read(); b=open('.crops/ours.raw','rb').read()\ndef diff(pa,pb):\n    a=open(pa,'rb').read();b=open(pb,'rb').read();n=min(len(a),len(b));t=0;c=0\n    for i in range(0,n,3):\n        t+=abs(a[i]-b[i])+abs(a[i+1]-b[i+1])+abs(a[i+2]-b[i+2]);c+=3\n    return t/c\nprint('desktop',diff('.crops/desktop.raw','.crops/ours.raw'))\nprint('mobile',diff('.crops/mobile.raw','.crops/ours-mobile.raw'))\ndef px(x,y):\n    i=(y*W+x)*3; return tuple(b[i:i+3])\nfor y in [640,660,700,740]:\n    print(y,[('#%02x%02x%02x'%px(x,y)) for x in [25,80,140,200,230]])\nPY",
+    "cat > .crops/drawer.mjs <<'EOF'\nimport { chromium } from '/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/tools/node_modules/playwright/index.mjs';\nconst browser = await chromium.launch({ channel: 'chrome' });\nconst ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });\nconst page = await ctx.newPage();\nawait page.goto('http://127.0.0.1:4190', { waitUntil: 'networkidle' });\nawait page.evaluate(() => document.fonts.ready);\nawait page.getByRole('button', { name: 'Open navigation menu' }).click();\nawait page.waitForTimeout(400);\nconsole.log(await page.evaluate(() => {\n  const paper = document.querySelector('.MuiDrawer-paper');\n  const upgrade = [...document.querySelectorAll('*')].find((el) => el.textContent === 'Upgrade to Scale');\n  const r = (el) => { const b = el.getBoundingClientRect(); return [b.x,b.y,b.width,b.height]; };\n  return { paper: r(paper), scrollHeight: paper.scrollHeight, clientHeight: paper.clientHeight, upgrade: r(upgrade.parentElement), drawerAria: paper.getAttribute('aria-hidden'), rootAria: document.querySelector('.MuiModal-root')?.getAttribute('aria-hidden') };\n}));\nawait page.addStyleTag({ content: '*,*::before,*::after{transition:none!important;animation:none!important}' });\nawait page.screenshot({ path: '.crops/mobile-drawer2.png' });\nawait browser.close();\nEOF\nnode .crops/drawer.mjs",
+    "pnpm list --depth 0 2>&1 | tail -30; echo '--- dist ---'; ls -la dist | head; du -sh dist; echo '--- build assets ---'; ls dist/assets | tail -5",
+    "pnpm preview --port 4191 --host 127.0.0.1",
+    "sleep 2; curl -s -o /dev/null -w '%{http_code} ' http://127.0.0.1:4191/; curl -s -o /dev/null -w '%{http_code}\\n' http://127.0.0.1:4191/favicon.svg\ncat > .crops/prodcheck.mjs <<'EOF'\nimport { chromium } from '/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/tools/node_modules/playwright/index.mjs';\nconst browser = await chromium.launch({ channel: 'chrome' });\nconst page = await browser.newPage({ viewport: { width: 1440, height: 1340 } });\nconst errors = [];\npage.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()); });\npage.on('pageerror', (e) => errors.push(String(e)));\nawait page.goto('http://127.0.0.1:4191/', { waitUntil: 'networkidle' });\nawait page.evaluate(() => document.fonts.ready);\nconsole.log({\n  title: await page.title(),\n  h1: await page.locator('h1').innerText(),\n  cards: await page.locator('.MuiCard-root').count(),\n  height: await page.evaluate(() => document.documentElement.scrollHeight),\n  errors,\n});\nawait browser.close();\nEOF\nnode .crops/prodcheck.mjs",
+    "sed -n '1,120p' /Users/minim1/.dsh/skills/mui-agent-skill/references/migracao-v9.md",
+    "pwd; test -d .crops && rm -rf .crops; pnpm build 2>&1 | tail -4; node ../tools/shot.mjs http://127.0.0.1:4190 . 2>&1 | tail -4; echo '--- tree ---'; ls -la; echo '--- src tree ---'; find src -type f | sort; echo '--- dist ---'; ls dist"
+  ],
+  "reads": [
+    "/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/caso-a-com-skill/TASK.md",
+    "/Users/minim1/.dsh/skills/mui-agent-skill/subskills/instalacao/SKILL.md",
+    "/Users/minim1/.dsh/skills/mui-agent-skill/subskills/estrutura-paginas/SKILL.md",
+    "/Users/minim1/.dsh/skills/mui-agent-skill/subskills/theming/SKILL.md",
+    "/Users/minim1/.dsh/skills/mui-agent-skill/subskills/referencias/SKILL.md",
+    "/Users/minim1/.dsh/skills/mui-agent-skill/subskills/componentes/SKILL.md",
+    "/Users/minim1/.dsh/skills/mui-agent-skill/subskills/INDEX.md"
+  ]
+}

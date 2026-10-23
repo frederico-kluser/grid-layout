@@ -1,0 +1,104 @@
+{
+  "labels": [
+    "caso-a",
+    "caso-b"
+  ],
+  "cases": {
+    "caso-a": {
+      "composite": 89.9,
+      "ssim": 0.88507,
+      "pixel_match_16": 0.94271,
+      "geometry": 0.985,
+      "mobile_ssim": 0.85087,
+      "zones": {
+        "sidebar": 0.88041,
+        "topbar": 0.83357,
+        "hero": 0.97288,
+        "kpis": 0.83934,
+        "charts": 0.92796,
+        "table": 0.83232,
+        "footer": 0.93337
+      },
+      "checks": {
+        "mui_v9": true,
+        "build_ok": true,
+        "no_barrel_imports": true,
+        "path_imports_ratio": true,
+        "no_removed_apis": true,
+        "no_system_props": true,
+        "theme_provider_cssbaseline": true,
+        "color_schemes_dark": true,
+        "slot_props": true,
+        "fontsource": true,
+        "grid_v2": true,
+        "a11y_labels": true
+      },
+      "skill_adherence": 100.0,
+      "build_seconds": 3.87,
+      "js_gzip_kb": 170.9,
+      "loc": 2605,
+      "duration_seconds": 1778.8,
+      "tokens": {
+        "input_sum": 1218725,
+        "output_sum": 231005,
+        "cache_read_sum": 35497216,
+        "max_input": 337379
+      },
+      "tool_calls": 210
+    },
+    "caso-b": {
+      "composite": 91.7,
+      "ssim": 0.90814,
+      "pixel_match_16": 0.95102,
+      "geometry": 0.99472,
+      "mobile_ssim": 0.86747,
+      "zones": {
+        "sidebar": 0.88821,
+        "topbar": 0.87209,
+        "hero": 0.96733,
+        "kpis": 0.94361,
+        "charts": 0.93743,
+        "table": 0.83366,
+        "footer": 1.0
+      },
+      "checks": {
+        "mui_v9": true,
+        "build_ok": true,
+        "no_barrel_imports": false,
+        "path_imports_ratio": false,
+        "no_removed_apis": true,
+        "no_system_props": true,
+        "theme_provider_cssbaseline": true,
+        "color_schemes_dark": false,
+        "slot_props": true,
+        "fontsource": true,
+        "grid_v2": true,
+        "a11y_labels": true
+      },
+      "skill_adherence": 75.0,
+      "build_seconds": 0.75,
+      "js_gzip_kb": 155.0,
+      "loc": 2800,
+      "duration_seconds": 1860.4,
+      "tokens": {
+        "input_sum": 421227,
+        "output_sum": 336303,
+        "cache_read_sum": 42202624,
+        "max_input": 196439
+      },
+      "tool_calls": 207
+    }
+  },
+  "direct_pair": {
+    "ssim": 0.86926,
+    "mae": 5.121,
+    "mae_similarity": 0.97992,
+    "rmse": 24.856,
+    "pixel_match_8": 0.91104,
+    "pixel_match_16": 0.92961,
+    "pixel_match_32": 0.95675,
+    "pixel_match_64": 0.96921,
+    "exact_pixels": 0.83542
+  },
+  "composite_gap_pp": -1.8
+}

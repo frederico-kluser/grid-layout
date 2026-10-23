@@ -1,0 +1,206 @@
+{
+  "candidates": {
+    "caso-a": {
+      "ssim": 0.83476,
+      "mae": 10.593,
+      "rmse": 28.056,
+      "pixel_match_8": 0.67804,
+      "pixel_match_16": 0.83425,
+      "pixel_match_32": 0.92747,
+      "pixel_match_64": 0.96246,
+      "exact_pixels": 0.24151,
+      "edge_similarity": 0.53245,
+      "delta_e": 2.81,
+      "palette_similarity": 0.9437,
+      "zones": {
+        "left_phone": 0.82442,
+        "middle_phone": 0.73392,
+        "right_phone": 0.78224,
+        "left_glow": 0.70726,
+        "left_star": 0.86695,
+        "middle_top": 0.61775,
+        "middle_tabs": 0.71733,
+        "middle_cards": 0.81891,
+        "middle_fab": 0.50411,
+        "right_top": 0.66411,
+        "right_orb": 0.79478,
+        "right_title": 0.75288,
+        "right_buttons": 0.80111
+      },
+      "composite": 80.0,
+      "meta": {
+        "scrollHeight": 768,
+        "overflowX": false,
+        "axe": {
+          "violations": [],
+          "violationCount": 0,
+          "nodeCount": 0
+        },
+        "axeMobile": {
+          "violations": [],
+          "violationCount": 0,
+          "nodeCount": 0
+        },
+        "consoleErrors": [],
+        "perf": {
+          "fcp": 176,
+          "lcp": 176,
+          "domContentLoaded": 42,
+          "load": 42,
+          "transferBytes": 459561,
+          "resourceCount": 3,
+          "domNodes": 365,
+          "muiNodes": 158,
+          "title": "Sona \u2014 AI voice assistant, three screens",
+          "h1": [
+            "Sona \u2014 AI voice assistant concept in three screens"
+          ],
+          "h2": [],
+          "bodyBg": "rgb(219, 219, 219)",
+          "fontFamily": "-apple-system, \"system-ui\", \"SF Pro Display\", \"SF Pro Text\", \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+          "robotoLoaded": false,
+          "scrollWidth": 1024,
+          "clientWidth": 1024,
+          "scrollHeight": 768,
+          "bodyScrollWidth": 1024,
+          "bodyScrollHeight": 768
+        },
+        "interactions": {
+          "tab": {
+            "clicked": true,
+            "before": [
+              "All"
+            ],
+            "after": [
+              "Scheduled"
+            ],
+            "changed": true
+          },
+          "mic": {
+            "found": true,
+            "before": "true",
+            "after": "false",
+            "labelBefore": "Pause listening",
+            "labelAfter": "Start listening",
+            "changed": true
+          }
+        },
+        "text_found": 11,
+        "text_total": 11
+      }
+    },
+    "caso-b": {
+      "ssim": 0.86257,
+      "mae": 11.257,
+      "rmse": 26.651,
+      "pixel_match_8": 0.62218,
+      "pixel_match_16": 0.77746,
+      "pixel_match_32": 0.92844,
+      "pixel_match_64": 0.96902,
+      "exact_pixels": 0.1738,
+      "edge_similarity": 0.57942,
+      "delta_e": 2.96,
+      "palette_similarity": 0.94089,
+      "zones": {
+        "left_phone": 0.83292,
+        "middle_phone": 0.79866,
+        "right_phone": 0.82304,
+        "left_glow": 0.73373,
+        "left_star": 0.84686,
+        "middle_top": 0.67051,
+        "middle_tabs": 0.79499,
+        "middle_cards": 0.87485,
+        "middle_fab": 0.66526,
+        "right_top": 0.68178,
+        "right_orb": 0.86412,
+        "right_title": 0.81854,
+        "right_buttons": 0.80421
+      },
+      "composite": 80.7,
+      "meta": {
+        "scrollHeight": 768,
+        "overflowX": false,
+        "axe": {
+          "violations": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious",
+              "nodes": 1
+            }
+          ],
+          "violationCount": 1,
+          "nodeCount": 1
+        },
+        "axeMobile": {
+          "violations": [
+            {
+              "id": "aria-prohibited-attr",
+              "impact": "serious",
+              "nodes": 1
+            }
+          ],
+          "violationCount": 1,
+          "nodeCount": 1
+        },
+        "consoleErrors": [],
+        "perf": {
+          "fcp": 180,
+          "lcp": 180,
+          "domContentLoaded": 37,
+          "load": 37,
+          "transferBytes": 444213,
+          "resourceCount": 4,
+          "domNodes": 257,
+          "muiNodes": 25,
+          "title": "Voice \u2014 AI Assistant",
+          "h1": [
+            "How Do You See theFuture of ArtificialIntelligence?"
+          ],
+          "h2": [],
+          "bodyBg": "rgb(219, 219, 219)",
+          "fontFamily": "\"Inter Variable\", Inter, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+          "robotoLoaded": true,
+          "scrollWidth": 1024,
+          "clientWidth": 1024,
+          "scrollHeight": 768,
+          "bodyScrollWidth": 1024,
+          "bodyScrollHeight": 768
+        },
+        "interactions": {
+          "tab": {
+            "clicked": true,
+            "before": [
+              "All"
+            ],
+            "after": [
+              "Scheduled"
+            ],
+            "changed": true
+          },
+          "mic": {
+            "found": true,
+            "before": "true",
+            "after": "false",
+            "labelBefore": "Pausar o microfone",
+            "labelAfter": "Retomar o microfone",
+            "changed": true
+          }
+        },
+        "text_found": 11,
+        "text_total": 11
+      }
+    }
+  },
+  "direct_pairs": {
+    "caso-a__vs__caso-b": {
+      "ssim": 0.84725,
+      "mae": 12.633,
+      "rmse": 28.362,
+      "pixel_match_8": 0.61035,
+      "pixel_match_16": 0.72702,
+      "pixel_match_32": 0.90354,
+      "pixel_match_64": 0.96567,
+      "exact_pixels": 0.16969
+    }
+  }
+}

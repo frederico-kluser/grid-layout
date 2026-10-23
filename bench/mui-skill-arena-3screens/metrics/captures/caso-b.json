@@ -1,0 +1,183 @@
+{
+  "label": "caso-b",
+  "url": "http://127.0.0.1:4194",
+  "capturedAt": "2026-10-23T22:17:59.842Z",
+  "desktop": {
+    "perf": {
+      "fcp": 180,
+      "lcp": 180,
+      "domContentLoaded": 37,
+      "load": 37,
+      "transferBytes": 444213,
+      "resourceCount": 4,
+      "domNodes": 257,
+      "muiNodes": 25,
+      "title": "Voice — AI Assistant",
+      "h1": [
+        "How Do You See theFuture of ArtificialIntelligence?"
+      ],
+      "h2": [],
+      "bodyBg": "rgb(219, 219, 219)",
+      "fontFamily": "\"Inter Variable\", Inter, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "robotoLoaded": true,
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "scrollHeight": 768,
+      "bodyScrollWidth": 1024,
+      "bodyScrollHeight": 768
+    },
+    "boxes": {
+      "9:41": {
+        "x": 423,
+        "y": 165,
+        "w": 23,
+        "h": 11,
+        "matches": 2,
+        "partial": false
+      },
+      "All": {
+        "x": 398,
+        "y": 251,
+        "w": 43,
+        "h": 27,
+        "matches": 1,
+        "partial": false
+      },
+      "Scheduled": {
+        "x": 450,
+        "y": 251,
+        "w": 46,
+        "h": 27,
+        "matches": 2,
+        "partial": false
+      },
+      "Favorites": {
+        "x": 513,
+        "y": 251,
+        "w": 42,
+        "h": 27,
+        "matches": 1,
+        "partial": false
+      },
+      "In Projects": {
+        "x": 571,
+        "y": 251,
+        "w": 46,
+        "h": 27,
+        "matches": 1,
+        "partial": false
+      },
+      "Library": {
+        "x": 527,
+        "y": 405,
+        "w": 37,
+        "h": 13,
+        "matches": 1,
+        "partial": false
+      },
+      "Projects": {
+        "x": 414,
+        "y": 549,
+        "w": 43,
+        "h": 13,
+        "matches": 1,
+        "partial": false
+      },
+      "Listening...": {
+        "x": 687,
+        "y": 212,
+        "w": 252,
+        "h": 18,
+        "matches": 1,
+        "partial": false
+      },
+      "How Do You See the Future of Artificial Intelligence?": null,
+      "Artificial Intelligence": null,
+      "How Do You See the Future of": null
+    },
+    "textPresent": [
+      "9:41",
+      "All",
+      "Scheduled",
+      "Favorites",
+      "In Projects",
+      "Library",
+      "Projects",
+      "Listening...",
+      "How Do You See the Future of Artificial Intelligence?",
+      "Artificial Intelligence",
+      "How Do You See the Future of"
+    ],
+    "axe": {
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodes": 1
+        }
+      ],
+      "violationCount": 1,
+      "nodeCount": 1
+    },
+    "interactions": {
+      "tab": {
+        "clicked": true,
+        "before": [
+          "All"
+        ],
+        "after": [
+          "Scheduled"
+        ],
+        "changed": true
+      },
+      "mic": {
+        "found": true,
+        "before": "true",
+        "after": "false",
+        "labelBefore": "Pausar o microfone",
+        "labelAfter": "Retomar o microfone",
+        "changed": true
+      }
+    },
+    "scrollHeight": 768
+  },
+  "mobile": {
+    "perf": {
+      "fcp": 116,
+      "lcp": 116,
+      "domContentLoaded": 53,
+      "load": 53,
+      "transferBytes": 443453,
+      "resourceCount": 3,
+      "domNodes": 257,
+      "muiNodes": 25,
+      "title": "Voice — AI Assistant",
+      "h1": [
+        "How Do You See theFuture of ArtificialIntelligence?"
+      ],
+      "h2": [],
+      "bodyBg": "rgb(219, 219, 219)",
+      "fontFamily": "\"Inter Variable\", Inter, -apple-system, \"system-ui\", \"Segoe UI\", sans-serif",
+      "robotoLoaded": true,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "scrollHeight": 1932,
+      "bodyScrollWidth": 390,
+      "bodyScrollHeight": 1932
+    },
+    "overflowX": false,
+    "axe": {
+      "violations": [
+        {
+          "id": "aria-prohibited-attr",
+          "impact": "serious",
+          "nodes": 1
+        }
+      ],
+      "violationCount": 1,
+      "nodeCount": 1
+    },
+    "scrollHeight": 1932
+  },
+  "consoleErrors": []
+}

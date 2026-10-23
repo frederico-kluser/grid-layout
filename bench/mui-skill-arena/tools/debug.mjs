@@ -1,0 +1,42 @@
+import { chromium } from 'playwright';
+import { readFileSync } from 'node:fs';
+const axeSource = readFileSync('./node_modules/axe-core/axe.min.js','utf8');
+const browser = await chromium.launch({ channel:'chrome' });
+const ctx = await browser.newContext({ viewport:{width:1440,height:1340}, colorScheme:'light' });
+const page = await ctx.newPage();
+await page.goto('http://127.0.0.1:4180/', { waitUntil:'networkidle' });
+await page.evaluate(()=>document.fonts.ready);
+console.log('html attrs before', await page.evaluate(()=>[...document.documentElement.attributes].map(a=>[a.name,a.value])));
+const btn = page.locator('[aria-label*="dark" i]').first();
+console.log('btn count', await btn.count(), await btn.getAttribute('aria-label'));
+await btn.click();
+await page.waitForTimeout(700);
+console.log('html attrs after', await page.evaluate(()=>[...document.documentElement.attributes].map(a=>[a.name,a.value])));
+console.log('body bg', await page.evaluate(()=>getComputedStyle(document.body).backgroundColor));
+console.log('root vars', await page.evaluate(()=>[getComputedStyle(document.documentElement).getPropertyValue('--mui-palette-background-default'), getComputedStyle(document.body).getPropertyValue('--mui-palette-background-default')]));
+console.log('body class', await page.evaluate(()=>document.body.className));
+await page.screenshot({ path:'./debug-dark.png', fullPage:true });
+await ctx.close();
+
+const mctx = await browser.newContext({ viewport:{width:390,height:844}, isMobile:true, hasTouch:true });
+const mpage = await mctx.newPage();
+await mpage.goto('http://127.0.0.1:4180/', { waitUntil:'networkidle' });
+const menu = mpage.locator('[aria-label*="menu" i]').first();
+console.log('menu count', await menu.count(), await menu.getAttribute('aria-label'));
+await menu.click();
+await mpage.waitForTimeout(700);
+console.log('drawers', await mpage.evaluate(()=>[...document.querySelectorAll('[class*="MuiDrawer"]')].map(e=>({cls:e.className, rect:e.getBoundingClientRect().toJSON(), vis:getComputedStyle(e).visibility}))));
+console.log('paper', await mpage.evaluate(()=>[...document.querySelectorAll('.MuiDrawer-paper')].map(e=>({rect:e.getBoundingClientRect().toJSON(), vis:getComputedStyle(e).visibility, disp:getComputedStyle(e).display}))));
+await mpage.screenshot({ path:'./debug-drawer.png' });
+
+await page.addScriptTag({content: axeSource}).catch(()=>{});
+const mctx2 = await browser.newContext({ viewport:{width:1440,height:1340} });
+const p2 = await mctx2.newPage();
+await p2.goto('http://127.0.0.1:4180/', { waitUntil:'networkidle' });
+await p2.addScriptTag({content: axeSource});
+const res = await p2.evaluate(async()=>{
+  const r = await axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa']}});
+  return r.violations.map(v=>({id:v.id, impact:v.impact, nodes:v.nodes.map(n=>({target:n.target, html:n.html.slice(0,260), summary:n.failureSummary}))}));
+});
+console.log(JSON.stringify(res, null, 2));
+await browser.close();

@@ -1,0 +1,10 @@
+import { chromium } from 'playwright';
+const browser = await chromium.launch({ channel: 'chrome' });
+const page = await browser.newPage({ viewport: { width: 1280, height: 1500 } });
+await page.goto('file:///Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena/metrics/report.html', { waitUntil: 'load' });
+await page.evaluate(() => document.fonts.ready);
+const broken = await page.evaluate(() => [...document.images].filter((i) => !i.complete || i.naturalWidth === 0).map((i) => i.src));
+const counts = await page.evaluate(() => ({ images: document.images.length, sections: document.querySelectorAll('section').length, height: document.documentElement.scrollHeight }));
+console.log(JSON.stringify({ broken, counts }, null, 2));
+await page.screenshot({ path: 'report-preview.png', fullPage: false });
+await browser.close();

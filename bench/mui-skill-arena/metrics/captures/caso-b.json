@@ -1,0 +1,423 @@
+{
+  "label": "caso-b",
+  "url": "http://127.0.0.1:4192",
+  "capturedAt": "2026-10-23T19:39:25.941Z",
+  "desktop": {
+    "perf": {
+      "fcp": 176,
+      "lcp": 176,
+      "domContentLoaded": 43,
+      "load": 43,
+      "transferBytes": 608956,
+      "resourceCount": 6,
+      "domNodes": 527,
+      "muiNodes": 363,
+      "h1": [
+        "Financial overview"
+      ],
+      "h2": [
+        "Revenue",
+        "Traffic sources",
+        "Recent transactions",
+        "Team activity"
+      ],
+      "title": "Orbit Finance — Financial overview",
+      "bodyBg": "rgb(245, 246, 250)",
+      "fontFamily": "Roboto, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "robotoLoaded": true,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "scrollHeight": 1340,
+      "bodyScrollWidth": 1440,
+      "bodyScrollHeight": 1340
+    },
+    "boxes": {
+      "Financial overview": {
+        "x": 280,
+        "y": 96,
+        "w": 239,
+        "h": 35,
+        "matches": 1,
+        "partial": false
+      },
+      "Track revenue, churn and cash flow across all entities.": {
+        "x": 280,
+        "y": 137,
+        "w": 311,
+        "h": 15,
+        "matches": 1,
+        "partial": false
+      },
+      "Total revenue": {
+        "x": 301,
+        "y": 210,
+        "w": 95,
+        "h": 13,
+        "matches": 1,
+        "partial": false
+      },
+      "Active customers": {
+        "x": 588,
+        "y": 210,
+        "w": 119,
+        "h": 13,
+        "matches": 1,
+        "partial": false
+      },
+      "Conversion rate": {
+        "x": 875,
+        "y": 210,
+        "w": 111,
+        "h": 13,
+        "matches": 1,
+        "partial": false
+      },
+      "Churn rate": {
+        "x": 1162,
+        "y": 210,
+        "w": 75,
+        "h": 13,
+        "matches": 1,
+        "partial": false
+      },
+      "$128,430": {
+        "x": 301,
+        "y": 240,
+        "w": 123,
+        "h": 35,
+        "matches": 1,
+        "partial": false
+      },
+      "8,942": {
+        "x": 588,
+        "y": 240,
+        "w": 73,
+        "h": 35,
+        "matches": 1,
+        "partial": false
+      },
+      "4.86%": {
+        "x": 875,
+        "y": 240,
+        "w": 80,
+        "h": 35,
+        "matches": 1,
+        "partial": false
+      },
+      "1.9%": {
+        "x": 1162,
+        "y": 240,
+        "w": 63,
+        "h": 35,
+        "matches": 1,
+        "partial": false
+      },
+      "Revenue": {
+        "x": 301,
+        "y": 420,
+        "w": 61,
+        "h": 19,
+        "matches": 2,
+        "partial": false
+      },
+      "$1.24M": {
+        "x": 301,
+        "y": 484,
+        "w": 75,
+        "h": 25,
+        "matches": 1,
+        "partial": false
+      },
+      "Traffic sources": {
+        "x": 1066,
+        "y": 420,
+        "w": 106,
+        "h": 19,
+        "matches": 1,
+        "partial": false
+      },
+      "48.2k": {
+        "x": 1066,
+        "y": 480,
+        "w": 55,
+        "h": 25,
+        "matches": 1,
+        "partial": false
+      },
+      "Recent transactions": {
+        "x": 301,
+        "y": 840,
+        "w": 141,
+        "h": 19,
+        "matches": 1,
+        "partial": false
+      },
+      "Team activity": {
+        "x": 1066,
+        "y": 840,
+        "w": 95,
+        "h": 19,
+        "matches": 1,
+        "partial": false
+      },
+      "Documentation": {
+        "x": 1213,
+        "y": 1286,
+        "w": 82,
+        "h": 14,
+        "matches": 1,
+        "partial": false
+      },
+      "Orbit": {
+        "x": 62,
+        "y": 27,
+        "w": 38,
+        "h": 21,
+        "matches": 2,
+        "partial": false
+      },
+      "Acme Corp": {
+        "x": 61,
+        "y": 77,
+        "w": 65,
+        "h": 15,
+        "matches": 1,
+        "partial": false
+      },
+      "New report": {
+        "x": 1303,
+        "y": 24,
+        "w": 94,
+        "h": 20,
+        "matches": 1,
+        "partial": false
+      },
+      "Export": {
+        "x": 1200,
+        "y": 24,
+        "w": 67,
+        "h": 20,
+        "matches": 1,
+        "partial": false
+      }
+    },
+    "axe": {
+      "violations": [],
+      "passes": 25,
+      "incomplete": 2,
+      "violationCount": 0,
+      "nodeCount": 0
+    },
+    "theme": {
+      "found": true,
+      "before": {
+        "body": "rgb(245, 246, 250)",
+        "html": "",
+        "attr": null,
+        "colorScheme": "light"
+      },
+      "after": {
+        "body": "rgb(11, 17, 32)",
+        "html": "",
+        "attr": null,
+        "colorScheme": "dark"
+      },
+      "changed": true,
+      "ariaLabel": "Switch to light mode"
+    },
+    "finalScrollHeight": 1340
+  },
+  "mobile": {
+    "perf": {
+      "fcp": 116,
+      "lcp": 116,
+      "domContentLoaded": 38,
+      "load": 38,
+      "transferBytes": 608956,
+      "resourceCount": 6,
+      "domNodes": 527,
+      "muiNodes": 363,
+      "h1": [
+        "Financial overview"
+      ],
+      "h2": [
+        "Revenue",
+        "Traffic sources",
+        "Recent transactions",
+        "Team activity"
+      ],
+      "title": "Orbit Finance — Financial overview",
+      "bodyBg": "rgb(245, 246, 250)",
+      "fontFamily": "Roboto, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "robotoLoaded": true,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "scrollHeight": 2752,
+      "bodyScrollWidth": 390,
+      "bodyScrollHeight": 2752
+    },
+    "boxes": {
+      "Financial overview": {
+        "x": 16,
+        "y": 81,
+        "w": 239,
+        "h": 35,
+        "matches": 1,
+        "partial": false
+      },
+      "Track revenue, churn and cash flow across all entities.": {
+        "x": 16,
+        "y": 123,
+        "w": 311,
+        "h": 15,
+        "matches": 1,
+        "partial": false
+      },
+      "Total revenue": {
+        "x": 33,
+        "y": 225,
+        "w": 95,
+        "h": 13,
+        "matches": 1,
+        "partial": false
+      },
+      "Active customers": {
+        "x": 33,
+        "y": 429,
+        "w": 119,
+        "h": 13,
+        "matches": 1,
+        "partial": false
+      },
+      "Conversion rate": {
+        "x": 33,
+        "y": 633,
+        "w": 111,
+        "h": 13,
+        "matches": 1,
+        "partial": false
+      },
+      "Churn rate": {
+        "x": 33,
+        "y": 837,
+        "w": 75,
+        "h": 13,
+        "matches": 1,
+        "partial": false
+      },
+      "$128,430": {
+        "x": 33,
+        "y": 255,
+        "w": 123,
+        "h": 35,
+        "matches": 1,
+        "partial": false
+      },
+      "8,942": {
+        "x": 33,
+        "y": 459,
+        "w": 73,
+        "h": 35,
+        "matches": 1,
+        "partial": false
+      },
+      "4.86%": {
+        "x": 33,
+        "y": 663,
+        "w": 80,
+        "h": 35,
+        "matches": 1,
+        "partial": false
+      },
+      "1.9%": {
+        "x": 33,
+        "y": 867,
+        "w": 63,
+        "h": 35,
+        "matches": 1,
+        "partial": false
+      },
+      "Revenue": {
+        "x": 33,
+        "y": 1037,
+        "w": 61,
+        "h": 19,
+        "matches": 2,
+        "partial": false
+      },
+      "$1.24M": {
+        "x": 33,
+        "y": 1100,
+        "w": 75,
+        "h": 25,
+        "matches": 1,
+        "partial": false
+      },
+      "Traffic sources": {
+        "x": 33,
+        "y": 1445,
+        "w": 106,
+        "h": 19,
+        "matches": 1,
+        "partial": false
+      },
+      "48.2k": {
+        "x": 33,
+        "y": 1505,
+        "w": 55,
+        "h": 25,
+        "matches": 1,
+        "partial": false
+      },
+      "Recent transactions": {
+        "x": 33,
+        "y": 1827,
+        "w": 141,
+        "h": 19,
+        "matches": 1,
+        "partial": false
+      },
+      "Team activity": {
+        "x": 33,
+        "y": 2274,
+        "w": 95,
+        "h": 19,
+        "matches": 1,
+        "partial": false
+      },
+      "Documentation": {
+        "x": 16,
+        "y": 2716,
+        "w": 82,
+        "h": 14,
+        "matches": 1,
+        "partial": false
+      },
+      "Orbit": null,
+      "Acme Corp": null,
+      "New report": null,
+      "Export": null
+    },
+    "overflowX": false,
+    "drawer": {
+      "found": true,
+      "opened": true,
+      "papers": [
+        {
+          "width": 288,
+          "height": 844,
+          "visible": true
+        }
+      ]
+    },
+    "axe": {
+      "violations": [],
+      "passes": 24,
+      "incomplete": 2,
+      "violationCount": 0,
+      "nodeCount": 0
+    },
+    "finalScrollHeight": 2752
+  },
+  "consoleErrors": []
+}

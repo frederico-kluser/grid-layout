@@ -1,0 +1,16 @@
+# Artefactos de benchmark: pesados ou gerados (não versionar)
+**/node_modules/
+**/dist/
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+**/coverage/
+**/.crops/
+**/.ref/
+**/.analysis/
+**/_analysis/
+**/logs/*.log
+**/tools/node_modules/
+**/tools/.venv/
+.DS_Store
+**/logs/*.pid

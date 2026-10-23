@@ -1,0 +1,111 @@
+{
+  "label": "caso-b",
+  "dir": "/Volumes/Ext2TB/Projects/grid-layout/bench/mui-skill-arena-3screens/caso-b-sem-skill",
+  "package_json": {
+    "name": "voice-assistant-showcase",
+    "private": true,
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+      "dev": "vite",
+      "build": "tsc --noEmit && vite build",
+      "preview": "vite preview"
+    },
+    "dependencies": {
+      "@emotion/react": "^11.14.0",
+      "@emotion/styled": "^11.14.1",
+      "@fontsource-variable/inter": "^5.3.0",
+      "@mui/icons-material": "9.5.0",
+      "@mui/material": "9.5.0",
+      "react": "^19.3.1",
+      "react-dom": "^19.3.1"
+    },
+    "devDependencies": {
+      "@types/react": "^19.3.0",
+      "@types/react-dom": "^19.3.0",
+      "@vitejs/plugin-react": "^6.1.2",
+      "typescript": "^7.0.2",
+      "vite": "^8.3.5"
+    }
+  },
+  "lockfiles": [
+    "pnpm-lock.yaml"
+  ],
+  "readme": true,
+  "source": {
+    "files": 11,
+    "lines_of_code": 1944,
+    "bytes": 52466
+  },
+  "installed": {
+    "mui": "9.5.0",
+    "icons": "9.5.0",
+    "react": "19.3.1",
+    "vite": "8.3.5",
+    "emotion": "11.14.0"
+  },
+  "build": {
+    "cmd": "pnpm build",
+    "seconds": 1.0,
+    "code": 0,
+    "stdout_tail": "vite v8.3.5 building client environment for production...\ntransforming...\n\u2713 11661 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                                              0.60 kB \u2502 gzip:   0.37 kB\ndist/assets/inter-vietnamese-wght-normal-CBcvBZtf.woff2     10.25 kB\ndist/assets/inter-greek-ext-wght-normal-DlzME5K_.woff2      11.23 kB\ndist/assets/inter-cyrillic-wght-normal-DqGufNeO.woff2       18.74 kB\ndist/assets/inter-greek-wght-normal-CkhJZR-_.woff2          18.99 kB\ndist/assets/inter-cyrillic-ext-wght-normal-BOeWTOD4.woff2   25.96 kB\ndist/assets/inter-latin-wght-normal-Dx4kXJAl.woff2          48.25 kB\ndist/assets/inter-latin-ext-wght-normal-DO1Apj_S.woff2      85.06 kB\ndist/assets/index-1Th-UobF.css                              19.46 kB \u2502 gzip:   5.62 kB\ndist/assets/index-pC2EfBJs.js                              373.92 kB \u2502 gzip: 117.85 kB\n\n\u2713 built in 649ms\n",
+    "stderr_tail": "$ tsc --noEmit && vite build\n"
+  },
+  "dist": {
+    "exists": true,
+    "files": 10,
+    "bytes": 612509,
+    "js_bytes": 373929,
+    "js_gzip_bytes": 116247,
+    "css_bytes": 19460,
+    "css_gzip_bytes": 5538
+  },
+  "flags": {
+    "grid_legacy": 0,
+    "input_props_textfield": 0,
+    "autocomplete_renderTags": 0,
+    "menu_list_props": 0,
+    "speeddial_tooltipTitle": 0,
+    "dialog_disableEscapeKeyDown": 0,
+    "grid_item_prop": 0,
+    "system_prop_stack": 0,
+    "system_prop_box_spacing": 0
+  },
+  "imports": {
+    "path_imports": 1,
+    "barrel_mui": 2,
+    "barrel_icons": 2,
+    "path_ratio": 0.2
+  },
+  "usage": {
+    "slotProps": 0,
+    "grid_size": 0,
+    "colorSchemes": 0,
+    "useColorScheme": 0,
+    "CssBaseline": 0,
+    "ThemeProvider": 3,
+    "InitColorSchemeScript": 0,
+    "fontsource_roboto": 0,
+    "styled": 0,
+    "aria_label": 16,
+    "drawer": 0,
+    "useMediaQuery": 0
+  },
+  "viewport_meta": true,
+  "checks": {
+    "mui_v9": true,
+    "build_ok": true,
+    "no_barrel_imports": false,
+    "path_imports_ratio": false,
+    "no_removed_apis": true,
+    "no_system_props": true,
+    "theme_provider_cssbaseline": false,
+    "color_schemes_dark": false,
+    "slot_props": false,
+    "fontsource": false,
+    "grid_v2": true,
+    "a11y_labels": true
+  },
+  "skill_adherence": 50.0,
+  "checks_passed": "6/12"
+}

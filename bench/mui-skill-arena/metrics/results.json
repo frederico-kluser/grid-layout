@@ -1,0 +1,500 @@
+{
+  "reference": "referencia",
+  "candidates": {
+    "caso-a": {
+      "label": "caso-a",
+      "desktop": {
+        "ssim": 0.88507,
+        "mae": 4.5,
+        "mae_similarity": 0.98235,
+        "rmse": 22.891,
+        "pixel_match_8": 0.91688,
+        "pixel_match_16": 0.94271,
+        "pixel_match_32": 0.96359,
+        "pixel_match_64": 0.97281,
+        "exact_pixels": 0.85569,
+        "edge_similarity": 0.67045,
+        "delta_e": 0.21,
+        "palette_similarity": 0.99578,
+        "zones": {
+          "sidebar": 0.88041,
+          "topbar": 0.83357,
+          "hero": 0.97288,
+          "kpis": 0.83934,
+          "charts": 0.92796,
+          "table": 0.83232,
+          "footer": 0.93337
+        },
+        "grid": {
+          "mean": 0.88339,
+          "min": 0.5744,
+          "max": 1.0,
+          "worst_cells": [
+            {
+              "col": 3,
+              "row": 6,
+              "x": 360,
+              "y": 1005,
+              "ssim": 0.5744
+            },
+            {
+              "col": 5,
+              "row": 6,
+              "x": 600,
+              "y": 1005,
+              "ssim": 0.6612
+            },
+            {
+              "col": 9,
+              "row": 6,
+              "x": 1080,
+              "y": 1005,
+              "ssim": 0.6793
+            },
+            {
+              "col": 5,
+              "row": 1,
+              "x": 600,
+              "y": 167,
+              "ssim": 0.683
+            },
+            {
+              "col": 9,
+              "row": 5,
+              "x": 1080,
+              "y": 837,
+              "ssim": 0.6892
+            }
+          ]
+        }
+      },
+      "geometry": {
+        "mean_score": 0.985,
+        "mean_delta_px": 4.5,
+        "within_8px": 11,
+        "within_24px": 12,
+        "keys": {
+          "Financial overview": {
+            "dx": 0,
+            "dy": 2,
+            "dw": 1,
+            "dh": 2,
+            "delta": 5,
+            "score": 0.9833
+          },
+          "Total revenue": {
+            "dx": 0,
+            "dy": 3,
+            "dw": 0,
+            "dh": 0,
+            "delta": 3,
+            "score": 0.99
+          },
+          "$128,430": {
+            "dx": 0,
+            "dy": 6,
+            "dw": 0,
+            "dh": 0,
+            "delta": 6,
+            "score": 0.98
+          },
+          "Revenue": {
+            "dx": 0,
+            "dy": 1,
+            "dw": 1,
+            "dh": 0,
+            "delta": 2,
+            "score": 0.9933
+          },
+          "$1.24M": {
+            "dx": 0,
+            "dy": 0,
+            "dw": 1,
+            "dh": 0,
+            "delta": 1,
+            "score": 0.9967
+          },
+          "Traffic sources": {
+            "dx": 0,
+            "dy": 1,
+            "dw": 2,
+            "dh": 0,
+            "delta": 3,
+            "score": 0.99
+          },
+          "48.2k": {
+            "dx": 0,
+            "dy": 0,
+            "dw": 1,
+            "dh": 0,
+            "delta": 1,
+            "score": 0.9967
+          },
+          "Recent transactions": {
+            "dx": 0,
+            "dy": 0,
+            "dw": 3,
+            "dh": 0,
+            "delta": 3,
+            "score": 0.99
+          },
+          "Team activity": {
+            "dx": 0,
+            "dy": 0,
+            "dw": 2,
+            "dh": 0,
+            "delta": 2,
+            "score": 0.9933
+          },
+          "Documentation": {
+            "dx": 14,
+            "dy": 0,
+            "dw": 3,
+            "dh": 1,
+            "delta": 18,
+            "score": 0.94
+          },
+          "Acme Corp": {
+            "dx": 2,
+            "dy": 0,
+            "dw": 3,
+            "dh": 0,
+            "delta": 5,
+            "score": 0.9833
+          },
+          "New report": {
+            "dx": 2,
+            "dy": 1,
+            "dw": 2,
+            "dh": 0,
+            "delta": 5,
+            "score": 0.9833
+          }
+        }
+      },
+      "mobile": {
+        "ssim": 0.85087,
+        "mae": 5.787,
+        "mae_similarity": 0.9773,
+        "rmse": 26.93,
+        "pixel_match_8": 0.9032,
+        "pixel_match_16": 0.93014,
+        "pixel_match_32": 0.95224,
+        "pixel_match_64": 0.96429,
+        "exact_pixels": 0.8503,
+        "edge_similarity": 0.65092,
+        "delta_e": 0.28,
+        "palette_similarity": 0.99431
+      },
+      "mobile_fold": {
+        "ssim": 0.90995,
+        "mae": 3.864,
+        "mae_similarity": 0.98485,
+        "rmse": 21.514,
+        "pixel_match_8": 0.92337,
+        "pixel_match_16": 0.94331,
+        "pixel_match_32": 0.96405,
+        "pixel_match_64": 0.97425,
+        "exact_pixels": 0.88316,
+        "edge_similarity": 0.7616
+      },
+      "composite": 89.9,
+      "candidate_meta": {
+        "scrollHeight": 1340,
+        "mobileScrollHeight": 2752,
+        "overflowX": false,
+        "axeDesktop": 1,
+        "axeDesktopNodes": 21,
+        "axeMobile": 1,
+        "axeMobileNodes": 17,
+        "consoleErrors": [],
+        "themeChanged": true,
+        "drawerOpened": true,
+        "perf": {
+          "fcp": 148,
+          "lcp": 148,
+          "domContentLoaded": 46,
+          "load": 46,
+          "transferBytes": 719361,
+          "resourceCount": 8,
+          "domNodes": 604,
+          "muiNodes": 511,
+          "h1": [
+            "Financial overview"
+          ],
+          "h2": [
+            "Total revenue",
+            "Active customers",
+            "Conversion rate",
+            "Churn rate",
+            "Revenue",
+            "Traffic sources",
+            "Recent transactions",
+            "Team activity"
+          ],
+          "title": "Orbit Finance \u2014 Financial overview",
+          "bodyBg": "rgb(245, 246, 250)",
+          "fontFamily": "Roboto, Helvetica, Arial, sans-serif",
+          "robotoLoaded": true,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "scrollHeight": 1340,
+          "bodyScrollWidth": 1440,
+          "bodyScrollHeight": 1340
+        }
+      }
+    },
+    "caso-b": {
+      "label": "caso-b",
+      "desktop": {
+        "ssim": 0.90814,
+        "mae": 3.788,
+        "mae_similarity": 0.98514,
+        "rmse": 20.902,
+        "pixel_match_8": 0.93424,
+        "pixel_match_16": 0.95102,
+        "pixel_match_32": 0.96744,
+        "pixel_match_64": 0.97622,
+        "exact_pixels": 0.85479,
+        "edge_similarity": 0.71552,
+        "delta_e": 0.25,
+        "palette_similarity": 0.99505,
+        "zones": {
+          "sidebar": 0.88821,
+          "topbar": 0.87209,
+          "hero": 0.96733,
+          "kpis": 0.94361,
+          "charts": 0.93743,
+          "table": 0.83366,
+          "footer": 1.0
+        },
+        "grid": {
+          "mean": 0.90872,
+          "min": 0.5427,
+          "max": 1.0,
+          "worst_cells": [
+            {
+              "col": 9,
+              "row": 6,
+              "x": 1080,
+              "y": 1005,
+              "ssim": 0.5427
+            },
+            {
+              "col": 9,
+              "row": 5,
+              "x": 1080,
+              "y": 837,
+              "ssim": 0.5775
+            },
+            {
+              "col": 3,
+              "row": 6,
+              "x": 360,
+              "y": 1005,
+              "ssim": 0.5924
+            },
+            {
+              "col": 10,
+              "row": 6,
+              "x": 1200,
+              "y": 1005,
+              "ssim": 0.6448
+            },
+            {
+              "col": 10,
+              "row": 5,
+              "x": 1200,
+              "y": 837,
+              "ssim": 0.6936
+            }
+          ]
+        }
+      },
+      "geometry": {
+        "mean_score": 0.99472,
+        "mean_delta_px": 1.6,
+        "within_8px": 10,
+        "within_24px": 12,
+        "keys": {
+          "Financial overview": {
+            "dx": 0,
+            "dy": 0,
+            "dw": 0,
+            "dh": 0,
+            "delta": 0,
+            "score": 1.0
+          },
+          "Total revenue": {
+            "dx": 0,
+            "dy": 0,
+            "dw": 0,
+            "dh": 0,
+            "delta": 0,
+            "score": 1.0
+          },
+          "$128,430": {
+            "dx": 0,
+            "dy": 0,
+            "dw": 0,
+            "dh": 0,
+            "delta": 0,
+            "score": 1.0
+          },
+          "Revenue": {
+            "dx": 0,
+            "dy": 0,
+            "dw": 0,
+            "dh": 0,
+            "delta": 0,
+            "score": 1.0
+          },
+          "$1.24M": {
+            "dx": 0,
+            "dy": 0,
+            "dw": 0,
+            "dh": 0,
+            "delta": 0,
+            "score": 1.0
+          },
+          "Traffic sources": {
+            "dx": 0,
+            "dy": 0,
+            "dw": 0,
+            "dh": 0,
+            "delta": 0,
+            "score": 1.0
+          },
+          "48.2k": {
+            "dx": 0,
+            "dy": 0,
+            "dw": 0,
+            "dh": 0,
+            "delta": 0,
+            "score": 1.0
+          },
+          "Recent transactions": {
+            "dx": 0,
+            "dy": 0,
+            "dw": 0,
+            "dh": 0,
+            "delta": 0,
+            "score": 1.0
+          },
+          "Team activity": {
+            "dx": 0,
+            "dy": 0,
+            "dw": 0,
+            "dh": 0,
+            "delta": 0,
+            "score": 1.0
+          },
+          "Documentation": {
+            "dx": 0,
+            "dy": 0,
+            "dw": 0,
+            "dh": 0,
+            "delta": 0,
+            "score": 1.0
+          },
+          "Acme Corp": {
+            "dx": 6,
+            "dy": 0,
+            "dw": 3,
+            "dh": 0,
+            "delta": 9,
+            "score": 0.97
+          },
+          "New report": {
+            "dx": 2,
+            "dy": 2,
+            "dw": 3,
+            "dh": 3,
+            "delta": 10,
+            "score": 0.9667
+          }
+        }
+      },
+      "mobile": {
+        "ssim": 0.86747,
+        "mae": 5.102,
+        "mae_similarity": 0.97999,
+        "rmse": 24.568,
+        "pixel_match_8": 0.9082,
+        "pixel_match_16": 0.93276,
+        "pixel_match_32": 0.95203,
+        "pixel_match_64": 0.96845,
+        "exact_pixels": 0.82781,
+        "edge_similarity": 0.73258,
+        "delta_e": 1.61,
+        "palette_similarity": 0.96772
+      },
+      "mobile_fold": {
+        "ssim": 0.88456,
+        "mae": 4.427,
+        "mae_similarity": 0.98264,
+        "rmse": 20.844,
+        "pixel_match_8": 0.87882,
+        "pixel_match_16": 0.92402,
+        "pixel_match_32": 0.94935,
+        "pixel_match_64": 0.97262,
+        "exact_pixels": 0.80257,
+        "edge_similarity": 0.76503
+      },
+      "composite": 91.7,
+      "candidate_meta": {
+        "scrollHeight": 1340,
+        "mobileScrollHeight": 2752,
+        "overflowX": false,
+        "axeDesktop": 0,
+        "axeDesktopNodes": 0,
+        "axeMobile": 0,
+        "axeMobileNodes": 0,
+        "consoleErrors": [],
+        "themeChanged": true,
+        "drawerOpened": true,
+        "perf": {
+          "fcp": 176,
+          "lcp": 176,
+          "domContentLoaded": 43,
+          "load": 43,
+          "transferBytes": 608956,
+          "resourceCount": 6,
+          "domNodes": 527,
+          "muiNodes": 363,
+          "h1": [
+            "Financial overview"
+          ],
+          "h2": [
+            "Revenue",
+            "Traffic sources",
+            "Recent transactions",
+            "Team activity"
+          ],
+          "title": "Orbit Finance \u2014 Financial overview",
+          "bodyBg": "rgb(245, 246, 250)",
+          "fontFamily": "Roboto, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+          "robotoLoaded": true,
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "scrollHeight": 1340,
+          "bodyScrollWidth": 1440,
+          "bodyScrollHeight": 1340
+        }
+      }
+    }
+  },
+  "direct_pairs": {
+    "caso-a__vs__caso-b": {
+      "ssim": 0.86926,
+      "mae": 5.121,
+      "mae_similarity": 0.97992,
+      "rmse": 24.856,
+      "pixel_match_8": 0.91104,
+      "pixel_match_16": 0.92961,
+      "pixel_match_32": 0.95675,
+      "pixel_match_64": 0.96921,
+      "exact_pixels": 0.83542
+    }
+  }
+}
